@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ND-EHR Pilot Dashboard</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      color: #212529;
+      background: #f8f9fa;
+    }
+    h1 { color: #1a3a5c; margin-bottom: 4px; }
+    .subtitle { color: #6c757d; margin-bottom: 40px; font-size: 0.95em; line-height: 1.7; }
+    section { background: #fff; border-radius: 8px; padding: 24px 28px;
+               box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+    h2 { margin-top: 0; }
+    h3 { margin-bottom: 6px; }
+    table td, table th { padding: 7px 10px; vertical-align: top; }
+    table tr:hover { background: #f8f9fa; }
+    footer { margin-top: 40px; font-size: 0.82em; color: #adb5bd; text-align: center; }
+  </style>
+</head>
+<body>
+
+<h1>ND-EHR Pilot &mdash; Project Dashboard</h1>
+<p class="subtitle">
+  Helfgott Research Institute, National University of Natural Medicine (NUNM)
+  &nbsp;&bull;&nbsp; Institute for Natural Medicine (INM)<br>
+  7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
+  &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
+</p>
+
+
+  <section style="margin-bottom:48px;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;">
+      Clinic 1
+    </h2>
+
+    <h3 style="font-size:1em;color:#495057;margin:20px 0 8px;">Downloaded Resources</h3>
+    
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;min-width:700px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;width:160px;">Resource</th>
+          <th style="padding:6px 10px;width:120px;white-space:nowrap;">Status</th>
+          <th style="padding:6px 10px;width:90px;text-align:right;white-space:nowrap;">Records</th>
+          <th style="padding:6px 10px;width:110px;white-space:nowrap;">Completed</th>
+          <th style="padding:6px 10px;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Patient</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">2,541</td>
+          <td style="white-space:nowrap;">Apr 26, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Practitioner</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">3</td>
+          <td style="white-space:nowrap;">Apr 26, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Encounter</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">5,237</td>
+          <td style="white-space:nowrap;">Apr 26, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Condition</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">10,703</td>
+          <td style="white-space:nowrap;">Apr 26, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">CarePlan</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">5,129</td>
+          <td style="white-space:nowrap;">Apr 26, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">MedicationRequest</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">8,186</td>
+          <td style="white-space:nowrap;">Apr 26, 2026</td>
+          <td style="font-size:0.88em;"><span style="color:#856404;font-size:0.85em;">⚠ Some pages skipped due to server errors during export</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Observation</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">410</td>
+          <td style="white-space:nowrap;">Apr 26, 2026</td>
+          <td style="font-size:0.88em;"><span style="color:#856404;font-size:0.85em;">⚠ 410 records downloaded; lab values largely absent — providers may not have entered lab results into ChARM</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Medication</td>
+          <td style="white-space:nowrap;"><span style="background:#e2e3e5;color:#495057;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏸ Deferred</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"><span style="color:#6c757d;font-size:0.85em;">Awaiting expanded scope tokens from ChARM</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">DocumentReference</td>
+          <td style="white-space:nowrap;"><span style="background:#e2e3e5;color:#495057;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏸ Deferred</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"><span style="color:#6c757d;font-size:0.85em;">Awaiting expanded scope tokens from ChARM</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Top 10 Conditions &mdash; Unique Patients</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;text-align:center;">#</th>
+          <th style="padding:6px 10px;">Condition</th>
+          <th style="padding:6px 10px;">Code</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">1</td>
+          <td>Benign hypertension</td>
+          <td style="color:#6c757d;font-size:0.85em;">10725009</td>
+          <td style="text-align:right;">269</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">2</td>
+          <td>Anxiety</td>
+          <td style="color:#6c757d;font-size:0.85em;">48694002</td>
+          <td style="text-align:right;">136</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">3</td>
+          <td>Hypothyroid</td>
+          <td style="color:#6c757d;font-size:0.85em;">40930008</td>
+          <td style="text-align:right;">133</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">4</td>
+          <td>Menopausal flushing</td>
+          <td style="color:#6c757d;font-size:0.85em;">198436008</td>
+          <td style="text-align:right;">125</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">5</td>
+          <td>Hypercholesterolemia</td>
+          <td style="color:#6c757d;font-size:0.85em;">13644009</td>
+          <td style="text-align:right;">124</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">6</td>
+          <td>Hyperlipidemia</td>
+          <td style="color:#6c757d;font-size:0.85em;">55822004</td>
+          <td style="text-align:right;">117</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">7</td>
+          <td>Insomnia</td>
+          <td style="color:#6c757d;font-size:0.85em;">193462001</td>
+          <td style="text-align:right;">93</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">8</td>
+          <td>Constipation</td>
+          <td style="color:#6c757d;font-size:0.85em;">14760008</td>
+          <td style="text-align:right;">86</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">9</td>
+          <td>Non-anemic red cell disorder</td>
+          <td style="color:#6c757d;font-size:0.85em;">234338001</td>
+          <td style="text-align:right;">82</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">10</td>
+          <td>Hypothyroidism due to thyroiditis</td>
+          <td style="color:#6c757d;font-size:0.85em;">102871000119101</td>
+          <td style="text-align:right;">77</td>
+        </tr>
+      </tbody>
+    </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 635 patients have condition records with no code or text (excluded from table above).</p>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Longitudinal HbA1c Analysis</h3>
+    <p style="color:#6c757d;font-style:italic;">Insufficient HbA1c data for longitudinal analysis. Lab values are largely absent from this clinic's observation records, likely because results were not entered into ChARM by providers.</p>
+  </section>
+  <section style="margin-bottom:48px;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;">
+      Clinic 2
+    </h2>
+
+    <h3 style="font-size:1em;color:#495057;margin:20px 0 8px;">Downloaded Resources</h3>
+    
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;min-width:700px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;width:160px;">Resource</th>
+          <th style="padding:6px 10px;width:120px;white-space:nowrap;">Status</th>
+          <th style="padding:6px 10px;width:90px;text-align:right;white-space:nowrap;">Records</th>
+          <th style="padding:6px 10px;width:110px;white-space:nowrap;">Completed</th>
+          <th style="padding:6px 10px;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Patient</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">1,120</td>
+          <td style="white-space:nowrap;">Apr 27, 2026</td>
+          <td style="font-size:0.88em;"><span style="color:#856404;font-size:0.85em;">⚠ Only 1,120 records exported vs ~8,829 unique patients referenced in encounter data; truncation issue under investigation with ChARM</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Practitioner</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">15</td>
+          <td style="white-space:nowrap;">Apr 27, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Encounter</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">85,859</td>
+          <td style="white-space:nowrap;">Apr 27, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Condition</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">279,866</td>
+          <td style="white-space:nowrap;">Apr 27, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">CarePlan</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">71,702</td>
+          <td style="white-space:nowrap;">Apr 27, 2026</td>
+          <td style="font-size:0.88em;"><span style="color:#856404;font-size:0.85em;">⚠ ~400 pages skipped due to server errors during export</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">MedicationRequest</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">200</td>
+          <td style="white-space:nowrap;">Apr 27, 2026</td>
+          <td style="font-size:0.88em;"><span style="color:#856404;font-size:0.85em;">⚠ 200 records downloaded; additional records affected by server errors during export</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Observation</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">900,286</td>
+          <td style="white-space:nowrap;">Apr 27, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Medication</td>
+          <td style="white-space:nowrap;"><span style="background:#e2e3e5;color:#495057;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏸ Deferred</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"><span style="color:#6c757d;font-size:0.85em;">Awaiting expanded scope tokens from ChARM</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">DocumentReference</td>
+          <td style="white-space:nowrap;"><span style="background:#e2e3e5;color:#495057;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏸ Deferred</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"><span style="color:#6c757d;font-size:0.85em;">Awaiting expanded scope tokens from ChARM</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Top 10 Conditions &mdash; Unique Patients</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;text-align:center;">#</th>
+          <th style="padding:6px 10px;">Condition</th>
+          <th style="padding:6px 10px;">Code</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">1</td>
+          <td>Fatigue</td>
+          <td style="color:#6c757d;font-size:0.85em;">84229001</td>
+          <td style="text-align:right;">3,353</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">2</td>
+          <td>Other fatigue</td>
+          <td style="color:#6c757d;font-size:0.85em;">R53.83</td>
+          <td style="text-align:right;">1,047</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">3</td>
+          <td>Insomnia</td>
+          <td style="color:#6c757d;font-size:0.85em;">193462001</td>
+          <td style="text-align:right;">1,003</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">4</td>
+          <td>Non-anaemic red cell disorder</td>
+          <td style="color:#6c757d;font-size:0.85em;">234338001</td>
+          <td style="text-align:right;">987</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">5</td>
+          <td>Hypothyroidism</td>
+          <td style="color:#6c757d;font-size:0.85em;">40930008</td>
+          <td style="text-align:right;">585</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">6</td>
+          <td>Irritable bowel</td>
+          <td style="color:#6c757d;font-size:0.85em;">10743008</td>
+          <td style="text-align:right;">545</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">7</td>
+          <td>Hyperlipidemia</td>
+          <td style="color:#6c757d;font-size:0.85em;">55822004</td>
+          <td style="text-align:right;">539</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">8</td>
+          <td>Diarrhea</td>
+          <td style="color:#6c757d;font-size:0.85em;">62315008</td>
+          <td style="text-align:right;">535</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">9</td>
+          <td>Iron deficiency</td>
+          <td style="color:#6c757d;font-size:0.85em;">35240004</td>
+          <td style="text-align:right;">533</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">10</td>
+          <td>Constipation</td>
+          <td style="color:#6c757d;font-size:0.85em;">14760008</td>
+          <td style="text-align:right;">526</td>
+        </tr>
+      </tbody>
+    </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 4,413 patients have condition records with no code or text (excluded from table above).</p>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Longitudinal HbA1c Analysis</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
+          <th style="padding:6px 10px;text-align:left;">Cohort</th>
+          <th style="padding:6px 10px;">n</th>
+          <th style="padding:6px 10px;">Mean First</th>
+          <th style="padding:6px 10px;">Mean Last</th>
+          <th style="padding:6px 10px;">Mean Change</th>
+          <th style="padding:6px 10px;">% Improved</th>
+          <th style="padding:6px 10px;">p-value</th>
+          <th style="padding:6px 10px;">Mean Follow-up</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Diabetes (baseline HbA1c >= 6.5%)</td>
+          <td style="text-align:right;">53</td>
+          <td style="text-align:right;">8.12%</td>
+          <td style="text-align:right;">6.99%</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-1.14%</td>
+          <td style="text-align:right;">79.2%</td>
+          <td style="text-align:right;">< 0.001</td>
+          <td style="text-align:right;">768 days</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Prediabetes (baseline HbA1c 5.7–6.5%)</td>
+          <td style="text-align:right;">265</td>
+          <td style="text-align:right;">5.84%</td>
+          <td style="text-align:right;">5.70%</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-0.13%</td>
+          <td style="text-align:right;">67.5%</td>
+          <td style="text-align:right;">< 0.001</td>
+          <td style="text-align:right;">683 days</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Normal (baseline HbA1c < 5.7%)</td>
+          <td style="text-align:right;">1,152</td>
+          <td style="text-align:right;">5.27%</td>
+          <td style="text-align:right;">5.30%</td>
+          <td style="text-align:right;color:#c0392b;font-weight:600;">+0.03%</td>
+          <td style="text-align:right;">37.2%</td>
+          <td style="text-align:right;">< 0.001</td>
+          <td style="text-align:right;">901 days</td>
+        </tr>
+      </tbody>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">3,204 patients with any HbA1c reading &nbsp;|&nbsp; 1,470 with 2+ longitudinal readings (included above)</p>
+  </section>
+
+  <section style="margin-bottom:48px;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #adb5bd;padding-bottom:6px;color:#adb5bd;">
+      Clinics 3–7 &mdash; Pending Onboarding
+    </h2>
+    <p style="color:#6c757d;">
+      Awaiting refresh tokens from clinic administrators.
+      Wyn at the Institute for Natural Medicine (INM) is arranging brief video meetings
+      with administrators at the 5 naturopathic residency clinics. The 2 private clinics
+      outside the INM network will be contacted separately.
+    </p>
+    <ul style="color:#6c757d;"><li>Clinic 3</li><li>Clinic 4</li><li>Clinic 5</li><li>Clinic 6</li><li>Clinic 7</li></ul>
+  </section>
+
+  <section style="margin-bottom:48px;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #e67e22;padding-bottom:6px;color:#e67e22;">
+      Open Items
+    </h2>
+    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>Patient data truncation (ChARM):</strong> The ChARM API appears to export only patients registered during the clinic's initial onboarding period. Clinic 2, for example, exported 1,120 patient records despite ~8,829 unique patients being referenced in encounter data. This issue has been raised with ChARM support and is under investigation.</li><li style="margin-bottom:12px;"><strong>Server errors during export (ChARM):</strong> Some resources — particularly CarePlan and MedicationRequest — encountered intermittent server errors during download, resulting in incomplete record counts for those resources. This appears to be a ChARM infrastructure issue rather than a data problem, and has been noted for both clinics.</li><li style="margin-bottom:12px;"><strong>Expanded API access (ChARM):</strong> Two additional data resources have been approved and access granted — Medication (drug name details) and DocumentReference (potentially full clinical notes). These will be included automatically when onboarding clinics 3–7 using the updated authorization URL. Clinics 1 and 2 will be re-authorized separately to download these resources.</li><li style="margin-bottom:12px;"><strong>Clinic onboarding (Clinics 3–7):</strong> Awaiting refresh tokens from clinic administrators to begin data download for the remaining 5 clinics.</li></ul>
+  </section>
+
+<footer>
+  Generated April 27, 2026 at 18:43 UTC &nbsp;&bull;&nbsp;
+  Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
+</footer>
+
+</body>
+</html>
