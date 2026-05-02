@@ -272,10 +272,10 @@
         </tr>
         <tr>
           <td style="font-weight:500;white-space:nowrap;">Medication</td>
-          <td style="white-space:nowrap;"><span style="background:#e2e3e5;color:#495057;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏸ Deferred</span></td>
-          <td style="text-align:right;white-space:nowrap;">—</td>
-          <td style="white-space:nowrap;">—</td>
-          <td style="font-size:0.88em;"><span style="color:#6c757d;font-size:0.85em;">Awaiting expanded scope tokens from ChARM</span></td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">142</td>
+          <td style="white-space:nowrap;">May 02, 2026</td>
+          <td style="font-size:0.88em;"></td>
         </tr>
         <tr>
           <td style="font-weight:500;white-space:nowrap;">DocumentReference</td>
@@ -495,11 +495,11 @@
     <h2 style="font-size:1.4em;border-bottom:3px solid #e67e22;padding-bottom:6px;color:#e67e22;">
       Open Items
     </h2>
-    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>Patient data truncation (ChARM):</strong> The ChARM API appears to export only patients registered during the clinic's initial onboarding period. Clinic 2, for example, exported 1,120 patient records despite ~8,829 unique patients being referenced in encounter data. This issue has been raised with ChARM support and is under investigation.</li><li style="margin-bottom:12px;"><strong>Server errors during export (ChARM):</strong> Some resources — particularly CarePlan and MedicationRequest — encountered intermittent server errors during download, resulting in incomplete record counts for those resources. This appears to be a ChARM infrastructure issue rather than a data problem, and has been noted for both clinics.</li><li style="margin-bottom:12px;"><strong>Expanded API access (ChARM):</strong> DocumentReference has been downloaded for Clinic 2 (295,239 records). Discharge summaries contain rich provider-written lifestyle recommendations — see the Lifestyle Recommendations section above. Medication (drug names) remains deferred for both clinics pending re-authorization. Clinic 1 DocumentReference also still pending re-authorization. Clinics 3–7 will receive expanded access automatically via the updated authorization URL.</li><li style="margin-bottom:12px;"><strong>Clinic onboarding (Clinics 3–7):</strong> Awaiting refresh tokens from clinic administrators to begin data download for the remaining 5 clinics.</li></ul>
+    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>Patient data truncation (ChARM):</strong> The ChARM API appears to export only patients registered during the clinic's initial onboarding period. Clinic 2, for example, exported 1,120 patient records despite ~8,829 unique patients being referenced in encounter data. This issue has been raised with ChARM support and is under investigation.</li><li style="margin-bottom:12px;"><strong>Server errors during export (ChARM):</strong> Some resources — particularly CarePlan and MedicationRequest — encountered intermittent server errors during download, resulting in incomplete record counts for those resources. This appears to be a ChARM infrastructure issue rather than a data problem, and has been noted for both clinics.</li><li style="margin-bottom:12px;"><strong>Expanded API access (ChARM):</strong> DocumentReference and Medication have both been downloaded for Clinic 2. Discharge summaries contain rich provider-written lifestyle recommendations (see section above). Medication records (142 unique drugs, RxNorm-coded) were fetched individually by ID — ChARM does not support the standard bulk Medication list endpoint. Clinic 1 still needs re-authorization to download these two resources. Clinics 3–7 will receive expanded access automatically.</li><li style="margin-bottom:12px;"><strong>Clinic onboarding (Clinics 3–7):</strong> Awaiting refresh tokens from clinic administrators to begin data download for the remaining 5 clinics.</li></ul>
   </section>
 
 <footer>
-  Generated May 02, 2026 at 19:10 UTC &nbsp;&bull;&nbsp;
+  Generated May 02, 2026 at 19:26 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
