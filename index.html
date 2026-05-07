@@ -319,6 +319,162 @@
           </table>
           <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">74 patients with condition code &nbsp;|&nbsp; 55 in discharge notes &nbsp;|&nbsp; 125 encounters<br><em>Small sample — interpret with caution.</em></p>
         </div></div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
+    <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:0.88em;color:#856404;"><strong>⚠ Supplementary data — not from structured Observation records.</strong> Values extracted by regex from free-text clinical notes. Precision varies; some values may be approximate, historical, or contextual. Keep strictly separate from Observation-sourced lab data in any analysis.</div>
+    <div style="margin-bottom:16px;">
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">885</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total values extracted</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">578</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">documents with lab mentions</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">5,255</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">SOAP notes scanned</div>
+      </div>
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
+          <th style="padding:6px 10px;text-align:left;">Lab</th>
+          <th style="padding:6px 10px;">Total</th>
+          <th style="padding:6px 10px;color:#1a7a4a;">Results</th>
+          <th style="padding:6px 10px;color:#856404;">Orders</th>
+          <th style="padding:6px 10px;">% Results</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">TSH</td>
+          <td style="text-align:right;">223</td>
+          <td style="text-align:right;color:#1a7a4a;">191</td>
+          <td style="text-align:right;color:#856404;">32</td>
+          <td style="text-align:right;color:#6c757d;">86%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Ferritin</td>
+          <td style="text-align:right;">127</td>
+          <td style="text-align:right;color:#1a7a4a;">116</td>
+          <td style="text-align:right;color:#856404;">11</td>
+          <td style="text-align:right;color:#6c757d;">91%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Vitamin D</td>
+          <td style="text-align:right;">99</td>
+          <td style="text-align:right;color:#1a7a4a;">87</td>
+          <td style="text-align:right;color:#856404;">12</td>
+          <td style="text-align:right;color:#6c757d;">88%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">HbA1c</td>
+          <td style="text-align:right;">59</td>
+          <td style="text-align:right;color:#1a7a4a;">53</td>
+          <td style="text-align:right;color:#856404;">6</td>
+          <td style="text-align:right;color:#6c757d;">90%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">LDL</td>
+          <td style="text-align:right;">56</td>
+          <td style="text-align:right;color:#1a7a4a;">56</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Testosterone</td>
+          <td style="text-align:right;">42</td>
+          <td style="text-align:right;color:#1a7a4a;">40</td>
+          <td style="text-align:right;color:#856404;">2</td>
+          <td style="text-align:right;color:#6c757d;">95%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Glucose</td>
+          <td style="text-align:right;">41</td>
+          <td style="text-align:right;color:#1a7a4a;">39</td>
+          <td style="text-align:right;color:#856404;">2</td>
+          <td style="text-align:right;color:#6c757d;">95%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Estradiol</td>
+          <td style="text-align:right;">37</td>
+          <td style="text-align:right;color:#1a7a4a;">35</td>
+          <td style="text-align:right;color:#856404;">2</td>
+          <td style="text-align:right;color:#6c757d;">95%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Triglycerides</td>
+          <td style="text-align:right;">36</td>
+          <td style="text-align:right;color:#1a7a4a;">36</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Cortisol</td>
+          <td style="text-align:right;">35</td>
+          <td style="text-align:right;color:#1a7a4a;">32</td>
+          <td style="text-align:right;color:#856404;">3</td>
+          <td style="text-align:right;color:#6c757d;">91%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Total Cholesterol</td>
+          <td style="text-align:right;">31</td>
+          <td style="text-align:right;color:#1a7a4a;">31</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Fasting Glucose</td>
+          <td style="text-align:right;">29</td>
+          <td style="text-align:right;color:#1a7a4a;">29</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">HDL</td>
+          <td style="text-align:right;">22</td>
+          <td style="text-align:right;color:#1a7a4a;">21</td>
+          <td style="text-align:right;color:#856404;">1</td>
+          <td style="text-align:right;color:#6c757d;">95%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Free T4</td>
+          <td style="text-align:right;">21</td>
+          <td style="text-align:right;color:#1a7a4a;">19</td>
+          <td style="text-align:right;color:#856404;">2</td>
+          <td style="text-align:right;color:#6c757d;">90%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Vitamin B12</td>
+          <td style="text-align:right;">13</td>
+          <td style="text-align:right;color:#1a7a4a;">12</td>
+          <td style="text-align:right;color:#856404;">1</td>
+          <td style="text-align:right;color:#6c757d;">92%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Hematocrit</td>
+          <td style="text-align:right;">7</td>
+          <td style="text-align:right;color:#1a7a4a;">7</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Hemoglobin</td>
+          <td style="text-align:right;">5</td>
+          <td style="text-align:right;color:#1a7a4a;">5</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Fasting Insulin</td>
+          <td style="text-align:right;">2</td>
+          <td style="text-align:right;color:#1a7a4a;">2</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
   <section style="margin-bottom:48px;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;">
@@ -650,6 +806,9 @@
           </table>
           <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">356 patients with condition code &nbsp;|&nbsp; 300 in discharge notes &nbsp;|&nbsp; 1,182 encounters<br><em>Small sample — interpret with caution.</em></p>
         </div></div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
+    <p style="color:#6c757d;font-style:italic;">No DocumentReference lab extraction data available for this clinic.</p>
   </section>
   <section style="margin-bottom:48px;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;">
@@ -981,6 +1140,162 @@
           </table>
           <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">248 patients with condition code &nbsp;|&nbsp; 228 in discharge notes &nbsp;|&nbsp; 1,450 encounters<br><em>Small sample — interpret with caution.</em></p>
         </div></div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
+    <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:0.88em;color:#856404;"><strong>⚠ Supplementary data — not from structured Observation records.</strong> Values extracted by regex from free-text clinical notes. Precision varies; some values may be approximate, historical, or contextual. Keep strictly separate from Observation-sourced lab data in any analysis.</div>
+    <div style="margin-bottom:16px;">
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">12,190</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total values extracted</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">5,260</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">documents with lab mentions</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">57,237</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">SOAP notes scanned</div>
+      </div>
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
+          <th style="padding:6px 10px;text-align:left;">Lab</th>
+          <th style="padding:6px 10px;">Total</th>
+          <th style="padding:6px 10px;color:#1a7a4a;">Results</th>
+          <th style="padding:6px 10px;color:#856404;">Orders</th>
+          <th style="padding:6px 10px;">% Results</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Vitamin D</td>
+          <td style="text-align:right;">2,375</td>
+          <td style="text-align:right;color:#1a7a4a;">2,309</td>
+          <td style="text-align:right;color:#856404;">66</td>
+          <td style="text-align:right;color:#6c757d;">97%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Testosterone</td>
+          <td style="text-align:right;">1,305</td>
+          <td style="text-align:right;color:#1a7a4a;">1,238</td>
+          <td style="text-align:right;color:#856404;">67</td>
+          <td style="text-align:right;color:#6c757d;">95%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Ferritin</td>
+          <td style="text-align:right;">1,111</td>
+          <td style="text-align:right;color:#1a7a4a;">1,033</td>
+          <td style="text-align:right;color:#856404;">78</td>
+          <td style="text-align:right;color:#6c757d;">93%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">TSH</td>
+          <td style="text-align:right;">988</td>
+          <td style="text-align:right;color:#1a7a4a;">961</td>
+          <td style="text-align:right;color:#856404;">27</td>
+          <td style="text-align:right;color:#6c757d;">97%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">HbA1c</td>
+          <td style="text-align:right;">929</td>
+          <td style="text-align:right;color:#1a7a4a;">901</td>
+          <td style="text-align:right;color:#856404;">28</td>
+          <td style="text-align:right;color:#6c757d;">97%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Estradiol</td>
+          <td style="text-align:right;">853</td>
+          <td style="text-align:right;color:#1a7a4a;">833</td>
+          <td style="text-align:right;color:#856404;">20</td>
+          <td style="text-align:right;color:#6c757d;">98%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Cortisol</td>
+          <td style="text-align:right;">848</td>
+          <td style="text-align:right;color:#1a7a4a;">803</td>
+          <td style="text-align:right;color:#856404;">45</td>
+          <td style="text-align:right;color:#6c757d;">95%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Glucose</td>
+          <td style="text-align:right;">761</td>
+          <td style="text-align:right;color:#1a7a4a;">754</td>
+          <td style="text-align:right;color:#856404;">7</td>
+          <td style="text-align:right;color:#6c757d;">99%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Vitamin B12</td>
+          <td style="text-align:right;">732</td>
+          <td style="text-align:right;color:#1a7a4a;">721</td>
+          <td style="text-align:right;color:#856404;">11</td>
+          <td style="text-align:right;color:#6c757d;">98%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">LDL</td>
+          <td style="text-align:right;">594</td>
+          <td style="text-align:right;color:#1a7a4a;">593</td>
+          <td style="text-align:right;color:#856404;">1</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Triglycerides</td>
+          <td style="text-align:right;">433</td>
+          <td style="text-align:right;color:#1a7a4a;">432</td>
+          <td style="text-align:right;color:#856404;">1</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Free T4</td>
+          <td style="text-align:right;">424</td>
+          <td style="text-align:right;color:#1a7a4a;">418</td>
+          <td style="text-align:right;color:#856404;">6</td>
+          <td style="text-align:right;color:#6c757d;">99%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">HDL</td>
+          <td style="text-align:right;">363</td>
+          <td style="text-align:right;color:#1a7a4a;">362</td>
+          <td style="text-align:right;color:#856404;">1</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Hemoglobin</td>
+          <td style="text-align:right;">140</td>
+          <td style="text-align:right;color:#1a7a4a;">140</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Hematocrit</td>
+          <td style="text-align:right;">140</td>
+          <td style="text-align:right;color:#1a7a4a;">139</td>
+          <td style="text-align:right;color:#856404;">1</td>
+          <td style="text-align:right;color:#6c757d;">99%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Fasting Glucose</td>
+          <td style="text-align:right;">88</td>
+          <td style="text-align:right;color:#1a7a4a;">87</td>
+          <td style="text-align:right;color:#856404;">1</td>
+          <td style="text-align:right;color:#6c757d;">99%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Total Cholesterol</td>
+          <td style="text-align:right;">68</td>
+          <td style="text-align:right;color:#1a7a4a;">68</td>
+          <td style="text-align:right;color:#856404;">0</td>
+          <td style="text-align:right;color:#6c757d;">100%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Fasting Insulin</td>
+          <td style="text-align:right;">38</td>
+          <td style="text-align:right;color:#1a7a4a;">33</td>
+          <td style="text-align:right;color:#856404;">5</td>
+          <td style="text-align:right;color:#6c757d;">87%</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section style="margin-bottom:48px;">
@@ -1004,7 +1319,7 @@
   </section>
 
 <footer>
-  Generated May 07, 2026 at 17:22 UTC &nbsp;&bull;&nbsp;
+  Generated May 07, 2026 at 17:43 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
