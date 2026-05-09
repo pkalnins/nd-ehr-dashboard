@@ -16,12 +16,48 @@
     h1 { color: #1a3a5c; margin-bottom: 4px; }
     .subtitle { color: #6c757d; margin-bottom: 40px; font-size: 0.95em; line-height: 1.7; }
     section { background: #fff; border-radius: 8px; padding: 24px 28px;
-               box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+               box-shadow: 0 1px 4px rgba(0,0,0,0.07); margin-bottom: 32px; }
     h2 { margin-top: 0; }
     h3 { margin-bottom: 6px; }
     table td, table th { padding: 7px 10px; vertical-align: top; }
     table tr:hover { background: #f8f9fa; }
     footer { margin-top: 40px; font-size: 0.82em; color: #adb5bd; text-align: center; }
+
+    /* Tabs */
+    .tab-container { margin-bottom: 32px; }
+    .tab-bar {
+      display: flex; flex-wrap: wrap;
+      background: #fff;
+      border-radius: 8px 8px 0 0;
+      padding: 0 8px;
+      border-bottom: 2px solid #dee2e6;
+      box-shadow: 0 -1px 4px rgba(0,0,0,0.05);
+    }
+    .tab-btn {
+      background: none; border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 0.92em; font-family: inherit;
+      color: #6c757d;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      white-space: nowrap;
+      transition: color 0.12s;
+    }
+    .tab-btn:hover { color: #2c5f8a; background: #f8f9fa; }
+    .tab-btn.active {
+      color: #2c5f8a;
+      border-bottom-color: #2c5f8a;
+      font-weight: 600;
+    }
+    .tab-btn.tab-pending { color: #adb5bd; font-style: italic; }
+    .tab-btn.tab-pending.active { color: #6c757d; border-bottom-color: #adb5bd; }
+    .tab-panel {
+      background: #fff;
+      border-radius: 0 0 8px 8px;
+      padding: 28px 28px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    }
   </style>
 </head>
 <body>
@@ -35,9 +71,19 @@
 </p>
 
 
-  <section style="margin-bottom:48px;">
-    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;">
-      Clinic 1
+  <div class="tab-container">
+    <div class="tab-bar">
+    <button class="tab-btn active" onclick="showTab(event,'clinic_1')">Clinic 1</button>
+    <button class="tab-btn" onclick="showTab(event,'clinic_2')">Clinic 2</button>
+    <button class="tab-btn" onclick="showTab(event,'clinic_3')">Clinic 3</button>
+    <button class="tab-btn" onclick="showTab(event,'clinic_4')">Clinic 4</button>
+    <button class="tab-btn tab-pending" onclick="showTab(event,'clinic_5')">Clinic 5</button>
+    <button class="tab-btn tab-pending" onclick="showTab(event,'clinic_6')">Clinic 6</button>
+    <button class="tab-btn tab-pending" onclick="showTab(event,'clinic_7')">Clinic 7</button>
+    </div>
+    <div id="tab-clinic_1" class="tab-panel" style="display:block;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
+      Clinic 1 &mdash; Vital Aging Clinic
     </h2>
 
     <h3 style="font-size:1em;color:#495057;margin:20px 0 8px;">Downloaded Resources</h3>
@@ -120,6 +166,35 @@
       </tbody>
     </table>
     </div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Patient Coverage</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:580px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;">Resource</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+          <th style="padding:6px 10px;text-align:right;">vs. Patient Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Patient resource</td>
+          <td style="text-align:right;">2,541</td>
+          <td style="text-align:right;color:#6c757d;">—</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Referenced in Encounters</td>
+          <td style="text-align:right;">1,652</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-889</td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;">Referenced in DocumentReference</td>
+          <td style="text-align:right;">1,714</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-827</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Top 10 Conditions &mdash; Unique Patients</h3>
     
@@ -511,10 +586,10 @@
         </tr>
       </tbody>
     </table>
-  </section>
-  <section style="margin-bottom:48px;">
-    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;">
-      Clinic 2
+  </div>
+  <div id="tab-clinic_2" class="tab-panel" style="display:none;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
+      Clinic 2 &mdash; Natural Medicine of Seattle
     </h2>
 
     <h3 style="font-size:1em;color:#495057;margin:20px 0 8px;">Downloaded Resources</h3>
@@ -597,6 +672,35 @@
       </tbody>
     </table>
     </div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Patient Coverage</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:580px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;">Resource</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+          <th style="padding:6px 10px;text-align:right;">vs. Patient Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Patient resource</td>
+          <td style="text-align:right;">1,120</td>
+          <td style="text-align:right;color:#6c757d;">—</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Referenced in Encounters</td>
+          <td style="text-align:right;">8,808</td>
+          <td style="text-align:right;color:#c0392b;font-weight:600;">+7,688 ⚠</td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;">Referenced in DocumentReference</td>
+          <td style="text-align:right;">9,792</td>
+          <td style="text-align:right;color:#c0392b;font-weight:600;">+8,672 ⚠</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Top 10 Conditions &mdash; Unique Patients</h3>
     
@@ -1044,10 +1148,10 @@
         </tr>
       </tbody>
     </table>
-  </section>
-  <section style="margin-bottom:48px;">
-    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;">
-      Clinic 3
+  </div>
+  <div id="tab-clinic_3" class="tab-panel" style="display:none;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
+      Clinic 3 &mdash; One Connection Healthcare
     </h2>
 
     <h3 style="font-size:1em;color:#495057;margin:20px 0 8px;">Downloaded Resources</h3>
@@ -1130,6 +1234,35 @@
       </tbody>
     </table>
     </div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Patient Coverage</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:580px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;">Resource</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+          <th style="padding:6px 10px;text-align:right;">vs. Patient Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Patient resource</td>
+          <td style="text-align:right;">4,495</td>
+          <td style="text-align:right;color:#6c757d;">—</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Referenced in Encounters</td>
+          <td style="text-align:right;">3,698</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-797</td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;">Referenced in DocumentReference</td>
+          <td style="text-align:right;">3,768</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-727</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Top 10 Conditions &mdash; Unique Patients</h3>
     
@@ -1577,20 +1710,165 @@
         </tr>
       </tbody>
     </table>
-  </section>
+  </div>
+  <div id="tab-clinic_4" class="tab-panel" style="display:none;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
+      Clinic 4
+    </h2>
 
-  <section style="margin-bottom:48px;">
-    <h2 style="font-size:1.4em;border-bottom:3px solid #adb5bd;padding-bottom:6px;color:#adb5bd;">
-      Clinics 3–7 &mdash; Pending Onboarding
+    <h3 style="font-size:1em;color:#495057;margin:20px 0 8px;">Downloaded Resources</h3>
+    
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;min-width:700px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;width:160px;">Resource</th>
+          <th style="padding:6px 10px;width:120px;white-space:nowrap;">Status</th>
+          <th style="padding:6px 10px;width:90px;text-align:right;white-space:nowrap;">Records</th>
+          <th style="padding:6px 10px;width:110px;white-space:nowrap;">Completed</th>
+          <th style="padding:6px 10px;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Patient</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">22,389</td>
+          <td style="white-space:nowrap;">May 08, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Practitioner</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">60</td>
+          <td style="white-space:nowrap;">May 08, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Encounter</td>
+          <td style="white-space:nowrap;"><span style="background:#fff3cd;color:#856404;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏳ Pending</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Condition</td>
+          <td style="white-space:nowrap;"><span style="background:#fff3cd;color:#856404;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏳ Pending</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">CarePlan</td>
+          <td style="white-space:nowrap;"><span style="background:#fff3cd;color:#856404;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏳ Pending</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">MedicationRequest</td>
+          <td style="white-space:nowrap;"><span style="background:#fff3cd;color:#856404;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏳ Pending</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Observation</td>
+          <td style="white-space:nowrap;"><span style="background:#fff3cd;color:#856404;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏳ Pending</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Medication</td>
+          <td style="white-space:nowrap;"><span style="background:#e2e3e5;color:#495057;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏸ Deferred</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"><span style="color:#6c757d;font-size:0.85em;">Awaiting expanded scope tokens from ChARM</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">DocumentReference</td>
+          <td style="white-space:nowrap;"><span style="background:#e2e3e5;color:#495057;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">⏸ Deferred</span></td>
+          <td style="text-align:right;white-space:nowrap;">—</td>
+          <td style="white-space:nowrap;">—</td>
+          <td style="font-size:0.88em;"><span style="color:#6c757d;font-size:0.85em;">Awaiting expanded scope tokens from ChARM</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Patient Coverage</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:580px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;">
+          <th style="padding:6px 10px;">Resource</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+          <th style="padding:6px 10px;text-align:right;">vs. Patient Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Patient resource</td>
+          <td style="text-align:right;">22,389</td>
+          <td style="text-align:right;color:#6c757d;">—</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Referenced in Encounters</td>
+          <td style="text-align:right;">—</td>
+          <td style="text-align:right;color:#6c757d;">—</td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;">Referenced in DocumentReference</td>
+          <td style="text-align:right;">—</td>
+          <td style="text-align:right;color:#6c757d;">—</td>
+        </tr>
+      </tbody>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">Encounter and DocumentReference counts not yet computed. Run <code>python analysis/patient_coverage.py clinic_1 clinic_2 clinic_3</code> to populate.</p>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Top 10 Conditions &mdash; Unique Patients</h3>
+    <p style="color:#6c757d;font-style:italic;">No condition data available.</p>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Longitudinal HbA1c Analysis</h3>
+    <div style="background:#d4edda;border-left:4px solid #1a7a4a;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#1a7a4a;font-size:0.88em;">Source A &mdash; Structured Observation Records (FHIR Observation resource)</strong></div><p style="color:#6c757d;font-style:italic;">Insufficient HbA1c data for longitudinal analysis. Lab values are largely absent from this clinic's observation records, likely because results were not entered into ChARM by providers.</p><div style="margin:28px 0;border-top:2px dashed #dee2e6;"></div><div style="background:#fff3cd;border-left:4px solid #ffc107;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#856404;font-size:0.88em;">Source B &mdash; DocRef-Extracted SOAP Notes (regex from free-text clinical notes)</strong></div><p style="font-size:0.85em;color:#856404;margin:0 0 10px;">⚠ Values extracted by pattern matching from narrative text. Keep strictly separate from Source A in any analysis. Useful for clinics where structured lab entry was absent.</p><p style="color:#6c757d;font-style:italic;">Insufficient HbA1c data for longitudinal analysis. Lab values are largely absent from this clinic's observation records, likely because results were not entered into ChARM by providers.</p>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lifestyle Recommendations &mdash; Discharge Summary Analysis</h3>
+    <p style="color:#6c757d;font-style:italic;">No lifestyle recommendation data available for this clinic.</p>
+
+    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
+    <p style="color:#6c757d;font-style:italic;">No DocumentReference lab extraction data available for this clinic.</p>
+  </div>
+  <div id="tab-clinic_5" class="tab-panel" style="display:none;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #adb5bd;padding-bottom:6px;color:#adb5bd;margin-top:0;">
+      Clinic 5
     </h2>
     <p style="color:#6c757d;">
-      Awaiting refresh tokens from clinic administrators.
-      Wyn at the Institute for Natural Medicine (INM) is arranging brief video meetings
-      with administrators at the 5 naturopathic residency clinics. The 2 private clinics
-      outside the INM network will be contacted separately.
+      Awaiting credentials from clinic administrator. Once the clinic completes
+      authorization via the self-service onboarding app, credentials will be loaded
+      into Secret Manager and the import job will be deployed.
     </p>
-    <ul style="color:#6c757d;"><li>Clinic 4</li><li>Clinic 5</li><li>Clinic 6</li><li>Clinic 7</li></ul>
-  </section>
+  </div>
+  <div id="tab-clinic_6" class="tab-panel" style="display:none;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #adb5bd;padding-bottom:6px;color:#adb5bd;margin-top:0;">
+      Clinic 6
+    </h2>
+    <p style="color:#6c757d;">
+      Awaiting credentials from clinic administrator. Once the clinic completes
+      authorization via the self-service onboarding app, credentials will be loaded
+      into Secret Manager and the import job will be deployed.
+    </p>
+  </div>
+  <div id="tab-clinic_7" class="tab-panel" style="display:none;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #adb5bd;padding-bottom:6px;color:#adb5bd;margin-top:0;">
+      Clinic 7
+    </h2>
+    <p style="color:#6c757d;">
+      Awaiting credentials from clinic administrator. Once the clinic completes
+      authorization via the self-service onboarding app, credentials will be loaded
+      into Secret Manager and the import job will be deployed.
+    </p>
+  </div>
+  </div>
 
   <section style="margin-bottom:48px;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #e67e22;padding-bottom:6px;color:#e67e22;">
@@ -1600,9 +1878,18 @@
   </section>
 
 <footer>
-  Generated May 07, 2026 at 17:53 UTC &nbsp;&bull;&nbsp;
+  Generated May 09, 2026 at 00:08 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
+
+<script>
+function showTab(event, tabId) {
+  document.querySelectorAll('.tab-panel').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + tabId).style.display = 'block';
+  event.currentTarget.classList.add('active');
+}
+</script>
 
 </body>
 </html>
