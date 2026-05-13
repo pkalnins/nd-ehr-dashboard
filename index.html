@@ -609,9 +609,9 @@
         <tr>
           <td style="font-weight:500;white-space:nowrap;">Patient</td>
           <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
-          <td style="text-align:right;white-space:nowrap;">1,120</td>
-          <td style="white-space:nowrap;">Apr 27, 2026</td>
-          <td style="font-size:0.88em;"><span style="color:#856404;font-size:0.85em;">⚠ Only 1,120 records exported vs ~8,829 unique patients referenced in encounter data; truncation issue under investigation with ChARM</span></td>
+          <td style="text-align:right;white-space:nowrap;">11,584</td>
+          <td style="white-space:nowrap;">May 13, 2026</td>
+          <td style="font-size:0.88em;"><span style="color:#856404;font-size:0.85em;">⚠ Previously 1,120 records due to a pagination bug in our original importer (ChARM next-link stopped at page 56; direct page fetch works to page 580). Re-downloaded May 2026: 11,584 records.</span></td>
         </tr>
         <tr>
           <td style="font-weight:500;white-space:nowrap;">Practitioner</td>
@@ -686,18 +686,18 @@
       <tbody>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Patient resource</td>
-          <td style="text-align:right;">1,120</td>
+          <td style="text-align:right;">11,584</td>
           <td style="text-align:right;color:#6c757d;">—</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Referenced in Encounters</td>
           <td style="text-align:right;">8,808</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+7,688 ⚠</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-2,776</td>
         </tr>
         <tr>
           <td style="font-weight:500;">Referenced in DocumentReference</td>
           <td style="text-align:right;">9,792</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+8,672 ⚠</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-1,792</td>
         </tr>
       </tbody>
     </table>
@@ -1815,8 +1815,8 @@
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Referenced in Encounters</td>
-          <td style="text-align:right;">—</td>
-          <td style="text-align:right;color:#6c757d;">—</td>
+          <td style="text-align:right;">16,391</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-5,998</td>
         </tr>
         <tr>
           <td style="font-weight:500;">Referenced in DocumentReference</td>
@@ -1824,7 +1824,7 @@
           <td style="text-align:right;color:#6c757d;">—</td>
         </tr>
       </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">Encounter and DocumentReference counts not yet computed. Run <code>python analysis/patient_coverage.py clinic_1 clinic_2 clinic_3</code> to populate.</p>
+    </table>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Top 10 Conditions &mdash; Unique Patients</h3>
     <p style="color:#6c757d;font-style:italic;">No condition data available.</p>
@@ -1942,16 +1942,16 @@
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Referenced in Encounters</td>
-          <td style="text-align:right;">—</td>
-          <td style="text-align:right;color:#6c757d;">—</td>
+          <td style="text-align:right;">2,140</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-897</td>
         </tr>
         <tr>
           <td style="font-weight:500;">Referenced in DocumentReference</td>
-          <td style="text-align:right;">—</td>
-          <td style="text-align:right;color:#6c757d;">—</td>
+          <td style="text-align:right;">2,244</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-793</td>
         </tr>
       </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">Encounter and DocumentReference counts not yet computed. Run <code>python analysis/patient_coverage.py clinic_1 clinic_2 clinic_3</code> to populate.</p>
+    </table>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Top 10 Conditions &mdash; Unique Patients</h3>
     
@@ -2426,11 +2426,11 @@
     <h2 style="font-size:1.4em;border-bottom:3px solid #e67e22;padding-bottom:6px;color:#e67e22;">
       Open Items
     </h2>
-    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>Patient data truncation (ChARM):</strong> The ChARM API appears to export only patients registered during the clinic's initial onboarding period. Clinic 2, for example, exported 1,120 patient records despite ~8,829 unique patients being referenced in encounter data. This issue has been raised with ChARM support and is under investigation.</li><li style="margin-bottom:12px;"><strong>Server errors during export (ChARM):</strong> Some resources — particularly CarePlan and MedicationRequest — encountered intermittent server errors during download, resulting in incomplete record counts for those resources. This appears to be a ChARM infrastructure issue rather than a data problem, and has been noted for both clinics.</li><li style="margin-bottom:12px;"><strong>Expanded API access (ChARM):</strong> DocumentReference and Medication have both been downloaded for Clinic 2. Discharge summaries contain rich provider-written lifestyle recommendations (see section above). Medication records (142 unique drugs, RxNorm-coded) were fetched individually by ID — ChARM does not support the standard bulk Medication list endpoint. Clinic 1 still needs re-authorization to download these two resources. Clinics 3–7 will receive expanded access automatically.</li><li style="margin-bottom:12px;"><strong>Clinic onboarding (Clinics 3–7):</strong> Awaiting refresh tokens from clinic administrators to begin data download for the remaining 5 clinics.</li></ul>
+    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>Patient pagination fix (May 2026):</strong> Clinic 2 originally showed only 1,120 patient records due to a bug in our original importer — ChARM's FHIR <code>next</code> link stops after page 56, but data exists through page 580. Switching to direct page-number requests resolved the issue; clinic 2 now has 11,584 patient records. ChARM has been notified of the next-link bug. All clinics now use the corrected importer.</li><li style="margin-bottom:12px;"><strong>Server errors during export (ChARM):</strong> Some resources — particularly CarePlan and MedicationRequest — encountered intermittent server errors during download, resulting in incomplete record counts for those resources. This appears to be a ChARM infrastructure issue rather than a data problem, and has been noted for both clinics.</li><li style="margin-bottom:12px;"><strong>Expanded API access (ChARM):</strong> DocumentReference and Medication have both been downloaded for Clinic 2. Discharge summaries contain rich provider-written lifestyle recommendations (see section above). Medication records (142 unique drugs, RxNorm-coded) were fetched individually by ID — ChARM does not support the standard bulk Medication list endpoint. Clinic 1 still needs re-authorization to download these two resources. Clinics 3–7 will receive expanded access automatically.</li><li style="margin-bottom:12px;"><strong>Clinic onboarding (Clinics 3–7):</strong> Awaiting refresh tokens from clinic administrators to begin data download for the remaining 5 clinics.</li></ul>
   </section>
 
 <footer>
-  Generated May 13, 2026 at 17:40 UTC &nbsp;&bull;&nbsp;
+  Generated May 13, 2026 at 18:12 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
