@@ -272,43 +272,7 @@
     </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 635 patients have condition records with no code or text (excluded from table above).</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Longitudinal HbA1c Analysis</h3>
-    <div style="background:#d4edda;border-left:4px solid #1a7a4a;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#1a7a4a;font-size:0.88em;">Source A &mdash; Structured Observation Records (FHIR Observation resource)</strong></div><p style="color:#6c757d;font-style:italic;">Insufficient HbA1c data for longitudinal analysis. Lab values are largely absent from this clinic's observation records, likely because results were not entered into ChARM by providers.</p><div style="margin:28px 0;border-top:2px dashed #dee2e6;"></div><div style="background:#fff3cd;border-left:4px solid #ffc107;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#856404;font-size:0.88em;">Source B &mdash; DocRef-Extracted SOAP Notes (regex from free-text clinical notes)</strong></div><p style="font-size:0.85em;color:#856404;margin:0 0 10px;">⚠ Values extracted by pattern matching from narrative text. Keep strictly separate from Source A in any analysis. Useful for clinics where structured lab entry was absent.</p>
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
-          <th style="padding:6px 10px;text-align:left;">Cohort</th>
-          <th style="padding:6px 10px;">n</th>
-          <th style="padding:6px 10px;">Mean First</th>
-          <th style="padding:6px 10px;">Mean Last</th>
-          <th style="padding:6px 10px;">Mean Change</th>
-          <th style="padding:6px 10px;">% Improved</th>
-          <th style="padding:6px 10px;">p-value</th>
-          <th style="padding:6px 10px;">Mean Follow-up</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Diabetes (baseline HbA1c >= 6.5%)</td>
-          <td style="text-align:right;">1</td>
-          <td style="text-align:right;">8.40%</td>
-          <td style="text-align:right;">8.10%</td>
-          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-0.30%</td>
-          <td style="text-align:right;">100.0%</td>
-          <td style="text-align:right;">—</td>
-          <td style="text-align:right;">2017 days</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Prediabetes (baseline HbA1c 5.7–6.5%)</td>
-          <td style="text-align:right;">1</td>
-          <td style="text-align:right;">6.00%</td>
-          <td style="text-align:right;">6.30%</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+0.30%</td>
-          <td style="text-align:right;">0.0%</td>
-          <td style="text-align:right;">—</td>
-          <td style="text-align:right;">792 days</td>
-        </tr>
-      </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">43 patients with any HbA1c reading &nbsp;|&nbsp; 2 with 2+ longitudinal readings (included above)</p>
+    <p style="color:#6c757d;font-style:italic;">Insufficient HbA1c data for longitudinal analysis. Lab values are largely absent from this clinic's observation records, likely because results were not entered into ChARM by providers.</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lifestyle Recommendations &mdash; Discharge Summary Analysis</h3>
     
@@ -430,162 +394,6 @@
           </table>
           <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">74 patients with condition code &nbsp;|&nbsp; 55 in discharge notes &nbsp;|&nbsp; 125 encounters<br><em>Small sample — interpret with caution.</em></p>
         </div></div>
-
-    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
-    <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:0.88em;color:#856404;"><strong>⚠ Supplementary data — not from structured Observation records.</strong> Values extracted by regex from free-text clinical notes. Precision varies; some values may be approximate, historical, or contextual. Keep strictly separate from Observation-sourced lab data in any analysis.</div>
-    <div style="margin-bottom:16px;">
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">885</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total values extracted</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">578</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">documents with lab mentions</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">5,255</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">SOAP notes scanned</div>
-      </div>
-    </div>
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
-          <th style="padding:6px 10px;text-align:left;">Lab</th>
-          <th style="padding:6px 10px;">Total</th>
-          <th style="padding:6px 10px;color:#1a7a4a;">Results</th>
-          <th style="padding:6px 10px;color:#856404;">Orders</th>
-          <th style="padding:6px 10px;">% Results</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">TSH</td>
-          <td style="text-align:right;">223</td>
-          <td style="text-align:right;color:#1a7a4a;">191</td>
-          <td style="text-align:right;color:#856404;">32</td>
-          <td style="text-align:right;color:#6c757d;">86%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Ferritin</td>
-          <td style="text-align:right;">127</td>
-          <td style="text-align:right;color:#1a7a4a;">116</td>
-          <td style="text-align:right;color:#856404;">11</td>
-          <td style="text-align:right;color:#6c757d;">91%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Vitamin D</td>
-          <td style="text-align:right;">99</td>
-          <td style="text-align:right;color:#1a7a4a;">87</td>
-          <td style="text-align:right;color:#856404;">12</td>
-          <td style="text-align:right;color:#6c757d;">88%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">HbA1c</td>
-          <td style="text-align:right;">59</td>
-          <td style="text-align:right;color:#1a7a4a;">53</td>
-          <td style="text-align:right;color:#856404;">6</td>
-          <td style="text-align:right;color:#6c757d;">90%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">LDL</td>
-          <td style="text-align:right;">56</td>
-          <td style="text-align:right;color:#1a7a4a;">56</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Testosterone</td>
-          <td style="text-align:right;">42</td>
-          <td style="text-align:right;color:#1a7a4a;">40</td>
-          <td style="text-align:right;color:#856404;">2</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Glucose</td>
-          <td style="text-align:right;">41</td>
-          <td style="text-align:right;color:#1a7a4a;">39</td>
-          <td style="text-align:right;color:#856404;">2</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Estradiol</td>
-          <td style="text-align:right;">37</td>
-          <td style="text-align:right;color:#1a7a4a;">35</td>
-          <td style="text-align:right;color:#856404;">2</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Triglycerides</td>
-          <td style="text-align:right;">36</td>
-          <td style="text-align:right;color:#1a7a4a;">36</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Cortisol</td>
-          <td style="text-align:right;">35</td>
-          <td style="text-align:right;color:#1a7a4a;">32</td>
-          <td style="text-align:right;color:#856404;">3</td>
-          <td style="text-align:right;color:#6c757d;">91%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Total Cholesterol</td>
-          <td style="text-align:right;">31</td>
-          <td style="text-align:right;color:#1a7a4a;">31</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Fasting Glucose</td>
-          <td style="text-align:right;">29</td>
-          <td style="text-align:right;color:#1a7a4a;">29</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">HDL</td>
-          <td style="text-align:right;">22</td>
-          <td style="text-align:right;color:#1a7a4a;">21</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Free T4</td>
-          <td style="text-align:right;">21</td>
-          <td style="text-align:right;color:#1a7a4a;">19</td>
-          <td style="text-align:right;color:#856404;">2</td>
-          <td style="text-align:right;color:#6c757d;">90%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Vitamin B12</td>
-          <td style="text-align:right;">13</td>
-          <td style="text-align:right;color:#1a7a4a;">12</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">92%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Hematocrit</td>
-          <td style="text-align:right;">7</td>
-          <td style="text-align:right;color:#1a7a4a;">7</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Hemoglobin</td>
-          <td style="text-align:right;">5</td>
-          <td style="text-align:right;color:#1a7a4a;">5</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Fasting Insulin</td>
-          <td style="text-align:right;">2</td>
-          <td style="text-align:right;color:#1a7a4a;">2</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
   <div id="tab-clinic_2" class="tab-panel" style="display:none;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
@@ -778,7 +586,7 @@
     </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 4,413 patients have condition records with no code or text (excluded from table above).</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Longitudinal HbA1c Analysis</h3>
-    <div style="background:#d4edda;border-left:4px solid #1a7a4a;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#1a7a4a;font-size:0.88em;">Source A &mdash; Structured Observation Records (FHIR Observation resource)</strong></div>
+    
     <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
       <thead>
         <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
@@ -824,53 +632,7 @@
           <td style="text-align:right;">901 days</td>
         </tr>
       </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">3,204 patients with any HbA1c reading &nbsp;|&nbsp; 1,470 with 2+ longitudinal readings (included above)</p><div style="margin:28px 0;border-top:2px dashed #dee2e6;"></div><div style="background:#fff3cd;border-left:4px solid #ffc107;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#856404;font-size:0.88em;">Source B &mdash; DocRef-Extracted SOAP Notes (regex from free-text clinical notes)</strong></div><p style="font-size:0.85em;color:#856404;margin:0 0 10px;">⚠ Values extracted by pattern matching from narrative text. Keep strictly separate from Source A in any analysis. Useful for clinics where structured lab entry was absent.</p>
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
-          <th style="padding:6px 10px;text-align:left;">Cohort</th>
-          <th style="padding:6px 10px;">n</th>
-          <th style="padding:6px 10px;">Mean First</th>
-          <th style="padding:6px 10px;">Mean Last</th>
-          <th style="padding:6px 10px;">Mean Change</th>
-          <th style="padding:6px 10px;">% Improved</th>
-          <th style="padding:6px 10px;">p-value</th>
-          <th style="padding:6px 10px;">Mean Follow-up</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Diabetes (baseline HbA1c >= 6.5%)</td>
-          <td style="text-align:right;">35</td>
-          <td style="text-align:right;">9.61%</td>
-          <td style="text-align:right;">7.29%</td>
-          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-2.32%</td>
-          <td style="text-align:right;">62.9%</td>
-          <td style="text-align:right;">< 0.001</td>
-          <td style="text-align:right;">803 days</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Prediabetes (baseline HbA1c 5.7–6.5%)</td>
-          <td style="text-align:right;">89</td>
-          <td style="text-align:right;">5.88%</td>
-          <td style="text-align:right;">5.93%</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+0.05%</td>
-          <td style="text-align:right;">56.2%</td>
-          <td style="text-align:right;">0.6568</td>
-          <td style="text-align:right;">748 days</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Normal (baseline HbA1c < 5.7%)</td>
-          <td style="text-align:right;">354</td>
-          <td style="text-align:right;">5.22%</td>
-          <td style="text-align:right;">5.38%</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+0.16%</td>
-          <td style="text-align:right;">20.6%</td>
-          <td style="text-align:right;">< 0.001</td>
-          <td style="text-align:right;">650 days</td>
-        </tr>
-      </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">1,068 patients with any HbA1c reading &nbsp;|&nbsp; 478 with 2+ longitudinal readings (included above)</p>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">3,204 patients with any HbA1c reading &nbsp;|&nbsp; 1,470 with 2+ longitudinal readings (included above)</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lifestyle Recommendations &mdash; Discharge Summary Analysis</h3>
     
@@ -992,162 +754,6 @@
           </table>
           <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">356 patients with condition code &nbsp;|&nbsp; 300 in discharge notes &nbsp;|&nbsp; 1,182 encounters<br><em>Small sample — interpret with caution.</em></p>
         </div></div>
-
-    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
-    <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:0.88em;color:#856404;"><strong>⚠ Supplementary data — not from structured Observation records.</strong> Values extracted by regex from free-text clinical notes. Precision varies; some values may be approximate, historical, or contextual. Keep strictly separate from Observation-sourced lab data in any analysis.</div>
-    <div style="margin-bottom:16px;">
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">56,854</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total values extracted</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">15,245</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">documents with lab mentions</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">85,346</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">SOAP notes scanned</div>
-      </div>
-    </div>
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
-          <th style="padding:6px 10px;text-align:left;">Lab</th>
-          <th style="padding:6px 10px;">Total</th>
-          <th style="padding:6px 10px;color:#1a7a4a;">Results</th>
-          <th style="padding:6px 10px;color:#856404;">Orders</th>
-          <th style="padding:6px 10px;">% Results</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Vitamin D</td>
-          <td style="text-align:right;">10,501</td>
-          <td style="text-align:right;color:#1a7a4a;">10,255</td>
-          <td style="text-align:right;color:#856404;">246</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Ferritin</td>
-          <td style="text-align:right;">7,026</td>
-          <td style="text-align:right;color:#1a7a4a;">6,895</td>
-          <td style="text-align:right;color:#856404;">131</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Testosterone</td>
-          <td style="text-align:right;">5,815</td>
-          <td style="text-align:right;color:#1a7a4a;">5,666</td>
-          <td style="text-align:right;color:#856404;">149</td>
-          <td style="text-align:right;color:#6c757d;">97%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">LDL</td>
-          <td style="text-align:right;">5,300</td>
-          <td style="text-align:right;color:#1a7a4a;">5,276</td>
-          <td style="text-align:right;color:#856404;">24</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">TSH</td>
-          <td style="text-align:right;">5,008</td>
-          <td style="text-align:right;color:#1a7a4a;">4,913</td>
-          <td style="text-align:right;color:#856404;">95</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">HbA1c</td>
-          <td style="text-align:right;">4,099</td>
-          <td style="text-align:right;color:#1a7a4a;">4,057</td>
-          <td style="text-align:right;color:#856404;">42</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">HDL</td>
-          <td style="text-align:right;">2,969</td>
-          <td style="text-align:right;color:#1a7a4a;">2,956</td>
-          <td style="text-align:right;color:#856404;">13</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Triglycerides</td>
-          <td style="text-align:right;">2,888</td>
-          <td style="text-align:right;color:#1a7a4a;">2,874</td>
-          <td style="text-align:right;color:#856404;">14</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Estradiol</td>
-          <td style="text-align:right;">2,855</td>
-          <td style="text-align:right;color:#1a7a4a;">2,810</td>
-          <td style="text-align:right;color:#856404;">45</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Vitamin B12</td>
-          <td style="text-align:right;">2,494</td>
-          <td style="text-align:right;color:#1a7a4a;">2,467</td>
-          <td style="text-align:right;color:#856404;">27</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Free T4</td>
-          <td style="text-align:right;">2,316</td>
-          <td style="text-align:right;color:#1a7a4a;">2,296</td>
-          <td style="text-align:right;color:#856404;">20</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Glucose</td>
-          <td style="text-align:right;">2,180</td>
-          <td style="text-align:right;color:#1a7a4a;">2,139</td>
-          <td style="text-align:right;color:#856404;">41</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Cortisol</td>
-          <td style="text-align:right;">2,121</td>
-          <td style="text-align:right;color:#1a7a4a;">2,047</td>
-          <td style="text-align:right;color:#856404;">74</td>
-          <td style="text-align:right;color:#6c757d;">97%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Fasting Glucose</td>
-          <td style="text-align:right;">342</td>
-          <td style="text-align:right;color:#1a7a4a;">337</td>
-          <td style="text-align:right;color:#856404;">5</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Hemoglobin</td>
-          <td style="text-align:right;">299</td>
-          <td style="text-align:right;color:#1a7a4a;">297</td>
-          <td style="text-align:right;color:#856404;">2</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Hematocrit</td>
-          <td style="text-align:right;">276</td>
-          <td style="text-align:right;color:#1a7a4a;">276</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Fasting Insulin</td>
-          <td style="text-align:right;">232</td>
-          <td style="text-align:right;color:#1a7a4a;">222</td>
-          <td style="text-align:right;color:#856404;">10</td>
-          <td style="text-align:right;color:#6c757d;">96%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Total Cholesterol</td>
-          <td style="text-align:right;">133</td>
-          <td style="text-align:right;color:#1a7a4a;">132</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
   <div id="tab-clinic_3" class="tab-panel" style="display:none;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
@@ -1340,7 +946,7 @@
     </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 2,181 patients have condition records with no code or text (excluded from table above).</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Longitudinal HbA1c Analysis</h3>
-    <div style="background:#d4edda;border-left:4px solid #1a7a4a;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#1a7a4a;font-size:0.88em;">Source A &mdash; Structured Observation Records (FHIR Observation resource)</strong></div>
+    
     <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
       <thead>
         <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
@@ -1386,53 +992,7 @@
           <td style="text-align:right;">777 days</td>
         </tr>
       </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">1,683 patients with any HbA1c reading &nbsp;|&nbsp; 839 with 2+ longitudinal readings (included above)</p><div style="margin:28px 0;border-top:2px dashed #dee2e6;"></div><div style="background:#fff3cd;border-left:4px solid #ffc107;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#856404;font-size:0.88em;">Source B &mdash; DocRef-Extracted SOAP Notes (regex from free-text clinical notes)</strong></div><p style="font-size:0.85em;color:#856404;margin:0 0 10px;">⚠ Values extracted by pattern matching from narrative text. Keep strictly separate from Source A in any analysis. Useful for clinics where structured lab entry was absent.</p>
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
-          <th style="padding:6px 10px;text-align:left;">Cohort</th>
-          <th style="padding:6px 10px;">n</th>
-          <th style="padding:6px 10px;">Mean First</th>
-          <th style="padding:6px 10px;">Mean Last</th>
-          <th style="padding:6px 10px;">Mean Change</th>
-          <th style="padding:6px 10px;">% Improved</th>
-          <th style="padding:6px 10px;">p-value</th>
-          <th style="padding:6px 10px;">Mean Follow-up</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Diabetes (baseline HbA1c >= 6.5%)</td>
-          <td style="text-align:right;">34</td>
-          <td style="text-align:right;">8.46%</td>
-          <td style="text-align:right;">7.11%</td>
-          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-1.34%</td>
-          <td style="text-align:right;">76.5%</td>
-          <td style="text-align:right;">0.0028</td>
-          <td style="text-align:right;">417 days</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Prediabetes (baseline HbA1c 5.7–6.5%)</td>
-          <td style="text-align:right;">51</td>
-          <td style="text-align:right;">5.93%</td>
-          <td style="text-align:right;">6.04%</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+0.11%</td>
-          <td style="text-align:right;">49.0%</td>
-          <td style="text-align:right;">0.5400</td>
-          <td style="text-align:right;">617 days</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Normal (baseline HbA1c < 5.7%)</td>
-          <td style="text-align:right;">53</td>
-          <td style="text-align:right;">5.24%</td>
-          <td style="text-align:right;">5.84%</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+0.60%</td>
-          <td style="text-align:right;">18.9%</td>
-          <td style="text-align:right;">0.0044</td>
-          <td style="text-align:right;">446 days</td>
-        </tr>
-      </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">474 patients with any HbA1c reading &nbsp;|&nbsp; 138 with 2+ longitudinal readings (included above)</p>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">1,683 patients with any HbA1c reading &nbsp;|&nbsp; 839 with 2+ longitudinal readings (included above)</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lifestyle Recommendations &mdash; Discharge Summary Analysis</h3>
     
@@ -1554,162 +1114,6 @@
           </table>
           <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">248 patients with condition code &nbsp;|&nbsp; 228 in discharge notes &nbsp;|&nbsp; 1,450 encounters<br><em>Small sample — interpret with caution.</em></p>
         </div></div>
-
-    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
-    <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:0.88em;color:#856404;"><strong>⚠ Supplementary data — not from structured Observation records.</strong> Values extracted by regex from free-text clinical notes. Precision varies; some values may be approximate, historical, or contextual. Keep strictly separate from Observation-sourced lab data in any analysis.</div>
-    <div style="margin-bottom:16px;">
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">12,190</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total values extracted</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">5,260</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">documents with lab mentions</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">57,237</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">SOAP notes scanned</div>
-      </div>
-    </div>
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
-          <th style="padding:6px 10px;text-align:left;">Lab</th>
-          <th style="padding:6px 10px;">Total</th>
-          <th style="padding:6px 10px;color:#1a7a4a;">Results</th>
-          <th style="padding:6px 10px;color:#856404;">Orders</th>
-          <th style="padding:6px 10px;">% Results</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Vitamin D</td>
-          <td style="text-align:right;">2,375</td>
-          <td style="text-align:right;color:#1a7a4a;">2,309</td>
-          <td style="text-align:right;color:#856404;">66</td>
-          <td style="text-align:right;color:#6c757d;">97%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Testosterone</td>
-          <td style="text-align:right;">1,305</td>
-          <td style="text-align:right;color:#1a7a4a;">1,238</td>
-          <td style="text-align:right;color:#856404;">67</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Ferritin</td>
-          <td style="text-align:right;">1,111</td>
-          <td style="text-align:right;color:#1a7a4a;">1,033</td>
-          <td style="text-align:right;color:#856404;">78</td>
-          <td style="text-align:right;color:#6c757d;">93%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">TSH</td>
-          <td style="text-align:right;">988</td>
-          <td style="text-align:right;color:#1a7a4a;">961</td>
-          <td style="text-align:right;color:#856404;">27</td>
-          <td style="text-align:right;color:#6c757d;">97%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">HbA1c</td>
-          <td style="text-align:right;">929</td>
-          <td style="text-align:right;color:#1a7a4a;">901</td>
-          <td style="text-align:right;color:#856404;">28</td>
-          <td style="text-align:right;color:#6c757d;">97%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Estradiol</td>
-          <td style="text-align:right;">853</td>
-          <td style="text-align:right;color:#1a7a4a;">833</td>
-          <td style="text-align:right;color:#856404;">20</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Cortisol</td>
-          <td style="text-align:right;">848</td>
-          <td style="text-align:right;color:#1a7a4a;">803</td>
-          <td style="text-align:right;color:#856404;">45</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Glucose</td>
-          <td style="text-align:right;">761</td>
-          <td style="text-align:right;color:#1a7a4a;">754</td>
-          <td style="text-align:right;color:#856404;">7</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Vitamin B12</td>
-          <td style="text-align:right;">732</td>
-          <td style="text-align:right;color:#1a7a4a;">721</td>
-          <td style="text-align:right;color:#856404;">11</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">LDL</td>
-          <td style="text-align:right;">594</td>
-          <td style="text-align:right;color:#1a7a4a;">593</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Triglycerides</td>
-          <td style="text-align:right;">433</td>
-          <td style="text-align:right;color:#1a7a4a;">432</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Free T4</td>
-          <td style="text-align:right;">424</td>
-          <td style="text-align:right;color:#1a7a4a;">418</td>
-          <td style="text-align:right;color:#856404;">6</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">HDL</td>
-          <td style="text-align:right;">363</td>
-          <td style="text-align:right;color:#1a7a4a;">362</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Hemoglobin</td>
-          <td style="text-align:right;">140</td>
-          <td style="text-align:right;color:#1a7a4a;">140</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Hematocrit</td>
-          <td style="text-align:right;">140</td>
-          <td style="text-align:right;color:#1a7a4a;">139</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Fasting Glucose</td>
-          <td style="text-align:right;">88</td>
-          <td style="text-align:right;color:#1a7a4a;">87</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">99%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Total Cholesterol</td>
-          <td style="text-align:right;">68</td>
-          <td style="text-align:right;color:#1a7a4a;">68</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Fasting Insulin</td>
-          <td style="text-align:right;">38</td>
-          <td style="text-align:right;color:#1a7a4a;">33</td>
-          <td style="text-align:right;color:#856404;">5</td>
-          <td style="text-align:right;color:#6c757d;">87%</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
   <div id="tab-clinic_4" class="tab-panel" style="display:none;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
@@ -1830,17 +1234,14 @@
     <p style="color:#6c757d;font-style:italic;">No condition data available.</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Longitudinal HbA1c Analysis</h3>
-    <div style="background:#d4edda;border-left:4px solid #1a7a4a;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#1a7a4a;font-size:0.88em;">Source A &mdash; Structured Observation Records (FHIR Observation resource)</strong></div><p style="color:#6c757d;font-style:italic;">Insufficient HbA1c data for longitudinal analysis. Lab values are largely absent from this clinic's observation records, likely because results were not entered into ChARM by providers.</p><div style="margin:28px 0;border-top:2px dashed #dee2e6;"></div><div style="background:#fff3cd;border-left:4px solid #ffc107;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#856404;font-size:0.88em;">Source B &mdash; DocRef-Extracted SOAP Notes (regex from free-text clinical notes)</strong></div><p style="font-size:0.85em;color:#856404;margin:0 0 10px;">⚠ Values extracted by pattern matching from narrative text. Keep strictly separate from Source A in any analysis. Useful for clinics where structured lab entry was absent.</p><p style="color:#6c757d;font-style:italic;">Insufficient HbA1c data for longitudinal analysis. Lab values are largely absent from this clinic's observation records, likely because results were not entered into ChARM by providers.</p>
+    <p style="color:#6c757d;font-style:italic;">Insufficient HbA1c data for longitudinal analysis. Lab values are largely absent from this clinic's observation records, likely because results were not entered into ChARM by providers.</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lifestyle Recommendations &mdash; Discharge Summary Analysis</h3>
     <p style="color:#6c757d;font-style:italic;">No lifestyle recommendation data available for this clinic.</p>
-
-    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
-    <p style="color:#6c757d;font-style:italic;">No DocumentReference lab extraction data available for this clinic.</p>
   </div>
   <div id="tab-clinic_5" class="tab-panel" style="display:none;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
-      Clinic 5
+      Clinic 5 &mdash; Emerald City Naturopathic Clinic
     </h2>
 
     <h3 style="font-size:1em;color:#495057;margin:20px 0 8px;">Downloaded Resources</h3>
@@ -2029,7 +1430,7 @@
     </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 814 patients have condition records with no code or text (excluded from table above).</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Longitudinal HbA1c Analysis</h3>
-    <div style="background:#d4edda;border-left:4px solid #1a7a4a;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#1a7a4a;font-size:0.88em;">Source A &mdash; Structured Observation Records (FHIR Observation resource)</strong></div>
+    
     <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
       <thead>
         <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
@@ -2075,53 +1476,7 @@
           <td style="text-align:right;">1104 days</td>
         </tr>
       </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">843 patients with any HbA1c reading &nbsp;|&nbsp; 439 with 2+ longitudinal readings (included above)</p><div style="margin:28px 0;border-top:2px dashed #dee2e6;"></div><div style="background:#fff3cd;border-left:4px solid #ffc107;padding:6px 14px;margin-bottom:12px;border-radius:0 4px 4px 0;"><strong style="color:#856404;font-size:0.88em;">Source B &mdash; DocRef-Extracted SOAP Notes (regex from free-text clinical notes)</strong></div><p style="font-size:0.85em;color:#856404;margin:0 0 10px;">⚠ Values extracted by pattern matching from narrative text. Keep strictly separate from Source A in any analysis. Useful for clinics where structured lab entry was absent.</p>
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
-          <th style="padding:6px 10px;text-align:left;">Cohort</th>
-          <th style="padding:6px 10px;">n</th>
-          <th style="padding:6px 10px;">Mean First</th>
-          <th style="padding:6px 10px;">Mean Last</th>
-          <th style="padding:6px 10px;">Mean Change</th>
-          <th style="padding:6px 10px;">% Improved</th>
-          <th style="padding:6px 10px;">p-value</th>
-          <th style="padding:6px 10px;">Mean Follow-up</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Diabetes (baseline HbA1c >= 6.5%)</td>
-          <td style="text-align:right;">4</td>
-          <td style="text-align:right;">9.47%</td>
-          <td style="text-align:right;">8.00%</td>
-          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-1.48%</td>
-          <td style="text-align:right;">75.0%</td>
-          <td style="text-align:right;">0.5880</td>
-          <td style="text-align:right;">1258 days</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Prediabetes (baseline HbA1c 5.7–6.5%)</td>
-          <td style="text-align:right;">22</td>
-          <td style="text-align:right;">5.89%</td>
-          <td style="text-align:right;">5.93%</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+0.04%</td>
-          <td style="text-align:right;">54.5%</td>
-          <td style="text-align:right;">0.6696</td>
-          <td style="text-align:right;">832 days</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Normal (baseline HbA1c < 5.7%)</td>
-          <td style="text-align:right;">15</td>
-          <td style="text-align:right;">5.54%</td>
-          <td style="text-align:right;">5.56%</td>
-          <td style="text-align:right;color:#c0392b;font-weight:600;">+0.02%</td>
-          <td style="text-align:right;">20.0%</td>
-          <td style="text-align:right;">0.5666</td>
-          <td style="text-align:right;">567 days</td>
-        </tr>
-      </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">138 patients with any HbA1c reading &nbsp;|&nbsp; 41 with 2+ longitudinal readings (included above)</p>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">843 patients with any HbA1c reading &nbsp;|&nbsp; 439 with 2+ longitudinal readings (included above)</p>
 
     <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lifestyle Recommendations &mdash; Discharge Summary Analysis</h3>
     
@@ -2243,162 +1598,6 @@
           </table>
           <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">36 patients with condition code &nbsp;|&nbsp; 33 in discharge notes &nbsp;|&nbsp; 246 encounters<br><em>Small sample — interpret with caution.</em></p>
         </div></div>
-
-    <h3 style="font-size:1em;color:#495057;margin:28px 0 8px;">Lab Values &mdash; DocumentReference Extraction (Supplementary)</h3>
-    <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:0.88em;color:#856404;"><strong>⚠ Supplementary data — not from structured Observation records.</strong> Values extracted by regex from free-text clinical notes. Precision varies; some values may be approximate, historical, or contextual. Keep strictly separate from Observation-sourced lab data in any analysis.</div>
-    <div style="margin-bottom:16px;">
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">3,857</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total values extracted</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">2,367</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">documents with lab mentions</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">32,739</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">SOAP notes scanned</div>
-      </div>
-    </div>
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:right;">
-          <th style="padding:6px 10px;text-align:left;">Lab</th>
-          <th style="padding:6px 10px;">Total</th>
-          <th style="padding:6px 10px;color:#1a7a4a;">Results</th>
-          <th style="padding:6px 10px;color:#856404;">Orders</th>
-          <th style="padding:6px 10px;">% Results</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Vitamin D</td>
-          <td style="text-align:right;">2,084</td>
-          <td style="text-align:right;color:#1a7a4a;">1,982</td>
-          <td style="text-align:right;color:#856404;">102</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Cortisol</td>
-          <td style="text-align:right;">328</td>
-          <td style="text-align:right;color:#1a7a4a;">310</td>
-          <td style="text-align:right;color:#856404;">18</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">HbA1c</td>
-          <td style="text-align:right;">261</td>
-          <td style="text-align:right;color:#1a7a4a;">251</td>
-          <td style="text-align:right;color:#856404;">10</td>
-          <td style="text-align:right;color:#6c757d;">96%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Testosterone</td>
-          <td style="text-align:right;">245</td>
-          <td style="text-align:right;color:#1a7a4a;">224</td>
-          <td style="text-align:right;color:#856404;">21</td>
-          <td style="text-align:right;color:#6c757d;">91%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Estradiol</td>
-          <td style="text-align:right;">165</td>
-          <td style="text-align:right;color:#1a7a4a;">159</td>
-          <td style="text-align:right;color:#856404;">6</td>
-          <td style="text-align:right;color:#6c757d;">96%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">TSH</td>
-          <td style="text-align:right;">164</td>
-          <td style="text-align:right;color:#1a7a4a;">158</td>
-          <td style="text-align:right;color:#856404;">6</td>
-          <td style="text-align:right;color:#6c757d;">96%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Ferritin</td>
-          <td style="text-align:right;">156</td>
-          <td style="text-align:right;color:#1a7a4a;">145</td>
-          <td style="text-align:right;color:#856404;">11</td>
-          <td style="text-align:right;color:#6c757d;">93%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">LDL</td>
-          <td style="text-align:right;">99</td>
-          <td style="text-align:right;color:#1a7a4a;">94</td>
-          <td style="text-align:right;color:#856404;">5</td>
-          <td style="text-align:right;color:#6c757d;">95%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Vitamin B12</td>
-          <td style="text-align:right;">96</td>
-          <td style="text-align:right;color:#1a7a4a;">94</td>
-          <td style="text-align:right;color:#856404;">2</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">HDL</td>
-          <td style="text-align:right;">47</td>
-          <td style="text-align:right;color:#1a7a4a;">47</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Glucose</td>
-          <td style="text-align:right;">46</td>
-          <td style="text-align:right;color:#1a7a4a;">45</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">98%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Fasting Insulin</td>
-          <td style="text-align:right;">41</td>
-          <td style="text-align:right;color:#1a7a4a;">37</td>
-          <td style="text-align:right;color:#856404;">4</td>
-          <td style="text-align:right;color:#6c757d;">90%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Triglycerides</td>
-          <td style="text-align:right;">39</td>
-          <td style="text-align:right;color:#1a7a4a;">39</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Free T4</td>
-          <td style="text-align:right;">39</td>
-          <td style="text-align:right;color:#1a7a4a;">38</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">97%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Total Cholesterol</td>
-          <td style="text-align:right;">24</td>
-          <td style="text-align:right;color:#1a7a4a;">24</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Fasting Glucose</td>
-          <td style="text-align:right;">11</td>
-          <td style="text-align:right;color:#1a7a4a;">11</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Hematocrit</td>
-          <td style="text-align:right;">8</td>
-          <td style="text-align:right;color:#1a7a4a;">8</td>
-          <td style="text-align:right;color:#856404;">0</td>
-          <td style="text-align:right;color:#6c757d;">100%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Hemoglobin</td>
-          <td style="text-align:right;">4</td>
-          <td style="text-align:right;color:#1a7a4a;">3</td>
-          <td style="text-align:right;color:#856404;">1</td>
-          <td style="text-align:right;color:#6c757d;">75%</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
   <div id="tab-clinic_6" class="tab-panel" style="display:none;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #adb5bd;padding-bottom:6px;color:#adb5bd;margin-top:0;">
@@ -2426,11 +1625,11 @@
     <h2 style="font-size:1.4em;border-bottom:3px solid #e67e22;padding-bottom:6px;color:#e67e22;">
       Open Items
     </h2>
-    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>Patient pagination fix (May 2026):</strong> Clinic 2 originally showed only 1,120 patient records due to a bug in our original importer — ChARM's FHIR <code>next</code> link stops after page 56, but data exists through page 580. Switching to direct page-number requests resolved the issue; clinic 2 now has 11,584 patient records. ChARM has been notified of the next-link bug. All clinics now use the corrected importer.</li><li style="margin-bottom:12px;"><strong>Server errors during export (ChARM):</strong> Some resources — particularly CarePlan and MedicationRequest — encountered intermittent server errors during download, resulting in incomplete record counts for those resources. This appears to be a ChARM infrastructure issue rather than a data problem, and has been noted for both clinics.</li><li style="margin-bottom:12px;"><strong>Expanded API access (ChARM):</strong> DocumentReference and Medication have both been downloaded for Clinic 2. Discharge summaries contain rich provider-written lifestyle recommendations (see section above). Medication records (142 unique drugs, RxNorm-coded) were fetched individually by ID — ChARM does not support the standard bulk Medication list endpoint. Clinic 1 still needs re-authorization to download these two resources. Clinics 3–7 will receive expanded access automatically.</li><li style="margin-bottom:12px;"><strong>Clinic onboarding (Clinics 3–7):</strong> Awaiting refresh tokens from clinic administrators to begin data download for the remaining 5 clinics.</li></ul>
+    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>MedicationRequest server errors (ChARM):</strong> CarePlan and MedicationRequest encountered intermittent HTTP 500 errors during export for clinics 2 and 3, resulting in incomplete MedicationRequest counts for those clinics (clinic 2: 200 records; clinic 3: 4,579 with 13 pages skipped). Reported to ChARM support — awaiting resolution.</li><li style="margin-bottom:12px;"><strong>Clinic 4 download in progress:</strong> SageMED is currently downloading. Observation and DocumentReference are the remaining large resources. Patient coverage and analysis will be run after download completes.</li><li style="margin-bottom:12px;"><strong>Clinics 6–7 onboarding pending:</strong> Self-service onboarding app deployed and distributed to clinic administrators via INM. Credentials will be loaded into Secret Manager and the import job deployed as each clinic completes authorization.</li><li style="margin-bottom:12px;"><strong>Next pipeline steps:</strong> Once all clinic data is downloaded — Cloud Healthcare API FHIR store import → de-identification → Vertex AI Gemini Flash NLP extraction from CarePlan and DocumentReference narratives → BigQuery research database.</li></ul>
   </section>
 
 <footer>
-  Generated May 13, 2026 at 18:12 UTC &nbsp;&bull;&nbsp;
+  Generated May 13, 2026 at 18:33 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
