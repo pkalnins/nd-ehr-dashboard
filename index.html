@@ -78,7 +78,7 @@
     <button class="tab-btn" onclick="showTab(event,'clinic_3')">Clinic 3</button>
     <button class="tab-btn" onclick="showTab(event,'clinic_4')">Clinic 4</button>
     <button class="tab-btn" onclick="showTab(event,'clinic_5')">Clinic 5</button>
-    <button class="tab-btn tab-pending" onclick="showTab(event,'clinic_6')">Clinic 6</button>
+    <button class="tab-btn" onclick="showTab(event,'clinic_6')">Clinic 6</button>
     <button class="tab-btn tab-pending" onclick="showTab(event,'clinic_7')">Clinic 7</button>
     </div>
     <div id="tab-clinic_1" class="tab-panel" style="display:block;">
@@ -1600,14 +1600,364 @@
         </div></div>
   </div>
   <div id="tab-clinic_6" class="tab-panel" style="display:none;">
-    <h2 style="font-size:1.4em;border-bottom:3px solid #adb5bd;padding-bottom:6px;color:#adb5bd;margin-top:0;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5f8a;padding-bottom:6px;color:#2c5f8a;margin-top:0;">
       Clinic 6
     </h2>
-    <p style="color:#6c757d;">
-      Awaiting credentials from clinic administrator. Once the clinic completes
-      authorization via the self-service onboarding app, credentials will be loaded
-      into Secret Manager and the import job will be deployed.
-    </p>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a7a4a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Downloaded Resources</h3>
+    
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;min-width:700px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:6px 10px;width:160px;">Resource</th>
+          <th style="padding:6px 10px;width:120px;white-space:nowrap;">Status</th>
+          <th style="padding:6px 10px;width:90px;text-align:right;white-space:nowrap;">Records</th>
+          <th style="padding:6px 10px;width:110px;white-space:nowrap;">Completed</th>
+          <th style="padding:6px 10px;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Patient</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">6,732</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Practitioner</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">37</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Encounter</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">45,221</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Condition</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">117,393</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">CarePlan</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">30,463</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">MedicationRequest</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">20,606</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Observation</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">333,787</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">Medication</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">6,353</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;white-space:nowrap;">DocumentReference</td>
+          <td style="white-space:nowrap;"><span style="background:#d4edda;color:#1a7a4a;padding:2px 8px;border-radius:4px;font-size:0.82em;font-weight:600;white-space:nowrap;">✓ Complete</span></td>
+          <td style="text-align:right;white-space:nowrap;">199,259</td>
+          <td style="white-space:nowrap;">May 14, 2026</td>
+          <td style="font-size:0.88em;"></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a7a4a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Patient Coverage</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:580px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:6px 10px;">Resource</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+          <th style="padding:6px 10px;text-align:right;">vs. Patient Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Patient resource</td>
+          <td style="text-align:right;">6,732</td>
+          <td style="text-align:right;color:#6c757d;">—</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Referenced in Encounters</td>
+          <td style="text-align:right;">5,929</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-803</td>
+        </tr>
+        <tr>
+          <td style="font-weight:500;">Referenced in DocumentReference</td>
+          <td style="text-align:right;">6,012</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-720</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a7a4a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Top 10 Conditions &mdash; Unique Patients</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:6px 10px;text-align:center;">#</th>
+          <th style="padding:6px 10px;">Condition</th>
+          <th style="padding:6px 10px;">Code</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">1</td>
+          <td>Encounter for screening for lipoid disorders</td>
+          <td style="color:#6c757d;font-size:0.85em;">Z13.220</td>
+          <td style="text-align:right;">1,261</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">2</td>
+          <td>Encounter for screening for diabetes mellitus</td>
+          <td style="color:#6c757d;font-size:0.85em;">Z13.1</td>
+          <td style="text-align:right;">1,173</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">3</td>
+          <td>Child 6 week examination normal</td>
+          <td style="color:#6c757d;font-size:0.85em;">170118008</td>
+          <td style="text-align:right;">809</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">4</td>
+          <td>Encounter for immunization</td>
+          <td style="color:#6c757d;font-size:0.85em;">Z23</td>
+          <td style="text-align:right;">797</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">5</td>
+          <td>Encounter for general adult medical examination without abnormal findings</td>
+          <td style="color:#6c757d;font-size:0.85em;">Z00.00</td>
+          <td style="text-align:right;">792</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">6</td>
+          <td>Insomnia</td>
+          <td style="color:#6c757d;font-size:0.85em;">193462001</td>
+          <td style="text-align:right;">701</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">7</td>
+          <td>Fatigue</td>
+          <td style="color:#6c757d;font-size:0.85em;">84229001</td>
+          <td style="text-align:right;">677</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">8</td>
+          <td>Constipation</td>
+          <td style="color:#6c757d;font-size:0.85em;">14760008</td>
+          <td style="text-align:right;">632</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">9</td>
+          <td>Overwork</td>
+          <td style="color:#6c757d;font-size:0.85em;">105490003</td>
+          <td style="text-align:right;">606</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">10</td>
+          <td>Abdominal bloating</td>
+          <td style="color:#6c757d;font-size:0.85em;">116289008</td>
+          <td style="text-align:right;">548</td>
+        </tr>
+      </tbody>
+    </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 2,207 patients have condition records with no code or text (excluded from table above).</p>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a7a4a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Longitudinal HbA1c Analysis</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:right;background:#f2f4f6;">
+          <th style="padding:6px 10px;text-align:left;">Cohort</th>
+          <th style="padding:6px 10px;">n</th>
+          <th style="padding:6px 10px;">Mean First</th>
+          <th style="padding:6px 10px;">Mean Last</th>
+          <th style="padding:6px 10px;">Mean Change</th>
+          <th style="padding:6px 10px;">% Improved</th>
+          <th style="padding:6px 10px;">p-value</th>
+          <th style="padding:6px 10px;">Mean Follow-up</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Diabetes (baseline HbA1c >= 6.5%)</td>
+          <td style="text-align:right;">17</td>
+          <td style="text-align:right;">7.42%</td>
+          <td style="text-align:right;">6.60%</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-0.82%</td>
+          <td style="text-align:right;">64.7%</td>
+          <td style="text-align:right;">0.0036</td>
+          <td style="text-align:right;">507 days</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Prediabetes (baseline HbA1c 5.7–6.5%)</td>
+          <td style="text-align:right;">163</td>
+          <td style="text-align:right;">5.83%</td>
+          <td style="text-align:right;">5.72%</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-0.11%</td>
+          <td style="text-align:right;">63.8%</td>
+          <td style="text-align:right;">< 0.001</td>
+          <td style="text-align:right;">655 days</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Normal (baseline HbA1c < 5.7%)</td>
+          <td style="text-align:right;">617</td>
+          <td style="text-align:right;">5.29%</td>
+          <td style="text-align:right;">5.28%</td>
+          <td style="text-align:right;color:#1a7a4a;font-weight:600;">-0.01%</td>
+          <td style="text-align:right;">42.1%</td>
+          <td style="text-align:right;">0.5200</td>
+          <td style="text-align:right;">839 days</td>
+        </tr>
+      </tbody>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">1,843 patients with any HbA1c reading &nbsp;|&nbsp; 797 with 2+ longitudinal readings (included above)</p>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a7a4a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Lifestyle Recommendations &mdash; Discharge Summary Analysis</h3>
+    
+    <div style="margin-bottom:16px;">
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">85.0%</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">of patients received ≥1 lifestyle rec</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">62.7%</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">of visits included a lifestyle rec</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">3,855</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">unique patients in discharge notes</div>
+      </div>
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:right;background:#f2f4f6;">
+          <th style="padding:6px 10px;text-align:left;">Category</th>
+          <th style="padding:6px 10px;">Encounters</th>
+          <th style="padding:6px 10px;">% of Enc</th>
+          <th style="padding:6px 10px;">Patients</th>
+          <th style="padding:6px 10px;">% of Pts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Diet / Nutrition</td>
+          <td style="text-align:right;">5,807</td>
+          <td style="text-align:right;">48.3%</td>
+          <td style="text-align:right;">2,852</td>
+          <td style="text-align:right;">74.0%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Exercise / Physical Activity</td>
+          <td style="text-align:right;">2,694</td>
+          <td style="text-align:right;">22.4%</td>
+          <td style="text-align:right;">1,631</td>
+          <td style="text-align:right;">42.3%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Sleep</td>
+          <td style="text-align:right;">2,297</td>
+          <td style="text-align:right;">19.1%</td>
+          <td style="text-align:right;">1,469</td>
+          <td style="text-align:right;">38.1%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Stress / Mental Health</td>
+          <td style="text-align:right;">1,881</td>
+          <td style="text-align:right;">15.6%</td>
+          <td style="text-align:right;">1,293</td>
+          <td style="text-align:right;">33.5%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Substance Cessation</td>
+          <td style="text-align:right;">1,304</td>
+          <td style="text-align:right;">10.8%</td>
+          <td style="text-align:right;">919</td>
+          <td style="text-align:right;">23.8%</td>
+        </tr>
+      </tbody>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">Keyword-based extraction from 12,028 discharge summary notes. Vertex AI NLP extraction planned after de-identification.</p>
+    <h4 style="font-size:0.9em;color:#495057;margin:20px 0 10px;">
+      Subgroup Analysis — Prediabetes &amp; Diabetes (by SNOMED condition code)
+    </h4>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:8px;">
+        <div style="flex:1;min-width:280px;margin-bottom:16px;background:#fff;border:1px solid #dee2e6;border-radius:6px;padding:14px 16px;">
+          <strong style="font-size:0.95em;">Prediabetes</strong>
+          <div style="margin:10px 0 8px;">
+            <div style="display:inline-block;background:#eaf3fb;border-radius:6px;padding:8px 14px;margin-right:10px;margin-bottom:10px;text-align:center;">
+              <div style="font-size:1.4em;font-weight:700;color:#2c5f8a;">93.5%</div>
+              <div style="font-size:0.78em;color:#6c757d;">patients ≥1 rec</div>
+            </div>
+            <div style="display:inline-block;background:#eaf3fb;border-radius:6px;padding:8px 14px;margin-right:10px;margin-bottom:10px;text-align:center;">
+              <div style="font-size:1.4em;font-weight:700;color:#2c5f8a;">67.7%</div>
+              <div style="font-size:0.78em;color:#6c757d;">visits w/ rec</div>
+            </div>
+          </div>
+          <table style="width:100%;border-collapse:collapse;">
+            <thead>
+              <tr style="border-bottom:2px solid #dee2e6;text-align:right;font-size:0.8em;background:#f2f4f6;">
+                <th style="text-align:left;padding:4px 6px;">Category</th>
+                <th style="padding:4px 6px;">Enc</th>
+                <th style="padding:4px 6px;">%</th>
+                <th style="padding:4px 6px;">Pts</th>
+                <th style="padding:4px 6px;">%</th>
+              </tr>
+            </thead>
+            <tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Diet / Nutrition</td><td style="text-align:right;font-size:0.88em;">653</td><td style="text-align:right;font-size:0.88em;">51.1%</td><td style="text-align:right;font-size:0.88em;">243</td><td style="text-align:right;font-size:0.88em;">88.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Exercise / Physical Activity</td><td style="text-align:right;font-size:0.88em;">304</td><td style="text-align:right;font-size:0.88em;">23.8%</td><td style="text-align:right;font-size:0.88em;">170</td><td style="text-align:right;font-size:0.88em;">61.6%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Sleep</td><td style="text-align:right;font-size:0.88em;">131</td><td style="text-align:right;font-size:0.88em;">10.3%</td><td style="text-align:right;font-size:0.88em;">88</td><td style="text-align:right;font-size:0.88em;">31.9%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Stress / Mental Health</td><td style="text-align:right;font-size:0.88em;">225</td><td style="text-align:right;font-size:0.88em;">17.6%</td><td style="text-align:right;font-size:0.88em;">130</td><td style="text-align:right;font-size:0.88em;">47.1%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Substance Cessation</td><td style="text-align:right;font-size:0.88em;">70</td><td style="text-align:right;font-size:0.88em;">5.5%</td><td style="text-align:right;font-size:0.88em;">51</td><td style="text-align:right;font-size:0.88em;">18.5%</td></tr></tbody>
+          </table>
+          <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">326 patients with condition code &nbsp;|&nbsp; 276 in discharge notes &nbsp;|&nbsp; 1,277 encounters<br><em>Small sample — interpret with caution.</em></p>
+        </div>
+        <div style="flex:1;min-width:280px;margin-bottom:16px;background:#fff;border:1px solid #dee2e6;border-radius:6px;padding:14px 16px;">
+          <strong style="font-size:0.95em;">Type 2 Diabetes</strong>
+          <div style="margin:10px 0 8px;">
+            <div style="display:inline-block;background:#eaf3fb;border-radius:6px;padding:8px 14px;margin-right:10px;margin-bottom:10px;text-align:center;">
+              <div style="font-size:1.4em;font-weight:700;color:#2c5f8a;">90.9%</div>
+              <div style="font-size:0.78em;color:#6c757d;">patients ≥1 rec</div>
+            </div>
+            <div style="display:inline-block;background:#eaf3fb;border-radius:6px;padding:8px 14px;margin-right:10px;margin-bottom:10px;text-align:center;">
+              <div style="font-size:1.4em;font-weight:700;color:#2c5f8a;">67.7%</div>
+              <div style="font-size:0.78em;color:#6c757d;">visits w/ rec</div>
+            </div>
+          </div>
+          <table style="width:100%;border-collapse:collapse;">
+            <thead>
+              <tr style="border-bottom:2px solid #dee2e6;text-align:right;font-size:0.8em;background:#f2f4f6;">
+                <th style="text-align:left;padding:4px 6px;">Category</th>
+                <th style="padding:4px 6px;">Enc</th>
+                <th style="padding:4px 6px;">%</th>
+                <th style="padding:4px 6px;">Pts</th>
+                <th style="padding:4px 6px;">%</th>
+              </tr>
+            </thead>
+            <tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Diet / Nutrition</td><td style="text-align:right;font-size:0.88em;">18</td><td style="text-align:right;font-size:0.88em;">58.1%</td><td style="text-align:right;font-size:0.88em;">10</td><td style="text-align:right;font-size:0.88em;">90.9%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Exercise / Physical Activity</td><td style="text-align:right;font-size:0.88em;">8</td><td style="text-align:right;font-size:0.88em;">25.8%</td><td style="text-align:right;font-size:0.88em;">6</td><td style="text-align:right;font-size:0.88em;">54.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Sleep</td><td style="text-align:right;font-size:0.88em;">1</td><td style="text-align:right;font-size:0.88em;">3.2%</td><td style="text-align:right;font-size:0.88em;">1</td><td style="text-align:right;font-size:0.88em;">9.1%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Stress / Mental Health</td><td style="text-align:right;font-size:0.88em;">5</td><td style="text-align:right;font-size:0.88em;">16.1%</td><td style="text-align:right;font-size:0.88em;">4</td><td style="text-align:right;font-size:0.88em;">36.4%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.88em;">Substance Cessation</td><td style="text-align:right;font-size:0.88em;">3</td><td style="text-align:right;font-size:0.88em;">9.7%</td><td style="text-align:right;font-size:0.88em;">2</td><td style="text-align:right;font-size:0.88em;">18.2%</td></tr></tbody>
+          </table>
+          <p style="font-size:0.8em;color:#6c757d;margin:8px 0 0;">18 patients with condition code &nbsp;|&nbsp; 11 in discharge notes &nbsp;|&nbsp; 31 encounters<br><em>Small sample — interpret with caution.</em></p>
+        </div></div>
   </div>
   <div id="tab-clinic_7" class="tab-panel" style="display:none;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #adb5bd;padding-bottom:6px;color:#adb5bd;margin-top:0;">
@@ -1629,7 +1979,7 @@
   </section>
 
 <footer>
-  Generated May 13, 2026 at 19:06 UTC &nbsp;&bull;&nbsp;
+  Generated May 14, 2026 at 17:41 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
