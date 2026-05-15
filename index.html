@@ -123,47 +123,47 @@
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Patient</td>
           <td style="text-align:right;">50,778</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Practitioner</td>
           <td style="text-align:right;">142</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Encounter</td>
           <td style="text-align:right;">420,047</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Condition</td>
           <td style="text-align:right;">1,298,512</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">CarePlan</td>
           <td style="text-align:right;">326,841</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">MedicationRequest</td>
           <td style="text-align:right;">35,970</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Observation</td>
           <td style="text-align:right;">3,201,377</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">Medication</td>
           <td style="text-align:right;">12,214</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">DocumentReference</td>
           <td style="text-align:right;">1,894,644</td>
-          <td style="text-align:center;color:#6c757d;">6 / 6</td>
+          <td style="text-align:center;color:#6c757d;">6 / 7</td>
         </tr>
         <tr style="border-top:2px solid #dee2e6;font-weight:700;">
           <td>Total</td>
@@ -3527,11 +3527,11 @@
     <h2 style="font-size:1.4em;border-bottom:3px solid #e67e22;padding-bottom:6px;color:#e67e22;">
       Open Items
     </h2>
-    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>MedicationRequest server errors (ChARM):</strong> CarePlan and MedicationRequest encountered intermittent HTTP 500 errors during export for clinics 2 and 3, resulting in incomplete MedicationRequest counts for those clinics (clinic 2: 200 records; clinic 3: 4,579 with 13 pages skipped). Reported to ChARM support — awaiting resolution.</li><li style="margin-bottom:12px;"><strong>Clinics 1 &amp; 2 re-authorization pending:</strong> Medication and DocumentReference resources require an expanded OAuth scope that was not included in the original ChARM onboarding. A re-authorization URL with the expanded scope has been sent to those clinics. These resources are currently available for clinics 3–6.</li><li style="margin-bottom:12px;"><strong>Clinic 7 onboarding pending:</strong> Self-service onboarding app deployed and distributed to clinic administrators via INM. Credentials will be loaded into Secret Manager and the import job deployed once the clinic completes authorization.</li><li style="margin-bottom:12px;"><strong>Next pipeline steps:</strong> Once all clinic data is downloaded — Cloud Healthcare API FHIR store import → de-identification → Vertex AI Gemini Flash NLP extraction from CarePlan and DocumentReference narratives → BigQuery research database.</li></ul>
+    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>MedicationRequest server errors (ChARM):</strong> CarePlan and MedicationRequest encountered intermittent HTTP 500 errors during export for clinics 2 and 3, resulting in incomplete MedicationRequest counts for those clinics (clinic 2: 200 records; clinic 3: 4,579 with 13 pages skipped). Reported to ChARM support — awaiting resolution.</li><li style="margin-bottom:12px;"><strong>Clinic 7 onboarding pending:</strong> Self-service onboarding app deployed and distributed to clinic administrators via INM. Credentials will be loaded into Secret Manager and the import job deployed once the clinic completes authorization.</li><li style="margin-bottom:12px;"><strong>Next pipeline steps:</strong> Once all clinic data is downloaded — Cloud Healthcare API FHIR store import → de-identification → Vertex AI Gemini Flash NLP extraction from CarePlan and DocumentReference narratives → BigQuery research database.</li></ul>
   </section>
 
 <footer>
-  Generated May 15, 2026 at 19:19 UTC &nbsp;&bull;&nbsp;
+  Generated May 15, 2026 at 19:31 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
