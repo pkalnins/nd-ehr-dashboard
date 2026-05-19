@@ -9,12 +9,21 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 32px 24px;
+      padding: 0 24px 32px;
       color: #212529;
       background: #f8f9fa;
     }
     h1 { color: #1a3a5c; margin-bottom: 4px; }
-    .subtitle { color: #6c757d; margin-bottom: 40px; font-size: 0.95em; line-height: 1.7; }
+    .subtitle { color: #6c757d; margin-bottom: 12px; font-size: 0.95em; line-height: 1.7; }
+    #sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #f8f9fa;
+      padding-top: 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }
     section { background: #fff; border-radius: 8px; padding: 24px 28px;
                box-shadow: 0 1px 4px rgba(0,0,0,0.07); margin-bottom: 32px; }
     h2 { margin-top: 0; }
@@ -26,12 +35,15 @@
     /* Tabs */
     .tab-container { margin-bottom: 32px; }
     .tab-bar {
+      position: sticky;
+      top: 0; /* updated by JS to sit below #sticky-header */
+      z-index: 99;
       display: flex; flex-wrap: wrap;
       background: #fff;
       border-radius: 8px 8px 0 0;
       padding: 0 8px;
       border-bottom: 2px solid #dee2e6;
-      box-shadow: 0 -1px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .tab-btn {
       background: none; border: none;
@@ -64,6 +76,7 @@
 </head>
 <body>
 
+<div id="sticky-header">
 <h1>ND-EHR Pilot &mdash; Project Dashboard</h1>
 <p class="subtitle">
   Helfgott Research Institute, National University of Natural Medicine (NUNM)
@@ -71,6 +84,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
+</div>
 
 
   <div class="tab-container">
@@ -4941,7 +4955,7 @@
   </section>
 
 <footer>
-  Generated May 19, 2026 at 19:52 UTC &nbsp;&bull;&nbsp;
+  Generated May 19, 2026 at 21:15 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
@@ -4952,6 +4966,13 @@ function showTab(event, tabId) {
   document.getElementById('tab-' + tabId).style.display = 'block';
   event.currentTarget.classList.add('active');
 }
+function updateTabBarOffset() {
+  const hdr = document.getElementById('sticky-header');
+  const bar = document.querySelector('.tab-bar');
+  if (hdr && bar) bar.style.top = hdr.offsetHeight + 'px';
+}
+updateTabBarOffset();
+window.addEventListener('resize', updateTabBarOffset);
 </script>
 
 </body>
