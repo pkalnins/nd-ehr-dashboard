@@ -5711,11 +5711,11 @@
     <h2 style="font-size:1.4em;border-bottom:3px solid #e67e22;padding-bottom:6px;color:#e67e22;">
       Open Items
     </h2>
-    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>MedicationRequest server errors (ChARM):</strong> CarePlan and MedicationRequest encountered intermittent HTTP 500 errors during export for clinics 2 and 3, resulting in incomplete MedicationRequest counts for those clinics (clinic 2: 200 records; clinic 3: 4,579 with 13 pages skipped). Reported to ChARM support — awaiting resolution.</li><li style="margin-bottom:12px;"><strong>Clinic 7 onboarding pending:</strong> Self-service onboarding app deployed and distributed to clinic administrators via INM. Credentials will be loaded into Secret Manager and the import job deployed once the clinic completes authorization.</li><li style="margin-bottom:12px;"><strong>Next pipeline steps:</strong> Once all clinic data is downloaded — Cloud Healthcare API FHIR store import → de-identification → Vertex AI Gemini Flash NLP extraction from CarePlan and DocumentReference narratives → BigQuery research database.</li></ul>
+    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>Next pipeline steps:</strong> De-identification complete across all 7 clinics (Google Cloud Healthcare API + spaCy NER + custom regex, 9 passes). Immediately ahead: BigQuery research database import → Vertex AI Gemini Flash NLP extraction of structured treatment recommendations from CarePlan and DocumentReference narratives.</li></ul>
   </section>
 
 <footer>
-  Generated May 27, 2026 at 16:18 UTC &nbsp;&bull;&nbsp;
+  Generated May 27, 2026 at 19:32 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
