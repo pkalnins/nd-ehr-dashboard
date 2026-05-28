@@ -6328,11 +6328,11 @@
     <h2 style="font-size:1.4em;border-bottom:3px solid #e67e22;padding-bottom:6px;color:#e67e22;">
       Open Items
     </h2>
-    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>Next pipeline steps:</strong> De-identification complete across all 7 clinics (Google Cloud Healthcare API + spaCy NER + custom regex, 9 passes). Immediately ahead: BigQuery research database import → Vertex AI Gemini Flash NLP extraction of structured treatment recommendations from CarePlan and DocumentReference narratives.</li></ul>
+    <ul style="line-height:1.7;"><li style="margin-bottom:12px;"><strong>PHI deletion — deadline June 26, 2026:</strong> Delete all raw PHI buckets (<code>gs://nd_ehr_raw_phi/</code>) once final database integrity is confirmed. All analysis scripts and the dashboard read from BigQuery and cached JSON summaries; raw NDJSON is no longer needed.</li><li style="margin-bottom:12px;"><strong>Final research database preparations:</strong> Confirm BigQuery dataset (<code>nd-ehr-analysis.nd_ehr_research</code>) is complete and access-controlled for the research team. Next steps include manuscript writing and any additional statistical analyses requested by NUNM/Helfgott and INM.</li></ul>
   </section>
 
 <footer>
-  Generated May 28, 2026 at 23:29 UTC &nbsp;&bull;&nbsp;
+  Generated May 28, 2026 at 23:36 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
