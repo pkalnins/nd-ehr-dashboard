@@ -66,6 +66,8 @@
     .tab-btn.tab-pending.active { color: #6c757d; border-bottom-color: #adb5bd; }
     .tab-btn.tab-summary { font-weight: 600; }
     .tab-btn.tab-summary.active { color: #1a3a5c; border-bottom-color: #1a3a5c; }
+    .tab-btn.tab-final { font-weight: 700; }
+    .tab-btn.tab-final.active { color: #1a5c3a; border-bottom-color: #1a5c3a; }
     .tab-panel {
       background: #fff;
       border-radius: 0 0 8px 8px;
@@ -89,7 +91,8 @@
 
   <div class="tab-container">
     <div class="tab-bar">
-    <button class="tab-btn tab-summary active" onclick="showTab(event,'all-clinics')">All Clinics</button>
+    <button class="tab-btn tab-final active" onclick="showTab(event,'final-database')">Final Database</button>
+    <button class="tab-btn tab-summary" onclick="showTab(event,'all-clinics')">All Clinics</button>
     <button class="tab-btn" onclick="showTab(event,'clinic_1')">Clinic 1</button>
     <button class="tab-btn" onclick="showTab(event,'clinic_2')">Clinic 2</button>
     <button class="tab-btn" onclick="showTab(event,'clinic_3')">Clinic 3</button>
@@ -98,7 +101,629 @@
     <button class="tab-btn" onclick="showTab(event,'clinic_6')">Clinic 6</button>
     <button class="tab-btn" onclick="showTab(event,'clinic_7')">Clinic 7</button>
     </div>
-    <div id="tab-all-clinics" class="tab-panel" style="display:block;">
+    <div id="tab-final-database" class="tab-panel" style="display:block;">
+    <h2 style="font-size:1.4em;border-bottom:3px solid #1a3a5c;padding-bottom:6px;
+               color:#1a3a5c;margin-top:0;">
+      Final Database &mdash; All Clinics
+    </h2>
+
+    
+    <div style="margin-bottom:20px;">
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 22px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:2.0em;font-weight:700;color:#1a3a5c;">7</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">participating clinics</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 22px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:2.0em;font-weight:700;color:#1a3a5c;">58,502</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total patients</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 22px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:2.0em;font-weight:700;color:#1a3a5c;">8,116,491</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total FHIR records</div>
+      </div>
+    </div>
+    <p style="font-size:0.85em;color:#6c757d;margin-bottom:0;">
+      Database generated 2026-05-26. Clinics: clinic_1, clinic_2, clinic_3, clinic_4, clinic_5, clinic_6, clinic_7.
+      De-identified via Google Cloud Healthcare API + 9-pass custom redaction.
+      Patient IDs are clinic-scoped and non-overlapping.
+    </p>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Downloaded Resources</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:520px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:6px 10px;">Resource</th>
+          <th style="padding:6px 10px;text-align:right;">Total Records</th>
+          <th style="padding:6px 10px;text-align:center;">Clinics Complete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Patient</td>
+          <td style="text-align:right;">58,502</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Practitioner</td>
+          <td style="text-align:right;">183</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Encounter</td>
+          <td style="text-align:right;">469,191</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Condition</td>
+          <td style="text-align:right;">1,427,886</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">CarePlan</td>
+          <td style="text-align:right;">368,438</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">MedicationRequest</td>
+          <td style="text-align:right;">46,143</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Observation</td>
+          <td style="text-align:right;">3,630,768</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Medication</td>
+          <td style="text-align:right;">15,790</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">DocumentReference</td>
+          <td style="text-align:right;">2,099,590</td>
+          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+        </tr>
+        <tr style="border-top:2px solid #dee2e6;font-weight:700;">
+          <td>Total</td>
+          <td style="text-align:right;">8,116,491</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Patient Demographics</h3>
+    
+    <div style="margin-bottom:20px;">
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">58,502</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total patients</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">42.4</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">mean age (years)</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;margin-bottom:24px;">
+      <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Gender</strong>
+        <div style="margin-top:8px;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:480px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:6px 10px;">Gender</th>
+          <th style="padding:6px 10px;text-align:right;">Count</th>
+          <th style="padding:6px 10px;text-align:right;">%</th>
+          <th style="padding:6px 10px;text-align:right;">Mean Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;text-transform:capitalize;">female</td>
+          <td style="text-align:right;">26,224</td>
+          <td style="text-align:right;">44.8%</td>
+          <td style="text-align:right;">46.0 yrs</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;text-transform:capitalize;">other</td>
+          <td style="text-align:right;">18,194</td>
+          <td style="text-align:right;">31.1%</td>
+          <td style="text-align:right;">37.2 yrs</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;text-transform:capitalize;">male</td>
+          <td style="text-align:right;">13,570</td>
+          <td style="text-align:right;">23.2%</td>
+          <td style="text-align:right;">43.0 yrs</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;text-transform:capitalize;">unknown</td>
+          <td style="text-align:right;">514</td>
+          <td style="text-align:right;">0.9%</td>
+          <td style="text-align:right;">39.3 yrs</td>
+        </tr>
+      </tbody>
+    </table><p style="font-size:0.82em;color:#856404;margin-top:6px;">⚠ ChARM encodes unspecified gender as "other" rather than "unknown" — the "other" count likely reflects missing data, not non-binary patients.</p></div>
+      </div>
+      <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Age Distribution</strong>
+        <div style="margin-top:8px;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:320px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:6px 10px;">Age Group</th>
+          <th style="padding:6px 10px;text-align:right;">Count</th>
+          <th style="padding:6px 10px;text-align:right;">%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">0-17</td>
+          <td style="text-align:right;">7,293</td>
+          <td style="text-align:right;">12.5%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">18-34</td>
+          <td style="text-align:right;">11,310</td>
+          <td style="text-align:right;">19.3%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">35-49</td>
+          <td style="text-align:right;">19,188</td>
+          <td style="text-align:right;">32.8%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">50-64</td>
+          <td style="text-align:right;">12,638</td>
+          <td style="text-align:right;">21.6%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">65+</td>
+          <td style="text-align:right;">7,683</td>
+          <td style="text-align:right;">13.1%</td>
+        </tr>
+      </tbody>
+    </table></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Race</strong>
+        <div style="margin-top:8px;"><table style="width:100%;border-collapse:collapse;font-size:0.92em;"><thead><tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;"><th style="padding:6px 10px;">Race</th><th style="padding:6px 10px;text-align:right;">Count</th><th style="padding:6px 10px;text-align:right;">%</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Unknown / Not reported</td><td style="text-align:right;font-size:0.9em;">52,100</td><td style="text-align:right;font-size:0.9em;">89.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">White</td><td style="text-align:right;font-size:0.9em;">5,411</td><td style="text-align:right;font-size:0.9em;">9.2%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Asian</td><td style="text-align:right;font-size:0.9em;">489</td><td style="text-align:right;font-size:0.9em;">0.8%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Mixed</td><td style="text-align:right;font-size:0.9em;">269</td><td style="text-align:right;font-size:0.9em;">0.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Black Or African American</td><td style="text-align:right;font-size:0.9em;">161</td><td style="text-align:right;font-size:0.9em;">0.3%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Other</td><td style="text-align:right;font-size:0.9em;">47</td><td style="text-align:right;font-size:0.9em;">0.1%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">American Indian Or Alaska Native</td><td style="text-align:right;font-size:0.9em;">14</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Native Hawaiian Or Other Pacific Islander</td><td style="text-align:right;font-size:0.9em;">11</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr></tbody></table><p style="font-size:0.82em;color:#6c757d;margin-top:4px;">Source: US Core FHIR extension.</p></div>
+      </div>
+      <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Ethnicity</strong>
+        <div style="margin-top:8px;"><table style="width:100%;border-collapse:collapse;font-size:0.92em;"><thead><tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;"><th style="padding:6px 10px;">Ethnicity</th><th style="padding:6px 10px;text-align:right;">Count</th><th style="padding:6px 10px;text-align:right;">%</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Unknown / Not reported</td><td style="text-align:right;font-size:0.9em;">51,770</td><td style="text-align:right;font-size:0.9em;">88.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Not Hispanic Or Latino</td><td style="text-align:right;font-size:0.9em;">6,211</td><td style="text-align:right;font-size:0.9em;">10.6%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Hispanic Or Latino/Spanish</td><td style="text-align:right;font-size:0.9em;">516</td><td style="text-align:right;font-size:0.9em;">0.9%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Other</td><td style="text-align:right;font-size:0.9em;">5</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr></tbody></table><p style="font-size:0.82em;color:#6c757d;margin-top:4px;">Source: US Core FHIR extension.</p></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Top 10 Conditions &mdash; Unique Patients</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:6px 10px;text-align:center;">#</th>
+          <th style="padding:6px 10px;">Condition</th>
+          <th style="padding:6px 10px;">Code</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">1</td>
+          <td>Fatigue</td>
+          <td style="color:#6c757d;font-size:0.85em;">84229001</td>
+          <td style="text-align:right;">8,738</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">2</td>
+          <td>Insomnia</td>
+          <td style="color:#6c757d;font-size:0.85em;">193462001</td>
+          <td style="text-align:right;">4,258</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">3</td>
+          <td>Essential fatty acid deficiency</td>
+          <td style="color:#6c757d;font-size:0.85em;">238114000</td>
+          <td style="text-align:right;">3,488</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">4</td>
+          <td>Overwork</td>
+          <td style="color:#6c757d;font-size:0.85em;">105490003</td>
+          <td style="text-align:right;">3,045</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">5</td>
+          <td>Hyperlipidemia</td>
+          <td style="color:#6c757d;font-size:0.85em;">55822004</td>
+          <td style="text-align:right;">2,340</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">6</td>
+          <td>Seen by pediatrician</td>
+          <td style="color:#6c757d;font-size:0.85em;">305647009</td>
+          <td style="text-align:right;">2,207</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">7</td>
+          <td>Anxiety</td>
+          <td style="color:#6c757d;font-size:0.85em;">48694002</td>
+          <td style="text-align:right;">2,202</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">8</td>
+          <td>Encounter for immunization</td>
+          <td style="color:#6c757d;font-size:0.85em;">Z23</td>
+          <td style="text-align:right;">2,068</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">9</td>
+          <td>Encounter for screening for lipoid disorders</td>
+          <td style="color:#6c757d;font-size:0.85em;">Z13.220</td>
+          <td style="text-align:right;">1,991</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;">10</td>
+          <td>Encounter for screening for diabetes mellitus</td>
+          <td style="color:#6c757d;font-size:0.85em;">Z13.1</td>
+          <td style="text-align:right;">1,917</td>
+        </tr>
+      </tbody>
+    </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 19,384 patients have condition records with no code or text (excluded from table above).</p>
+
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Top 5 Most Prescribed Medications</h3>
+    
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:600px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:6px 10px;text-align:center;">#</th>
+          <th style="padding:6px 10px;">Medication</th>
+          <th style="padding:6px 10px;text-align:right;">Unique Patients</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;width:40px;">1</td>
+          <td>proGESTerone micronized 100 mg capsule</td>
+          <td style="text-align:right;white-space:nowrap;">313</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;width:40px;">2</td>
+          <td>lactulose 10 gram/15 mL oral solution</td>
+          <td style="text-align:right;white-space:nowrap;">286</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;width:40px;">3</td>
+          <td>albuterol 90 mcg/inh inhalation aerosol</td>
+          <td style="text-align:right;white-space:nowrap;">268</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;width:40px;">4</td>
+          <td>lactulose 10 g/15 mL oral syrup</td>
+          <td style="text-align:right;white-space:nowrap;">202</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;width:40px;">5</td>
+          <td>amoxicillin 400 mg/5 mL oral liquid</td>
+          <td style="text-align:right;white-space:nowrap;">192</td>
+        </tr>
+      </tbody>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">Ranked by unique patients prescribed. 46,143 total MedicationRequests across 52 unique medications.</p>
+
+    
+    <div style="margin:44px 0 28px;">
+      <div style="border-top:2px solid #dee2e6;margin-bottom:28px;"></div>
+      <div style="background:linear-gradient(135deg,#1a5c3a 0%,#2c7855 100%);
+                  color:#fff;border-radius:8px;padding:20px 26px;">
+        <div style="font-size:1.1em;font-weight:700;margin-bottom:5px;letter-spacing:0.01em;">
+          Research Findings &mdash; Naturopathic Diabetes / Prediabetes Management
+        </div>
+        <div style="font-size:0.87em;opacity:0.88;line-height:1.65;">
+          HbA1c-threshold cohort &nbsp;&bull;&nbsp; 7 naturopathic clinics
+          &nbsp;&bull;&nbsp; Rule-based NLP treatment extraction (PPV 97.9%)
+          &nbsp;&bull;&nbsp; Paired t-test longitudinal HbA1c outcomes
+        </div>
+      </div>
+    </div>
+    
+        <div style="background:#f0f7f2;border-left:4px solid #1a7a4a;border-radius:0 6px 6px 0;
+                    padding:12px 18px;margin-bottom:24px;font-size:0.9em;color:#1a5c2a;line-height:1.6;">
+          <strong>Cohort definition:</strong> Patients with a recorded HbA1c in the prediabetes or
+          diabetes range (≥5.7%), managed across 7 naturopathic clinics.
+          Primary analysis cohort for all findings below.
+        </div>
+        
+            <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:28px;">
+              <div style="flex:2;min-width:240px;background:#d4edda;border-radius:8px;
+                          padding:20px 24px;border-left:5px solid #1a7a4a;">
+                <div style="font-size:0.78em;font-weight:700;text-transform:uppercase;
+                             letter-spacing:0.05em;color:#1a7a4a;margin-bottom:8px;">
+                  Key Finding &mdash; All Elevated HbA1c &nbsp;(n=911 with ≥2 readings)
+                </div>
+                <div style="font-size:2.6em;font-weight:700;color:#1a5c2a;line-height:1.1;letter-spacing:-0.01em;">
+                  -0.216%
+                </div>
+                <div style="font-size:0.92em;color:#1a5c2a;margin-top:6px;">
+                  mean change in HbA1c &nbsp;&bull;&nbsp; p < 0.001
+                </div>
+              </div>
+              <div style="flex:1;min-width:170px;background:#eaf3fb;border-radius:8px;
+                          padding:20px 22px;border-left:5px solid #2c5f8a;">
+                <div style="font-size:0.78em;font-weight:700;text-transform:uppercase;
+                             letter-spacing:0.05em;color:#2c5f8a;margin-bottom:8px;">Patients Improved</div>
+                <div style="font-size:2.6em;font-weight:700;color:#1a3a5c;line-height:1.1;">67.6%</div>
+                <div style="font-size:0.88em;color:#6c757d;margin-top:6px;">of longitudinal patients</div>
+              </div>
+              <div style="flex:1;min-width:170px;background:#eaf3fb;border-radius:8px;
+                          padding:20px 22px;border-left:5px solid #2c5f8a;">
+                <div style="font-size:0.78em;font-weight:700;text-transform:uppercase;
+                             letter-spacing:0.05em;color:#2c5f8a;margin-bottom:8px;">Cohort</div>
+                <div style="font-size:2.6em;font-weight:700;color:#1a3a5c;line-height:1.1;">1,743</div>
+                <div style="font-size:0.88em;color:#6c757d;margin-top:6px;">
+                  patients &nbsp;&bull;&nbsp; 486&thinsp;day avg follow-up
+                </div>
+              </div>
+            </div>
+        <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a5c3a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Longitudinal HbA1c Analysis &mdash; by Subgroup</h3>
+        
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;min-width:720px;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:right;background:#f2f4f6;">
+          <th style="padding:8px 10px;text-align:left;">Subgroup</th>
+          <th style="padding:8px 10px;">n</th>
+          <th style="padding:8px 10px;">Mean First HbA1c</th>
+          <th style="padding:8px 10px;">Mean Last HbA1c</th>
+          <th style="padding:8px 10px;">Mean Change</th>
+          <th style="padding:8px 10px;">% Improved</th>
+          <th style="padding:8px 10px;">p-value</th>
+          <th style="padding:8px 10px;">Avg Follow-up</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;padding:8px 10px;">All elevated at baseline (≥5.7%)</td>
+          <td style="text-align:right;padding:8px 10px;">911</td>
+          <td style="text-align:right;padding:8px 10px;">6.16%</td>
+          <td style="text-align:right;padding:8px 10px;">5.95%</td>
+          <td style="text-align:right;padding:8px 6px;">
+            <span style="background:#d4edda;color:#1a7a4a;font-weight:700;
+                         padding:3px 8px;border-radius:4px;white-space:nowrap;">-0.22% ±0.044</span>
+          </td>
+          <td style="text-align:right;padding:8px 10px;">67.6%</td>
+          <td style="text-align:right;padding:8px 10px;">< 0.001</td>
+          <td style="text-align:right;padding:8px 10px;color:#6c757d;font-size:0.88em;">486 days</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;padding:8px 10px;">Diabetes range (≥6.5%)</td>
+          <td style="text-align:right;padding:8px 10px;">128</td>
+          <td style="text-align:right;padding:8px 10px;">7.93%</td>
+          <td style="text-align:right;padding:8px 10px;">7.25%</td>
+          <td style="text-align:right;padding:8px 6px;">
+            <span style="background:#d4edda;color:#1a7a4a;font-weight:700;
+                         padding:3px 8px;border-radius:4px;white-space:nowrap;">-0.69% ±0.271</span>
+          </td>
+          <td style="text-align:right;padding:8px 10px;">66.4%</td>
+          <td style="text-align:right;padding:8px 10px;">< 0.001</td>
+          <td style="text-align:right;padding:8px 10px;color:#6c757d;font-size:0.88em;">491 days</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;padding:8px 10px;">Prediabetes range (5.7–6.5%)</td>
+          <td style="text-align:right;padding:8px 10px;">783</td>
+          <td style="text-align:right;padding:8px 10px;">5.87%</td>
+          <td style="text-align:right;padding:8px 10px;">5.73%</td>
+          <td style="text-align:right;padding:8px 6px;">
+            <span style="background:#d4edda;color:#1a7a4a;font-weight:700;
+                         padding:3px 8px;border-radius:4px;white-space:nowrap;">-0.14% ±0.021</span>
+          </td>
+          <td style="text-align:right;padding:8px 10px;">67.8%</td>
+          <td style="text-align:right;padding:8px 10px;">< 0.001</td>
+          <td style="text-align:right;padding:8px 10px;color:#6c757d;font-size:0.88em;">486 days</td>
+        </tr>
+      </tbody>
+    </table>
+    </div><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">Patients with ≥2 HbA1c readings on distinct dates (n=911). Paired t-test, first vs. last reading; normal approximation adequate for all group sizes. Improvement = any reduction in HbA1c.</p>
+
+        <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a5c3a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Treatment Frequency &mdash; All NLP Categories</h3>
+        
+    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+      <thead>
+        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
+          <th style="padding:8px 10px;">Treatment Category</th>
+          <th style="padding:8px 10px;text-align:right;">Patients</th>
+          <th style="padding:8px 10px;min-width:260px;">% of Cohort</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Supplement / Botanical</td>
+          <td style="text-align:right;padding:7px 10px;">1,454</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:200px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">83.4%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Lab / Diagnostic</td>
+          <td style="text-align:right;padding:7px 10px;">1,222</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:168px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">70.1%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Diet / Nutrition</td>
+          <td style="text-align:right;padding:7px 10px;">1,022</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:140px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">58.6%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Exercise / Physical Activity</td>
+          <td style="text-align:right;padding:7px 10px;">887</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:122px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">50.9%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Referral</td>
+          <td style="text-align:right;padding:7px 10px;">848</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:116px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">48.7%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Physical Therapy & Bodywork</td>
+          <td style="text-align:right;padding:7px 10px;">549</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:75px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">31.5%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Stress / Mindfulness</td>
+          <td style="text-align:right;padding:7px 10px;">527</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:72px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">30.2%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Sleep Hygiene</td>
+          <td style="text-align:right;padding:7px 10px;">383</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:52px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">22.0%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">TCM / Acupuncture</td>
+          <td style="text-align:right;padding:7px 10px;">307</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:42px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">17.6%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">IV Therapy</td>
+          <td style="text-align:right;padding:7px 10px;">207</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:28px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">11.9%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Hydrotherapy</td>
+          <td style="text-align:right;padding:7px 10px;">154</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:21px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">8.8%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Homeopathy</td>
+          <td style="text-align:right;padding:7px 10px;">92</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:12px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">5.3%</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;white-space:nowrap;padding:7px 10px;">Substance Cessation</td>
+          <td style="text-align:right;padding:7px 10px;">50</td>
+          <td style="padding:7px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:6px;height:10px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
+              <span style="font-weight:600;color:#1a3a5c;white-space:nowrap;">2.9%</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">% of 1,743-patient HbA1c-threshold cohort with ≥1 clinician order in each category (is_order=TRUE). Rule-based NLP, PPV 97.9% (CI 95–99%).</p>
+
+        <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a5c3a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Lifestyle Recommendations</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;">
+        <div style="flex:1;min-width:280px;background:#fff;border:1px solid #dee2e6;
+                    border-radius:8px;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <strong style="font-size:0.97em;color:#1a3a5c;">Diet / Nutrition</strong>
+            <span style="font-size:1.7em;font-weight:700;color:#1a7a4a;">58.6%</span>
+          </div>
+          <div style="font-size:0.82em;color:#6c757d;margin-bottom:8px;">
+            1,022 of 1,743 patients received ≥1 recommendation
+          </div>
+          <table style="width:100%;border-collapse:collapse;margin-top:10px;"><thead><tr style="font-size:0.78em;color:#6c757d;border-bottom:1px solid #dee2e6;"><th style="text-align:left;font-weight:600;padding:3px 0;">Subcategory</th><th style="text-align:right;font-weight:600;padding:3px 8px;">Pts</th><th style="font-weight:600;padding:3px 0;">% of category</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Dietary Counseling</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">537</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:47px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">52%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Whole Foods</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">367</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:32px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">36%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Intermittent Fasting</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">265</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:23px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">26%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Elimination Diet</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">110</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:9px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">11%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Low Carb / Keto</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">68</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:6px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">7%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Mediterranean Diet</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">50</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:4px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">5%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Anti-Inflammatory Diet</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">28</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:2px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">3%</span></div></td></tr></tbody></table>
+        </div>
+        <div style="flex:1;min-width:280px;background:#fff;border:1px solid #dee2e6;
+                    border-radius:8px;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <strong style="font-size:0.97em;color:#1a3a5c;">Exercise / Physical Activity</strong>
+            <span style="font-size:1.7em;font-weight:700;color:#1a7a4a;">50.9%</span>
+          </div>
+          <div style="font-size:0.82em;color:#6c757d;margin-bottom:8px;">
+            887 of 1,743 patients received ≥1 recommendation
+          </div>
+          <table style="width:100%;border-collapse:collapse;margin-top:10px;"><thead><tr style="font-size:0.78em;color:#6c757d;border-bottom:1px solid #dee2e6;"><th style="text-align:left;font-weight:600;padding:3px 0;">Subcategory</th><th style="text-align:right;font-weight:600;padding:3px 8px;">Pts</th><th style="font-weight:600;padding:3px 0;">% of category</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Aerobic</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">550</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:55px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">62%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Strength Training</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">431</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:43px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">49%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">General Exercise</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">320</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:32px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">36%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Yoga</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">136</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:13px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">15%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Pilates</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">37</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:3px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">4%</span></div></td></tr></tbody></table>
+        </div>
+        <div style="flex:1;min-width:280px;background:#fff;border:1px solid #dee2e6;
+                    border-radius:8px;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <strong style="font-size:0.97em;color:#1a3a5c;">Stress / Mindfulness</strong>
+            <span style="font-size:1.7em;font-weight:700;color:#1a7a4a;">30.2%</span>
+          </div>
+          <div style="font-size:0.82em;color:#6c757d;margin-bottom:8px;">
+            527 of 1,743 patients received ≥1 recommendation
+          </div>
+          <table style="width:100%;border-collapse:collapse;margin-top:10px;"><thead><tr style="font-size:0.78em;color:#6c757d;border-bottom:1px solid #dee2e6;"><th style="text-align:left;font-weight:600;padding:3px 0;">Subcategory</th><th style="text-align:right;font-weight:600;padding:3px 8px;">Pts</th><th style="font-weight:600;padding:3px 0;">% of category</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Stress Reduction</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">339</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:57px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">64%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Counseling / Therapy</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">202</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:34px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">38%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Meditation</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">127</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:21px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">24%</span></div></td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.86em;padding:4px 0;">Breathing</td><td style="text-align:right;font-size:0.86em;padding:4px 8px;">91</td><td style="padding:4px 0;"><div style="display:flex;align-items:center;gap:4px;"><div style="width:15px;height:7px;background:#5a9e6f;border-radius:2px;flex-shrink:0;"></div><span style="font-size:0.82em;color:#1a7a4a;">17%</span></div></td></tr></tbody></table>
+        </div>
+        <div style="flex:1;min-width:280px;background:#fff;border:1px solid #dee2e6;
+                    border-radius:8px;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <strong style="font-size:0.97em;color:#1a3a5c;">Sleep Hygiene</strong>
+            <span style="font-size:1.7em;font-weight:700;color:#1a7a4a;">22.0%</span>
+          </div>
+          <div style="font-size:0.82em;color:#6c757d;margin-bottom:8px;">
+            383 of 1,743 patients received ≥1 recommendation
+          </div>
+          
+        </div>
+        <div style="flex:1;min-width:280px;background:#fff;border:1px solid #dee2e6;
+                    border-radius:8px;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <strong style="font-size:0.97em;color:#1a3a5c;">Hydrotherapy</strong>
+            <span style="font-size:1.7em;font-weight:700;color:#1a7a4a;">8.8%</span>
+          </div>
+          <div style="font-size:0.82em;color:#6c757d;margin-bottom:8px;">
+            154 of 1,743 patients received ≥1 recommendation
+          </div>
+          
+        </div></div>
+  </div>
+  <div id="tab-all-clinics" class="tab-panel" style="display:none;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #1a3a5c;padding-bottom:6px;color:#1a3a5c;margin-top:0;">
       All Clinics &mdash; Pooled Summary
     </h2>
@@ -5715,7 +6340,7 @@
   </section>
 
 <footer>
-  Generated May 27, 2026 at 19:32 UTC &nbsp;&bull;&nbsp;
+  Generated May 28, 2026 at 23:17 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
