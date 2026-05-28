@@ -114,93 +114,86 @@
         <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">participating clinics</div>
       </div>
       <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 22px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:2.0em;font-weight:700;color:#1a3a5c;">58,502</div>
+        <div style="font-size:2.0em;font-weight:700;color:#1a3a5c;">58,498</div>
         <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total patients</div>
       </div>
       <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 22px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:2.0em;font-weight:700;color:#1a3a5c;">8,116,491</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total FHIR records</div>
+        <div style="font-size:2.0em;font-weight:700;color:#1a3a5c;">6,389,419</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">clinical records</div>
+      </div>
+      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 22px;margin-right:16px;margin-bottom:12px;text-align:center;">
+        <div style="font-size:2.0em;font-weight:700;color:#1a3a5c;">858,394</div>
+        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">clinical notes</div>
       </div>
     </div>
     <p style="font-size:0.85em;color:#6c757d;margin-bottom:0;">
-      Database generated 2026-05-26. Clinics: clinic_1, clinic_2, clinic_3, clinic_4, clinic_5, clinic_6, clinic_7.
+      Research database generated 2026-05-28. Clinics: clinic_1, clinic_2, clinic_3, clinic_4, clinic_5, clinic_6, clinic_7.
       De-identified via Google Cloud Healthcare API + 9-pass custom redaction.
-      Patient IDs are clinic-scoped and non-overlapping.
+      Patient IDs are clinic-scoped and non-overlapping. Gender derived from birth sex.
     </p>
 
-    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Downloaded Resources</h3>
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Research Database — Table Counts</h3>
     
     <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:520px;">
       <thead>
         <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
-          <th style="padding:6px 10px;">Resource</th>
-          <th style="padding:6px 10px;text-align:right;">Total Records</th>
-          <th style="padding:6px 10px;text-align:center;">Clinics Complete</th>
+          <th style="padding:7px 10px;">Table</th>
+          <th style="padding:7px 10px;text-align:right;">Records</th>
         </tr>
       </thead>
       <tbody>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Patient</td>
-          <td style="text-align:right;">58,502</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+          <td style="font-weight:500;">Patients</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">58,498</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Practitioner</td>
-          <td style="text-align:right;">183</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+          <td style="font-weight:500;">Encounters</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">469,162</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Encounter</td>
-          <td style="text-align:right;">469,191</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+          <td style="font-weight:500;">Clinical Notes</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">858,394</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Condition</td>
-          <td style="text-align:right;">1,427,886</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+          <td style="font-weight:500;">Conditions (raw)</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">1,426,936</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">CarePlan</td>
-          <td style="text-align:right;">368,438</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+          <td style="font-weight:500;">Conditions (deduplicated)</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">445,165</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">MedicationRequest</td>
-          <td style="text-align:right;">46,143</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+          <td style="font-weight:500;">Medication Requests</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">46,098</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Observation</td>
-          <td style="text-align:right;">3,630,768</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+          <td style="font-weight:500;">Medications</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">15,790</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Medication</td>
-          <td style="text-align:right;">15,790</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
+          <td style="font-weight:500;">Observations</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">3,588,829</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">DocumentReference</td>
-          <td style="text-align:right;">2,099,590</td>
-          <td style="text-align:center;color:#6c757d;">7 / 7</td>
-        </tr>
-        <tr style="border-top:2px solid #dee2e6;font-weight:700;">
-          <td>Total</td>
-          <td style="text-align:right;">8,116,491</td>
-          <td></td>
+          <td style="font-weight:500;">Treatments (NLP-extracted)</td>
+          <td style="text-align:right;font-variant-numeric:tabular-nums;">594,340</td>
         </tr>
       </tbody>
     </table>
+    <p style="font-size:0.83em;color:#6c757d;margin-top:8px;">
+      BigQuery dataset: <code>nd-ehr-analysis.nd_ehr_research</code> &nbsp;&bull;&nbsp;
+      De-identified data only.
+    </p>
 
     <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Patient Demographics</h3>
     
     <div style="margin-bottom:20px;">
       <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">58,502</div>
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">58,498</div>
         <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total patients</div>
       </div>
       <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">42.4</div>
+        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">42.6</div>
         <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">mean age (years)</div>
       </div>
     </div>
@@ -219,30 +212,24 @@
       <tbody>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;text-transform:capitalize;">female</td>
-          <td style="text-align:right;">26,224</td>
-          <td style="text-align:right;">44.8%</td>
-          <td style="text-align:right;">46.0 yrs</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;text-transform:capitalize;">other</td>
-          <td style="text-align:right;">18,194</td>
-          <td style="text-align:right;">31.1%</td>
-          <td style="text-align:right;">37.2 yrs</td>
+          <td style="text-align:right;">39,504</td>
+          <td style="text-align:right;">67.5%</td>
+          <td style="text-align:right;">43.6 yrs</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;text-transform:capitalize;">male</td>
-          <td style="text-align:right;">13,570</td>
-          <td style="text-align:right;">23.2%</td>
-          <td style="text-align:right;">43.0 yrs</td>
+          <td style="text-align:right;">17,653</td>
+          <td style="text-align:right;">30.2%</td>
+          <td style="text-align:right;">40.4 yrs</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;text-transform:capitalize;">unknown</td>
-          <td style="text-align:right;">514</td>
-          <td style="text-align:right;">0.9%</td>
-          <td style="text-align:right;">39.3 yrs</td>
+          <td style="text-align:right;">1,341</td>
+          <td style="text-align:right;">2.3%</td>
+          <td style="text-align:right;">38.9 yrs</td>
         </tr>
       </tbody>
-    </table><p style="font-size:0.82em;color:#856404;margin-top:6px;">⚠ ChARM encodes unspecified gender as "other" rather than "unknown" — the "other" count likely reflects missing data, not non-binary patients.</p></div>
+    </table></div>
       </div>
       <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Age Distribution</strong>
         <div style="margin-top:8px;">
@@ -256,29 +243,34 @@
       </thead>
       <tbody>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">0-17</td>
-          <td style="text-align:right;">7,293</td>
-          <td style="text-align:right;">12.5%</td>
+          <td style="font-weight:500;">0–17</td>
+          <td style="text-align:right;">6,980</td>
+          <td style="text-align:right;">11.9%</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">18-34</td>
-          <td style="text-align:right;">11,310</td>
-          <td style="text-align:right;">19.3%</td>
+          <td style="font-weight:500;">18–34</td>
+          <td style="text-align:right;">10,942</td>
+          <td style="text-align:right;">18.7%</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">35-49</td>
-          <td style="text-align:right;">19,188</td>
-          <td style="text-align:right;">32.8%</td>
+          <td style="font-weight:500;">35–49</td>
+          <td style="text-align:right;">19,145</td>
+          <td style="text-align:right;">32.7%</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">50-64</td>
-          <td style="text-align:right;">12,638</td>
-          <td style="text-align:right;">21.6%</td>
+          <td style="font-weight:500;">50–64</td>
+          <td style="text-align:right;">13,366</td>
+          <td style="text-align:right;">22.8%</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="font-weight:500;">65+</td>
-          <td style="text-align:right;">7,683</td>
-          <td style="text-align:right;">13.1%</td>
+          <td style="text-align:right;">7,483</td>
+          <td style="text-align:right;">12.8%</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="font-weight:500;">Not reported</td>
+          <td style="text-align:right;">582</td>
+          <td style="text-align:right;">1.0%</td>
         </tr>
       </tbody>
     </table></div>
@@ -286,10 +278,10 @@
     </div>
     <div style="display:flex;gap:24px;flex-wrap:wrap;">
       <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Race</strong>
-        <div style="margin-top:8px;"><table style="width:100%;border-collapse:collapse;font-size:0.92em;"><thead><tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;"><th style="padding:6px 10px;">Race</th><th style="padding:6px 10px;text-align:right;">Count</th><th style="padding:6px 10px;text-align:right;">%</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Unknown / Not reported</td><td style="text-align:right;font-size:0.9em;">52,100</td><td style="text-align:right;font-size:0.9em;">89.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">White</td><td style="text-align:right;font-size:0.9em;">5,411</td><td style="text-align:right;font-size:0.9em;">9.2%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Asian</td><td style="text-align:right;font-size:0.9em;">489</td><td style="text-align:right;font-size:0.9em;">0.8%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Mixed</td><td style="text-align:right;font-size:0.9em;">269</td><td style="text-align:right;font-size:0.9em;">0.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Black Or African American</td><td style="text-align:right;font-size:0.9em;">161</td><td style="text-align:right;font-size:0.9em;">0.3%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Other</td><td style="text-align:right;font-size:0.9em;">47</td><td style="text-align:right;font-size:0.9em;">0.1%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">American Indian Or Alaska Native</td><td style="text-align:right;font-size:0.9em;">14</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Native Hawaiian Or Other Pacific Islander</td><td style="text-align:right;font-size:0.9em;">11</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr></tbody></table><p style="font-size:0.82em;color:#6c757d;margin-top:4px;">Source: US Core FHIR extension.</p></div>
+        <div style="margin-top:8px;"><table style="width:100%;border-collapse:collapse;font-size:0.92em;"><thead><tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;"><th style="padding:6px 10px;">Race</th><th style="padding:6px 10px;text-align:right;">Count</th><th style="padding:6px 10px;text-align:right;">%</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Unknown / Not reported</td><td style="text-align:right;font-size:0.9em;">52,096</td><td style="text-align:right;font-size:0.9em;">89.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">White</td><td style="text-align:right;font-size:0.9em;">5,411</td><td style="text-align:right;font-size:0.9em;">9.2%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Asian</td><td style="text-align:right;font-size:0.9em;">493</td><td style="text-align:right;font-size:0.9em;">0.8%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Mixed</td><td style="text-align:right;font-size:0.9em;">270</td><td style="text-align:right;font-size:0.9em;">0.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Black Or African American</td><td style="text-align:right;font-size:0.9em;">167</td><td style="text-align:right;font-size:0.9em;">0.3%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">American Indian Or Alaska Native</td><td style="text-align:right;font-size:0.9em;">41</td><td style="text-align:right;font-size:0.9em;">0.1%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Native Hawaiian Or Other Pacific Islander</td><td style="text-align:right;font-size:0.9em;">18</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Other</td><td style="text-align:right;font-size:0.9em;">2</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr></tbody></table><p style="font-size:0.82em;color:#6c757d;margin-top:4px;">Source: US Core FHIR extension.</p></div>
       </div>
       <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Ethnicity</strong>
-        <div style="margin-top:8px;"><table style="width:100%;border-collapse:collapse;font-size:0.92em;"><thead><tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;"><th style="padding:6px 10px;">Ethnicity</th><th style="padding:6px 10px;text-align:right;">Count</th><th style="padding:6px 10px;text-align:right;">%</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Unknown / Not reported</td><td style="text-align:right;font-size:0.9em;">51,770</td><td style="text-align:right;font-size:0.9em;">88.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Not Hispanic Or Latino</td><td style="text-align:right;font-size:0.9em;">6,211</td><td style="text-align:right;font-size:0.9em;">10.6%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Hispanic Or Latino/Spanish</td><td style="text-align:right;font-size:0.9em;">516</td><td style="text-align:right;font-size:0.9em;">0.9%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Other</td><td style="text-align:right;font-size:0.9em;">5</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr></tbody></table><p style="font-size:0.82em;color:#6c757d;margin-top:4px;">Source: US Core FHIR extension.</p></div>
+        <div style="margin-top:8px;"><table style="width:100%;border-collapse:collapse;font-size:0.92em;"><thead><tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;"><th style="padding:6px 10px;">Ethnicity</th><th style="padding:6px 10px;text-align:right;">Count</th><th style="padding:6px 10px;text-align:right;">%</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Unknown / Not reported</td><td style="text-align:right;font-size:0.9em;">51,766</td><td style="text-align:right;font-size:0.9em;">88.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Not Hispanic Or Latino</td><td style="text-align:right;font-size:0.9em;">6,215</td><td style="text-align:right;font-size:0.9em;">10.6%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Hispanic Or Latino/Spanish</td><td style="text-align:right;font-size:0.9em;">517</td><td style="text-align:right;font-size:0.9em;">0.9%</td></tr></tbody></table><p style="font-size:0.82em;color:#6c757d;margin-top:4px;">Source: US Core FHIR extension.</p></div>
       </div>
     </div>
 
@@ -309,64 +301,64 @@
           <td style="text-align:center;color:#6c757d;">1</td>
           <td>Fatigue</td>
           <td style="color:#6c757d;font-size:0.85em;">84229001</td>
-          <td style="text-align:right;">8,738</td>
+          <td style="text-align:right;">9,430</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">2</td>
           <td>Insomnia</td>
           <td style="color:#6c757d;font-size:0.85em;">193462001</td>
-          <td style="text-align:right;">4,258</td>
+          <td style="text-align:right;">4,203</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">3</td>
-          <td>Essential fatty acid deficiency</td>
-          <td style="color:#6c757d;font-size:0.85em;">238114000</td>
-          <td style="text-align:right;">3,488</td>
+          <td>Overwork</td>
+          <td style="color:#6c757d;font-size:0.85em;">105490003</td>
+          <td style="text-align:right;">4,075</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">4</td>
-          <td>Overwork</td>
-          <td style="color:#6c757d;font-size:0.85em;">105490003</td>
-          <td style="text-align:right;">3,045</td>
+          <td>Anxiety</td>
+          <td style="color:#6c757d;font-size:0.85em;">48694002</td>
+          <td style="text-align:right;">3,258</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">5</td>
           <td>Hyperlipidemia</td>
           <td style="color:#6c757d;font-size:0.85em;">55822004</td>
-          <td style="text-align:right;">2,340</td>
+          <td style="text-align:right;">3,228</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">6</td>
-          <td>Seen by pediatrician</td>
-          <td style="color:#6c757d;font-size:0.85em;">305647009</td>
-          <td style="text-align:right;">2,207</td>
+          <td>Constipation</td>
+          <td style="color:#6c757d;font-size:0.85em;">14760008</td>
+          <td style="text-align:right;">3,203</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">7</td>
-          <td>Anxiety</td>
-          <td style="color:#6c757d;font-size:0.85em;">48694002</td>
-          <td style="text-align:right;">2,202</td>
+          <td>Essential fatty acid deficiency</td>
+          <td style="color:#6c757d;font-size:0.85em;">238114000</td>
+          <td style="text-align:right;">3,151</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">8</td>
-          <td>Encounter for immunization</td>
-          <td style="color:#6c757d;font-size:0.85em;">Z23</td>
-          <td style="text-align:right;">2,068</td>
+          <td>Other fatigue</td>
+          <td style="color:#6c757d;font-size:0.85em;">R53.83</td>
+          <td style="text-align:right;">2,848</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">9</td>
-          <td>Encounter for screening for lipoid disorders</td>
-          <td style="color:#6c757d;font-size:0.85em;">Z13.220</td>
-          <td style="text-align:right;">1,991</td>
+          <td>Decreased vitamin D</td>
+          <td style="color:#6c757d;font-size:0.85em;">131114008</td>
+          <td style="text-align:right;">2,645</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;">10</td>
-          <td>Encounter for screening for diabetes mellitus</td>
-          <td style="color:#6c757d;font-size:0.85em;">Z13.1</td>
-          <td style="text-align:right;">1,917</td>
+          <td>Vitamin D deficiency</td>
+          <td style="color:#6c757d;font-size:0.85em;">34713006</td>
+          <td style="text-align:right;">2,615</td>
         </tr>
       </tbody>
-    </table><p style="margin-top:8px;font-size:0.85em;color:#6c757d;">* 19,384 patients have condition records with no code or text (excluded from table above).</p>
+    </table>
 
     <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Top 5 Most Prescribed Medications</h3>
     
@@ -382,30 +374,30 @@
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;width:40px;">1</td>
           <td>proGESTerone micronized 100 mg capsule</td>
-          <td style="text-align:right;white-space:nowrap;">313</td>
+          <td style="text-align:right;white-space:nowrap;">335</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;width:40px;">2</td>
+          <td>albuterol 90 mcg/inh inhalation aerosol</td>
+          <td style="text-align:right;white-space:nowrap;">307</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0f0f0;">
+          <td style="text-align:center;color:#6c757d;width:40px;">3</td>
           <td>lactulose 10 gram/15 mL oral solution</td>
           <td style="text-align:right;white-space:nowrap;">286</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="text-align:center;color:#6c757d;width:40px;">3</td>
-          <td>albuterol 90 mcg/inh inhalation aerosol</td>
-          <td style="text-align:right;white-space:nowrap;">268</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;width:40px;">4</td>
-          <td>lactulose 10 g/15 mL oral syrup</td>
-          <td style="text-align:right;white-space:nowrap;">202</td>
+          <td>amoxicillin 400 mg/5 mL oral liquid</td>
+          <td style="text-align:right;white-space:nowrap;">259</td>
         </tr>
         <tr style="border-bottom:1px solid #f0f0f0;">
           <td style="text-align:center;color:#6c757d;width:40px;">5</td>
-          <td>amoxicillin 400 mg/5 mL oral liquid</td>
-          <td style="text-align:right;white-space:nowrap;">192</td>
+          <td>liothyronine 5 mcg oral tablet</td>
+          <td style="text-align:right;white-space:nowrap;">217</td>
         </tr>
       </tbody>
-    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">Ranked by unique patients prescribed. 46,143 total MedicationRequests across 52 unique medications.</p>
+    </table><p style="font-size:0.85em;color:#6c757d;margin-top:8px;">Ranked by unique patients prescribed. 46,098 total MedicationRequests across 15,782 unique medications.</p>
 
     
     <div style="margin:44px 0 28px;">
@@ -6340,7 +6332,7 @@
   </section>
 
 <footer>
-  Generated May 28, 2026 at 23:17 UTC &nbsp;&bull;&nbsp;
+  Generated May 28, 2026 at 23:29 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
