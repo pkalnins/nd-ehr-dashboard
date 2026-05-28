@@ -89,6 +89,99 @@
 </div>
 
 
+  <section style="margin-bottom:32px;">
+    <h2 style="font-size:1.25em;border-bottom:2px solid #dee2e6;padding-bottom:6px;
+               color:#1a3a5c;margin-top:0;margin-bottom:16px;">
+      Project Status
+    </h2>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;">
+      <div style="flex:1;min-width:210px;border-radius:8px;padding:18px 20px;background:#d4edda;border-top:4px solid #1a7a4a;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+          <div>
+            <div style="font-size:0.72em;font-weight:700;text-transform:uppercase;
+                         letter-spacing:0.07em;color:#1a7a4a;margin-bottom:3px;">
+              Stage 0
+            </div>
+            <div style="font-size:0.95em;font-weight:700;color:#212529;line-height:1.3;">
+              IRB & Approval
+            </div>
+          </div>
+          <span style="background:#1a7a4a;color:#fff;font-size:0.7em;font-weight:700;
+                        padding:3px 8px;border-radius:4px;white-space:nowrap;
+                        margin-left:10px;flex-shrink:0;">
+            &#10003; Complete
+          </span>
+        </div>
+        <ul style="margin:0;padding-left:16px;font-size:0.83em;color:#1a5c2a;line-height:1.75;">
+          <li style="margin-bottom:2px;">IRB protocol rewrite</li><li style="margin-bottom:2px;">Project approval</li>
+        </ul>
+      </div>
+      <div style="flex:1;min-width:210px;border-radius:8px;padding:18px 20px;background:#d4edda;border-top:4px solid #1a7a4a;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+          <div>
+            <div style="font-size:0.72em;font-weight:700;text-transform:uppercase;
+                         letter-spacing:0.07em;color:#1a7a4a;margin-bottom:3px;">
+              Stage 1
+            </div>
+            <div style="font-size:0.95em;font-weight:700;color:#212529;line-height:1.3;">
+              Data Import & De-identification
+            </div>
+          </div>
+          <span style="background:#1a7a4a;color:#fff;font-size:0.7em;font-weight:700;
+                        padding:3px 8px;border-radius:4px;white-space:nowrap;
+                        margin-left:10px;flex-shrink:0;">
+            &#10003; Complete
+          </span>
+        </div>
+        <ul style="margin:0;padding-left:16px;font-size:0.83em;color:#1a5c2a;line-height:1.75;">
+          <li style="margin-bottom:2px;">Raw EHR import — 7 clinics</li><li style="margin-bottom:2px;">FHIR store import</li><li style="margin-bottom:2px;">De-identification (9 passes)</li><li style="margin-bottom:2px;">Safety audit — 0 HIGH flags</li><li style="margin-bottom:2px;">BigQuery research database</li>
+        </ul>
+      </div>
+      <div style="flex:1;min-width:210px;border-radius:8px;padding:18px 20px;background:#d4edda;border-top:4px solid #1a7a4a;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+          <div>
+            <div style="font-size:0.72em;font-weight:700;text-transform:uppercase;
+                         letter-spacing:0.07em;color:#1a7a4a;margin-bottom:3px;">
+              Stage 2
+            </div>
+            <div style="font-size:0.95em;font-weight:700;color:#212529;line-height:1.3;">
+              Data Structuring & Analysis
+            </div>
+          </div>
+          <span style="background:#1a7a4a;color:#fff;font-size:0.7em;font-weight:700;
+                        padding:3px 8px;border-radius:4px;white-space:nowrap;
+                        margin-left:10px;flex-shrink:0;">
+            &#10003; Complete
+          </span>
+        </div>
+        <ul style="margin:0;padding-left:16px;font-size:0.83em;color:#1a5c2a;line-height:1.75;">
+          <li style="margin-bottom:2px;">NLP treatment extraction</li><li style="margin-bottom:2px;">PPV validation (97.9%)</li><li style="margin-bottom:2px;">HbA1c cohort (n=1,743)</li><li style="margin-bottom:2px;">Longitudinal HbA1c analysis</li><li style="margin-bottom:2px;">Lifestyle recommendation analysis</li>
+        </ul>
+      </div>
+      <div style="flex:1;min-width:210px;border-radius:8px;padding:18px 20px;background:#fff3cd;border-top:4px solid #e67e22;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+          <div>
+            <div style="font-size:0.72em;font-weight:700;text-transform:uppercase;
+                         letter-spacing:0.07em;color:#c0600a;margin-bottom:3px;">
+              Stage 3
+            </div>
+            <div style="font-size:0.95em;font-weight:700;color:#212529;line-height:1.3;">
+              Final Steps
+            </div>
+          </div>
+          <span style="background:#e67e22;color:#fff;font-size:0.7em;font-weight:700;
+                        padding:3px 8px;border-radius:4px;white-space:nowrap;
+                        margin-left:10px;flex-shrink:0;">
+            &#8987; In Progress
+          </span>
+        </div>
+        <ul style="margin:0;padding-left:16px;font-size:0.83em;color:#7d4e00;line-height:1.75;">
+          <li style="margin-bottom:2px;">PHI bucket deletion (by June 26)</li><li style="margin-bottom:2px;">Database preparation for long-term use</li><li style="margin-bottom:2px;">Final manuscript</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <div class="tab-container">
     <div class="tab-bar">
     <button class="tab-btn tab-final active" onclick="showTab(event,'final-database')">Final Database</button>
@@ -6419,7 +6512,7 @@
   </section>
 
 <footer>
-  Generated May 28, 2026 at 23:41 UTC &nbsp;&bull;&nbsp;
+  Generated May 28, 2026 at 23:50 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
