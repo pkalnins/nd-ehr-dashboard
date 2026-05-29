@@ -166,144 +166,46 @@
       Patient IDs are clinic-scoped and non-overlapping. Gender derived from birth sex.
     </p>
 
-    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Research Database — Table Counts</h3>
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Table 1 — Clinic and Database Characteristics</h3>
     
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:520px;">
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.88em;min-width:700px;">
       <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
-          <th style="padding:7px 10px;">Table</th>
-          <th style="padding:7px 10px;text-align:right;">Records</th>
+        <tr style="background:#1a3a5c;color:#fff;">
+          <th style="padding:7px 10px;text-align:left;font-weight:700;color:#fff;">Characteristic</th>
+          <th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C1</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C2</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C3</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C4</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C5</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C6</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C7</th>
+          <th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;color:#fff;">Total</th>
         </tr>
       </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Patients</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">58,498</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Encounters</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">469,162</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Clinical Notes</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">858,394</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Conditions (raw)</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">1,426,936</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Conditions (deduplicated)</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">445,165</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Medication Requests</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">46,098</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Medications</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">15,790</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Observations</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">3,588,829</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Treatments (NLP-extracted)</td>
-          <td style="text-align:right;font-variant-numeric:tabular-nums;">594,340</td>
-        </tr>
+      <tbody><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Network</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">Independent ND</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">INM residency</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">INM residency</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">INM residency</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">INM residency</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">Independent ND</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">INM residency</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">—</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">State</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">WA</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">WA</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">WA</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">WA</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">WA</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">WA</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">WA</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">WA</td></tr><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Patients</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2,541</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">11,580</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">4,495</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">22,389</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">3,037</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">6,732</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">7,724</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">58,498</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">Encounters</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">5,237</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">85,859</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">57,195</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">193,730</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">32,776</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">45,221</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">49,144</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">469,162</td></tr><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Clinical notes</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">10,395</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">159,882</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">105,630</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">362,099</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">47,743</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">79,408</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">93,237</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">858,394</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">Observations<sup>a</sup></td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">396</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">891,556</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">525,839</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">1,009,635</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">408,868</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">331,593</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">420,942</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">3,588,829</td></tr><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Conditions (unique)</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">6,527</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">69,887</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">72,794</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">149,077</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">27,495</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">53,194</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">66,191</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">445,165</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">Medication orders<sup>b</sup></td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">8,179</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">199</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">4,579</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2,220</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">178</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">20,596</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">10,147</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">46,098</td></tr><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Treatments (NLP)<sup>c</sup></td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2,447</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">123,363</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">94,260</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">212,199</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">36,609</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">42,819</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">32,802</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">544,499</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">Date range<sup>d</sup></td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2013–2026</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2013–2026</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2013–2026</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2008–2026</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2015–2026</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2013–2026</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">2014–2026</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">2008–2026</td></tr>
       </tbody>
     </table>
-    <p style="font-size:0.83em;color:#6c757d;margin-top:8px;">
-      BigQuery dataset: <code>nd-ehr-analysis.nd_ehr_research</code> &nbsp;&bull;&nbsp;
-      De-identified data only.
+    </div>
+    <p style="font-size:0.80em;color:#6c757d;margin-top:8px;line-height:1.6;">
+      <sup>a</sup>&nbsp;C1 observations low (396) — providers at this clinic did not enter lab results into ChARM EHR (confirmed, not a pipeline issue).&nbsp;
+      <sup>b</sup>&nbsp;C2 (n=199) and C5 (n=178) medication orders low — medications documented outside ChARM's prescription module.&nbsp;
+      <sup>c</sup>&nbsp;Rule-based NLP, is_order=TRUE only (PPV 97.9%).&nbsp;
+      <sup>d</sup>&nbsp;Dates are approximate; all encounter dates shifted per-patient during de-identification (±0–364 days).
     </p>
 
-    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Patients by Clinic</h3>
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Table 2 — Patient Characteristics by Clinic</h3>
     
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.88em;min-width:700px;">
       <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
-          <th style="padding:7px 12px 7px 0;">Clinic</th>
-          <th style="padding:7px 0;">Patients</th>
+        <tr style="background:#1a3a5c;color:#fff;">
+          <th style="padding:7px 10px;text-align:left;font-weight:700;color:#fff;">Characteristic</th>
+          <th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C1</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C2</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C3</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C4</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C5</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C6</th><th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;">C7</th>
+          <th style="padding:7px 10px;text-align:right;font-weight:700;white-space:nowrap;color:#fff;">Total</th>
         </tr>
       </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="white-space:nowrap;font-weight:500;padding:8px 12px 8px 0;width:1%;">Clinic 1</td>
-          <td style="padding:8px 12px 8px 0;">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <div style="width:36px;height:14px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
-              <span style="white-space:nowrap;color:#1a3a5c;font-weight:600;">2,541</span>
-              <span style="color:#6c757d;font-size:0.88em;">(4.3%)</span>
-            </div>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="white-space:nowrap;font-weight:500;padding:8px 12px 8px 0;width:1%;">Clinic 2</td>
-          <td style="padding:8px 12px 8px 0;">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <div style="width:165px;height:14px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
-              <span style="white-space:nowrap;color:#1a3a5c;font-weight:600;">11,580</span>
-              <span style="color:#6c757d;font-size:0.88em;">(19.8%)</span>
-            </div>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="white-space:nowrap;font-weight:500;padding:8px 12px 8px 0;width:1%;">Clinic 3</td>
-          <td style="padding:8px 12px 8px 0;">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <div style="width:64px;height:14px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
-              <span style="white-space:nowrap;color:#1a3a5c;font-weight:600;">4,495</span>
-              <span style="color:#6c757d;font-size:0.88em;">(7.7%)</span>
-            </div>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="white-space:nowrap;font-weight:500;padding:8px 12px 8px 0;width:1%;">Clinic 4</td>
-          <td style="padding:8px 12px 8px 0;">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <div style="width:320px;height:14px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
-              <span style="white-space:nowrap;color:#1a3a5c;font-weight:600;">22,389</span>
-              <span style="color:#6c757d;font-size:0.88em;">(38.3%)</span>
-            </div>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="white-space:nowrap;font-weight:500;padding:8px 12px 8px 0;width:1%;">Clinic 5</td>
-          <td style="padding:8px 12px 8px 0;">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <div style="width:43px;height:14px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
-              <span style="white-space:nowrap;color:#1a3a5c;font-weight:600;">3,037</span>
-              <span style="color:#6c757d;font-size:0.88em;">(5.2%)</span>
-            </div>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="white-space:nowrap;font-weight:500;padding:8px 12px 8px 0;width:1%;">Clinic 6</td>
-          <td style="padding:8px 12px 8px 0;">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <div style="width:96px;height:14px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
-              <span style="white-space:nowrap;color:#1a3a5c;font-weight:600;">6,732</span>
-              <span style="color:#6c757d;font-size:0.88em;">(11.5%)</span>
-            </div>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="white-space:nowrap;font-weight:500;padding:8px 12px 8px 0;width:1%;">Clinic 7</td>
-          <td style="padding:8px 12px 8px 0;">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <div style="width:110px;height:14px;background:#2c5f8a;border-radius:3px;flex-shrink:0;"></div>
-              <span style="white-space:nowrap;color:#1a3a5c;font-weight:600;">7,724</span>
-              <span style="color:#6c757d;font-size:0.88em;">(13.2%)</span>
-            </div>
-          </td>
-        </tr>
+      <tbody><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Female (%)</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">78.8%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">74.0%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">78.6%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">62.0%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">72.6%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">71.0%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">63.3%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">68.1%</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">Male (%)</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">21.1%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">25.7%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">15.2%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">37.5%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">26.2%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">24.8%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">36.7%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">30.6%</td></tr><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Sex unknown (%)</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.1%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.3%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">6.3%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.5%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">1.2%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">4.2%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.1%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">1.3%</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">Mean age, F (yrs)<sup>a</sup></td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">63.0</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">44.4</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">38.1</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">47.2</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">51.7</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">38.8</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">29.6</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">43.7</td></tr><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Mean age, M (yrs)<sup>a</sup></td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">64.0</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">45.4</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">35.9</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">46.5</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">48.2</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">29.1</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">18.5</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">40.5</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">Min age (yrs)<sup>a</sup></td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">16</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">4</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">1</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">1</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">1</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">0</td></tr><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Max age (yrs)<sup>a,b</sup></td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">89</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">89</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">89</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">89</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">89</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">89</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">89</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">89</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">White (%)</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">43.3%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">7.9%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.3%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.1%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">25.3%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">5.5%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">28.9%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">9.3%</td></tr><tr style="background:#f8f9fa;"><td style="padding:6px 10px;text-align:left;">Other race (%)</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">1.7%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">1.2%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.0%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.0%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">3.3%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">0.9%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">8.3%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">1.7%</td></tr><tr style="background:#fff;"><td style="padding:6px 10px;text-align:left;">Race unknown (%)</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">55.0%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">90.9%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">99.7%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">99.9%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">71.4%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">93.6%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">62.9%</td><td style="padding:6px 10px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;;font-weight:600;">89.1%</td></tr>
       </tbody>
     </table>
-    <p style="font-size:0.83em;color:#6c757d;margin-top:8px;">
-      58,498 total patients across 7 clinics. Source: BigQuery
-      <code>patients</code> table.
+    </div>
+    <p style="font-size:0.80em;color:#6c757d;margin-top:8px;line-height:1.6;">
+      <sup>a</sup>&nbsp;Ages are approximate; calculated from birth year only (±up to 1 year).&nbsp;
+      <sup>b</sup>&nbsp;Per HIPAA Safe Harbor, patients born before 1936 are generalized; max age reported as 89.
     </p>
 
     <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Encounter Volume by Year</h3>
@@ -404,106 +306,6 @@
       </div>
     </div>
     </div><p style="font-size:0.83em;color:#6c757d;margin-top:10px;">469,103 encounters 2012–2026. Years before 2012 excluded (sparse data).</p>
-
-    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Patient Demographics</h3>
-    
-    <div style="margin-bottom:20px;">
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">58,498</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">total patients</div>
-      </div>
-      <div style="display:inline-block;background:#eaf3fb;border-radius:8px;padding:12px 20px;margin-right:16px;margin-bottom:12px;text-align:center;">
-        <div style="font-size:1.9em;font-weight:700;color:#2c5f8a;">42.6</div>
-        <div style="font-size:0.82em;color:#6c757d;margin-top:2px;">mean age (years)</div>
-      </div>
-    </div>
-    <div style="display:flex;gap:24px;flex-wrap:wrap;margin-bottom:24px;">
-      <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Gender</strong>
-        <div style="margin-top:8px;">
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:480px;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
-          <th style="padding:6px 10px;">Gender</th>
-          <th style="padding:6px 10px;text-align:right;">Count</th>
-          <th style="padding:6px 10px;text-align:right;">%</th>
-          <th style="padding:6px 10px;text-align:right;">Mean Age</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;text-transform:capitalize;">female</td>
-          <td style="text-align:right;">39,504</td>
-          <td style="text-align:right;">67.5%</td>
-          <td style="text-align:right;">43.6 yrs</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;text-transform:capitalize;">male</td>
-          <td style="text-align:right;">17,653</td>
-          <td style="text-align:right;">30.2%</td>
-          <td style="text-align:right;">40.4 yrs</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;text-transform:capitalize;">unknown</td>
-          <td style="text-align:right;">1,341</td>
-          <td style="text-align:right;">2.3%</td>
-          <td style="text-align:right;">38.9 yrs</td>
-        </tr>
-      </tbody>
-    </table></div>
-      </div>
-      <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Age Distribution</strong>
-        <div style="margin-top:8px;">
-    <table style="width:100%;border-collapse:collapse;font-size:0.92em;max-width:320px;">
-      <thead>
-        <tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;">
-          <th style="padding:6px 10px;">Age Group</th>
-          <th style="padding:6px 10px;text-align:right;">Count</th>
-          <th style="padding:6px 10px;text-align:right;">%</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">0–17</td>
-          <td style="text-align:right;">6,980</td>
-          <td style="text-align:right;">11.9%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">18–34</td>
-          <td style="text-align:right;">10,942</td>
-          <td style="text-align:right;">18.7%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">35–49</td>
-          <td style="text-align:right;">19,145</td>
-          <td style="text-align:right;">32.7%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">50–64</td>
-          <td style="text-align:right;">13,366</td>
-          <td style="text-align:right;">22.8%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">65+</td>
-          <td style="text-align:right;">7,483</td>
-          <td style="text-align:right;">12.8%</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f0f0f0;">
-          <td style="font-weight:500;">Not reported</td>
-          <td style="text-align:right;">582</td>
-          <td style="text-align:right;">1.0%</td>
-        </tr>
-      </tbody>
-    </table></div>
-      </div>
-    </div>
-    <div style="display:flex;gap:24px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Race</strong>
-        <div style="margin-top:8px;"><table style="width:100%;border-collapse:collapse;font-size:0.92em;"><thead><tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;"><th style="padding:6px 10px;">Race</th><th style="padding:6px 10px;text-align:right;">Count</th><th style="padding:6px 10px;text-align:right;">%</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Unknown / Not reported</td><td style="text-align:right;font-size:0.9em;">52,096</td><td style="text-align:right;font-size:0.9em;">89.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">White</td><td style="text-align:right;font-size:0.9em;">5,411</td><td style="text-align:right;font-size:0.9em;">9.2%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Asian</td><td style="text-align:right;font-size:0.9em;">493</td><td style="text-align:right;font-size:0.9em;">0.8%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Mixed</td><td style="text-align:right;font-size:0.9em;">270</td><td style="text-align:right;font-size:0.9em;">0.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Black Or African American</td><td style="text-align:right;font-size:0.9em;">167</td><td style="text-align:right;font-size:0.9em;">0.3%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">American Indian Or Alaska Native</td><td style="text-align:right;font-size:0.9em;">41</td><td style="text-align:right;font-size:0.9em;">0.1%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Native Hawaiian Or Other Pacific Islander</td><td style="text-align:right;font-size:0.9em;">18</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Other</td><td style="text-align:right;font-size:0.9em;">2</td><td style="text-align:right;font-size:0.9em;">0.0%</td></tr></tbody></table><p style="font-size:0.82em;color:#6c757d;margin-top:4px;">Source: US Core FHIR extension.</p></div>
-      </div>
-      <div style="flex:1;min-width:260px;margin-bottom:16px;"><strong style="font-size:0.88em;color:#495057;">Ethnicity</strong>
-        <div style="margin-top:8px;"><table style="width:100%;border-collapse:collapse;font-size:0.92em;"><thead><tr style="border-bottom:2px solid #dee2e6;text-align:left;background:#f2f4f6;"><th style="padding:6px 10px;">Ethnicity</th><th style="padding:6px 10px;text-align:right;">Count</th><th style="padding:6px 10px;text-align:right;">%</th></tr></thead><tbody><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Unknown / Not reported</td><td style="text-align:right;font-size:0.9em;">51,766</td><td style="text-align:right;font-size:0.9em;">88.5%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Not Hispanic Or Latino</td><td style="text-align:right;font-size:0.9em;">6,215</td><td style="text-align:right;font-size:0.9em;">10.6%</td></tr><tr style="border-bottom:1px solid #f0f0f0;"><td style="font-size:0.9em;">Hispanic Or Latino/Spanish</td><td style="text-align:right;font-size:0.9em;">517</td><td style="text-align:right;font-size:0.9em;">0.9%</td></tr></tbody></table><p style="font-size:0.82em;color:#6c757d;margin-top:4px;">Source: US Core FHIR extension.</p></div>
-      </div>
-    </div>
 
     <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a3a5c;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Geographic Distribution</h3>
     
@@ -1402,7 +1204,7 @@
   </section>
 
 <footer>
-  Generated May 29, 2026 at 23:22 UTC &nbsp;&bull;&nbsp;
+  Generated May 29, 2026 at 23:54 UTC &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
