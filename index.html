@@ -44,6 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: May 30, 2026 at 06:20 PM PDT</p>
 </div>
 
 
@@ -129,6 +130,20 @@
         </div>
         <div style="font-size:0.83em;color:#7d4e00;line-height:1.6;"><div style="display:flex;align-items:flex-start;margin-bottom:4px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:2px solid #e67e22;border-radius:2px;flex-shrink:0;margin-right:6px;margin-top:2px;"></span><span>PHI bucket deletion (by June 26)</span></div><div style="display:flex;align-items:flex-start;margin-bottom:4px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:2px solid #e67e22;border-radius:2px;flex-shrink:0;margin-right:6px;margin-top:2px;"></span><span>Database preparation for long-term use</span></div><div style="display:flex;align-items:flex-start;margin-bottom:4px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:2px solid #e67e22;border-radius:2px;flex-shrink:0;margin-right:6px;margin-top:2px;"></span><span>Final manuscript</span></div></div>
       </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom:32px;">
+    <h2 style="font-size:1.25em;border-bottom:2px solid #dee2e6;padding-bottom:6px;
+               color:#1a3a5c;margin-top:0;margin-bottom:16px;">
+      Study Abstract
+    </h2>
+    <div style="font-size:0.88em;line-height:1.75;color:#333;max-width:900px;">
+      <p><strong>Background.</strong> Electronic health record (EHR) data from community-based naturopathic clinics represent a substantial but underutilized resource for health services research. Prior studies have relied on billing and administrative data, which do not capture the clinical narrative &mdash; treatment plans, lifestyle counseling, and supplement recommendations &mdash; that characterize naturopathic practice.</p>
+      <p><strong>Objectives.</strong> To develop and validate a privacy-first, cloud-based informatics infrastructure that transforms multi-clinic naturopathic EHR data into a standardized, de-identified, structured research dataset, and to demonstrate its analytic utility through an HbA1c-defined glycemic cohort analysis.</p>
+      <p><strong>Methods.</strong> Data were exported via FHIR API from seven ChARM EHR-based naturopathic clinics in Washington state. De-identification was performed using the Google Cloud Healthcare API, supplemented by a custom 9-pass rule-based NLP redaction pipeline verified by manual safety audit. The resulting dataset was loaded into BigQuery. De-identified clinical notes were converted into structured, queryable data: SOAP sections were parsed programmatically and curated keyword dictionaries applied to clinician-authored sections to classify treatment mentions into 13 standardized categories. A glycemic cohort was defined by elevated HbA1c (&ge;5.7%). Longitudinal HbA1c change was assessed by paired t-test (first vs. last reading). Rule-based NLP was validated by manual clinician review (PPV 97.9%).</p>
+      <p><strong>Results.</strong> The database includes 58,498 patients, 469,162 encounters, 858,394 clinical notes, and 3.6 million observations across 7 clinics. Among 2,869 patients with &ge;2 HbA1c readings, longitudinal analysis stratified by baseline glycemic category showed mean changes of &minus;0.686% (diabetes, n=128, p&lt;0.001), &minus;0.139% (prediabetes, n=783, p&lt;0.001), and &minus;0.028% (normoglycemic at baseline, n=1,958, p&lt;0.001). Supplement/botanical recommendations were documented for 83.4% of the elevated-HbA1c cohort; diet/nutrition counseling for 58.6%; and exercise counseling for 50.9%. Diet/nutrition and stress/mindfulness counseling were more frequent in the diabetes group than in prediabetes or normoglycemic patients.</p>
+      <p style="margin-bottom:0;"><strong>Conclusions.</strong> A scalable, HIPAA-compliant cloud pipeline successfully transformed multi-clinic naturopathic EHR data into a structured research dataset. The glycemic cohort analysis demonstrates both the database&rsquo;s analytic utility and clinically meaningful glycemic improvement in patients receiving naturopathic care, with a treatment pattern consistent with prior survey-based characterizations of naturopathic practice.</p>
     </div>
   </section>
 <section>
@@ -838,7 +853,7 @@
   </section>
 
 <footer>
-  Generated May 31, 2026 at 01:08 UTC &nbsp;&bull;&nbsp;
+  Generated May 30, 2026 at 06:20 PM PDT &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
