@@ -44,7 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
-<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: May 31, 2026 at 11:03 AM PDT</p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: May 31, 2026 at 11:15 AM PDT</p>
 </div>
 
 
@@ -604,10 +604,16 @@
     </div>
     
         <div style="background:#f0f7f2;border-left:4px solid #1a7a4a;border-radius:0 6px 6px 0;
-                    padding:12px 18px;margin-bottom:24px;font-size:0.9em;color:#1a5c2a;line-height:1.6;">
-          <strong>Cohort definition:</strong> Patients with a recorded HbA1c in the prediabetes or
-          diabetes range (≥5.7%), managed across 7 naturopathic clinics.
-          Primary analysis cohort for all findings below.
+                    padding:12px 18px;margin-bottom:24px;font-size:0.9em;color:#1a5c2a;line-height:1.7;">
+          <strong>Two cohorts are used in this section:</strong>
+          <ul style="margin:6px 0 0 0;padding-left:18px;color:#1a5c2a;">
+            <li><strong>Treatment cohort (n=3,149):</strong> all patients with any HbA1c ≥5.7%
+              (prediabetes or diabetes range at first reading). Used for all treatment frequency tables.</li>
+            <li><strong>Longitudinal outcomes cohort (n=1,581):</strong> all patients with ≥2 HbA1c
+              readings on distinct dates, regardless of baseline value. Used for HbA1c change analyses.
+              Includes 1,581 elevated-baseline patients (diabetes n=238, prediabetes n=1,343)
+              plus 3,992 normoglycemic patients as an internal comparator group.</li>
+          </ul>
         </div>
         
             <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:28px;">
@@ -855,7 +861,7 @@
   </section>
 
 <footer>
-  Generated May 31, 2026 at 11:03 AM PDT &nbsp;&bull;&nbsp;
+  Generated May 31, 2026 at 11:15 AM PDT &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
