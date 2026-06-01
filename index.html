@@ -44,7 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
-<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 01, 2026 at 03:07 PM PDT</p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 01, 2026 at 03:11 PM PDT</p>
 </div>
 
 
@@ -747,12 +747,20 @@
           
         </div></div></section>
   <section style="margin-bottom:32px;">
-    <div style="background:#d4edda;border-left:4px solid #1a7a4a;
-                padding:10px 14px;border-radius:0 4px 4px 0;margin-bottom:16px;">
-      <h2 style="font-size:1.25em;color:#1a3a5c;margin:0;">
-        HbA1c &ndash; hs-CRP Regression Analysis
-      </h2>
-    </div>
+    <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+               background:#4a2070;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">
+      HbA1c &ndash; hs-CRP Regression Analysis
+    </h3>
+    <p style="font-size:0.88em;color:#555;line-height:1.7;margin-bottom:12px;">
+      Elevated HbA1c and elevated hs-CRP frequently co-occur: chronic low-grade inflammation
+      promotes insulin resistance, while hyperglycemia drives oxidative stress and inflammatory
+      signaling. The published literature documents a consistent positive association between
+      these two biomarkers across diverse populations. This analysis tests whether that
+      relationship holds in our naturopathic patient cohort &mdash; serving both as a
+      cross-validation of our dataset against established findings and as a baseline for
+      future work examining whether naturopathic treatment patterns differentially affect
+      glycemic control and systemic inflammation.
+    </p>
     <p style="font-size:0.88em;color:#555;line-height:1.7;margin-bottom:16px;">
       Multiple regression of log-transformed hs-CRP on HbA1c, adjusting for age, sex, and BMI.
       One observation per patient (first recorded value). Adults &ge;18 with all four variables
@@ -864,7 +872,7 @@
   </section>
 
 <footer>
-  Generated June 01, 2026 at 03:07 PM PDT &nbsp;&bull;&nbsp;
+  Generated June 01, 2026 at 03:11 PM PDT &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
