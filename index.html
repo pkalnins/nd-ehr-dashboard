@@ -44,7 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
-<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 02, 2026 at 11:23 AM PDT</p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 02, 2026 at 11:33 AM PDT</p>
 </div>
 
 
@@ -1062,149 +1062,38 @@
   <section style="margin-bottom:48px;">
     <h2 style="font-size:1.4em;border-bottom:3px solid #2c5282;padding-bottom:6px;color:#2c5282;margin-bottom:20px;">Next Steps: Governance &amp; Data Access</h2>
     <p style="font-size:0.88em;color:#555;line-height:1.7;margin-bottom:20px;">
-      The research database is complete and ready for use. The items below outline decisions
-      and actions needed to transition the project to a sustainable institutional home and open
-      it to the broader research community.
+      The research database is complete and ready for use. The items below outline the
+      decisions and actions needed to open it to the broader research community and
+      establish a sustainable institutional home.
       &nbsp;<span style="font-size:0.85em;">
         <span style="background:#f59e0b;color:#fff;padding:1px 7px;border-radius:10px;font-weight:700;">DECIDE</span>
-        = group decision needed &nbsp;
+        &nbsp;group decision &nbsp;&nbsp;
         <span style="background:#2c5282;color:#fff;padding:1px 7px;border-radius:10px;font-weight:700;">ACTION</span>
-        = ready to implement &nbsp;
+        &nbsp;ready to implement &nbsp;&nbsp;
         <span style="background:#1a7a4a;color:#fff;padding:1px 7px;border-radius:10px;font-weight:700;">DONE</span>
-        = complete
+        &nbsp;complete
       </span>
     </p>
 
     <h3 style="font-size:0.95em;font-weight:700;color:#2c5282;margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.05em;">&#9729; GCP Project &amp; Data Infrastructure</h3>
-    
-    <div style="background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DONE</span><strong>GCP project ownership:</strong> <code>nd-ehr-analysis</code> is currently
-      owned by Paul Kalnins. <strong>Recommendation: Helfgott/NUNM retains GCP project ownership</strong>
-      given their role as the IRB institution — this provides institutional accountability for the
-      data. A Helfgott IT or research admin account should be added as a second project Owner.
-    </div>
-    <div style="background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DECIDE</span><strong>Designate a GCP administrator at Helfgott.</strong> Someone at Helfgott (IT
-      or research staff) needs to be named as the ongoing GCP project administrator who can grant
-      BigQuery access to new researchers. Currently only Paul Kalnins can provision access.
-      <br><em>Decision needed: who at Helfgott will hold this role?</em>
-    </div>
-    <div style="background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>ACTION</span><strong>Researcher access path (ready to implement):</strong> The process is defined
-      in <code>governance/data_access_policy.md</code>. New researchers submit: name + institution +
-      Google account email + intended use (+ signed DUA for external collaborators). PI approves;
-      GCP admin grants <code>roles/bigquery.dataViewer</code> + <code>roles/bigquery.jobUser</code>.
-      Analysts access BigQuery only — no row-level exports permitted.
-    </div>
-    <div style="background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DONE</span><strong>Raw PHI deleted:</strong> <code>gs://nd_ehr_raw_phi/</code> and PHI FHIR
-      stores scheduled for deletion June&nbsp;26,&nbsp;2026. De-identified bucket
-      (<code>gs://nd_ehr_deidentified/</code>) and all BigQuery tables are retained.
-      The de-identification crypto key (<code>charm-deid-crypto-key</code> in Secret Manager)
-      should be retained in case dates need to be unshifted for any future authorized purpose.
-    </div>
+    <div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><strong>GCP project ownership:</strong> Helfgott/NUNM owns the <code>nd-ehr-analysis</code> GCP project (appropriate given their role as the IRB institution). Paul Kalnins currently holds the primary working access; a Helfgott admin account also has owner-level access.</div><div style='background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DECIDE</span><strong>Designate an ongoing GCP administrator at Helfgott</strong> who can grant BigQuery access to new researchers. Currently Paul Kalnins is the sole active administrator. Someone at Helfgott IT or research staff should be identified as the long-term owner of this function.<br><em>Decision needed: who at Helfgott will hold this role?</em></div><div style='background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DECIDE</span><strong>INM may ask about GCP ownership.</strong> If INM wants to own the infrastructure, two options exist:<ul style='margin:6px 0 0 18px;padding:0;'><li><strong>Transfer the GCP project</strong> to INM's Google organization — technically possible but involves billing account changes, IAM restructuring, and moving all Cloud Run, Healthcare API, and Secret Manager resources. Non-trivial effort, ~1–2 days of engineering work.</li><li><strong>Copy the BigQuery dataset</strong> into INM's own GCP project — simpler: one <code>bq cp</code> command copies the tables; INM manages access from there. Helfgott retains the pipeline infrastructure; INM gets their own copy of the data. This is the lower-risk path.</li></ul><em>Recommendation: discuss with group. Helfgott as IRB institution is a natural fit for ownership; a BigQuery copy to INM is a reasonable compromise if INM wants direct control of data access.</em></div><div style='background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>ACTION</span><strong>Researcher access path (ready to implement):</strong><ul style='margin:6px 0 0 18px;padding:0;'><li>Researcher submits an IRB proposal to their institution</li><li>IRB approval (or exemption determination) is obtained</li><li>Researcher contacts PI with: name, institution, Google account email, intended use, and IRB approval documentation</li><li>External collaborators also sign the Data Use Agreement (<code>governance/data_use_agreement_template.md</code>)</li><li>PI approves; GCP admin grants <code>roles/bigquery.dataViewer</code> + <code>roles/bigquery.jobUser</code></li><li>Analysts access BigQuery only — no row-level data exports permitted</li></ul></div><div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><strong>Raw PHI deletion:</strong> <code>gs://nd_ehr_raw_phi/</code> and PHI FHIR stores scheduled for deletion June&nbsp;26,&nbsp;2026. The de-identified bucket (<code>gs://nd_ehr_deidentified/</code>) and all BigQuery tables are retained. The de-identification crypto key (<code>charm-deid-crypto-key</code> in Secret Manager) should be retained for any future authorized date-unshifting.</div>
 
     <h3 style="font-size:0.95em;font-weight:700;color:#2c5282;margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.05em;">&#128196; GitHub: Code Repository &amp; Dashboard</h3>
-    
-    <div style="background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DECIDE</span><strong>Organizational GitHub home for the project.</strong> The pipeline code
-      (<code>pkalnins/nd_ehr_analysis</code>) and live dashboard (<code>pkalnins/nd-ehr-dashboard</code>)
-      currently live under Paul Kalnins' personal GitHub account. For long-term project continuity,
-      these should be cloned (not transferred) to an organizational GitHub account so the project
-      has an institutional home independent of Paul.
-      <br><em>Decision needed: INM or Helfgott? INM is the clinical network; Helfgott is the
-      research/IRB institution. Either is appropriate — recommend discussing with the group.</em>
-    </div>
-    <div style="<span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>ACTION</span> background:#f0f4f8">
-      <span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>ACTION</span><strong>Steps to clone (once org account is decided):</strong>
-      <ol style="margin:6px 0 0 18px;padding:0;">
-        <li>Create an organizational GitHub account (e.g., <code>inm-research</code> or
-            <code>helfgott-research</code>)</li>
-        <li>Fork or clone both repositories into that org account</li>
-        <li>Update the GitHub Pages source in the dashboard repo settings</li>
-        <li>Update the dashboard push target in <code>generate_dashboard.py</code>
-            (<code>nd-ehr-dashboard</code> repo path)</li>
-        <li>Paul retains his personal forks as backup; primary project URL updates to the org account</li>
-      </ol>
-    </div>
-    <div style="background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DONE</span><strong>Dashboard is live</strong> at
-      <a href="https://pkalnins.github.io/nd-ehr-dashboard/" target="_blank"
-         style="color:#2c5282;">pkalnins.github.io/nd-ehr-dashboard</a> —
-      regenerated automatically by <code>python analysis/generate_dashboard.py</code>.
-      URL will change once moved to an organizational account.
-    </div>
+    <div style='background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DECIDE</span><strong>Choose an organizational GitHub home for the project.</strong> The pipeline code (<code>pkalnins/nd_ehr_analysis</code>) and live dashboard (<code>pkalnins/nd-ehr-dashboard</code>) currently live under Paul Kalnins' personal GitHub account. For long-term continuity, these should be cloned to an organizational account independent of Paul.<ul style='margin:6px 0 0 18px;padding:0;'><li><strong>INM</strong> — the clinical network; natural home for the data infrastructure supporting its clinics</li><li><strong>Helfgott/NUNM</strong> — the research and IRB institution; natural home for the research pipeline and analysis code</li></ul><em>Either is workable — recommend discussing with the group. Paul retains his personal forks as backup regardless.</em></div><div style='background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>ACTION</span><strong>Steps to set up the organizational account (once decided):</strong><ol style='margin:6px 0 0 18px;padding:0;'><li>Create an organizational GitHub account (e.g., <code>inm-research</code> or <code>helfgott-research</code>)</li><li>Fork or clone both repos into the org account</li><li>Enable GitHub Pages on the dashboard repo under the new account</li><li>Update the push target path in <code>generate_dashboard.py</code></li><li>Paul retains his personal forks; primary project URL updates to the org</li></ol></div><div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><strong>Dashboard is live</strong> at <a href='https://pkalnins.github.io/nd-ehr-dashboard/' target='_blank' style='color:#2c5282;'>pkalnins.github.io/nd-ehr-dashboard</a>. Regenerated automatically by <code>python analysis/generate_dashboard.py</code>. URL will update once moved to an organizational account.</div>
 
     <h3 style="font-size:0.95em;font-weight:700;color:#2c5282;margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.05em;">&#9878; IRB &amp; Governance Documents</h3>
-    
-    <div style="background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DECIDE</span><strong>Confirm IRB determination.</strong> The dataset is de-identified per HIPAA
-      Safe Harbor; under 45 CFR §&nbsp;46.102(e)(1) this likely constitutes non-human-subjects
-      research. However, a formal exemption determination or IRB approval should be on file at
-      Helfgott before the database is made available to external researchers.
-      <code>governance/irb_statement.md</code> provides draft language — bracketed fields need
-      to be completed with protocol-specific information.
-      <br><em>Decision needed: has Helfgott's IRB issued a determination? If not, this should
-      be initiated before the first external access request.</em>
-    </div>
-    <div style="background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DONE</span><strong>Governance documents are complete</strong> and ready to use:
-      <ul style="margin:6px 0 0 18px;padding:0;">
-        <li><code>governance/data_access_policy.md</code> — authorized uses, approval process,
-            researcher obligations</li>
-        <li><code>governance/data_use_agreement_template.md</code> — fill-in DUA for external
-            collaborators; must be signed before access is granted</li>
-        <li><code>governance/deid_certification.md</code> — HIPAA Safe Harbor attestation;
-            attach to IRB protocol or DUA</li>
-        <li><code>governance/irb_statement.md</code> — IRB oversight narrative; bracketed
-            fields need completion</li>
-      </ul>
-    </div>
-    <div style="background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DECIDE</span><strong>Designate a PI and IRB contact.</strong> Several governance documents
-      contain <em>[FILL IN: PI name]</em> and <em>[FILL IN: IRB coordinator]</em> placeholders.
-      These need to be completed before the documents are used for any formal purpose (DUA
-      execution, IRB submission, external data sharing).
-    </div>
+    <div style='background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DECIDE</span><strong>Confirm IRB determination is on file at Helfgott.</strong> The dataset is de-identified per HIPAA Safe Harbor; under 45&nbsp;CFR&nbsp;§&nbsp;46.102(e)(1) this likely constitutes non-human-subjects research and may qualify for exemption. A formal determination should be on file before the database is opened to external researchers. <code>governance/irb_statement.md</code> provides draft language with bracketed fields to complete.<ul style='margin:6px 0 0 18px;padding:0;'><li>Has Helfgott's IRB issued an exemption determination or approval?</li><li>If not, this should be initiated before the first external access request</li></ul></div><div style='background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DECIDE</span><strong>Designate a PI and IRB contact.</strong> Several governance documents contain <em>[FILL IN: PI name]</em> and <em>[FILL IN: IRB coordinator]</em> placeholders. These must be completed before DUA execution or IRB submission:<ul style='margin:6px 0 0 18px;padding:0;'><li><code>governance/irb_statement.md</code></li><li><code>governance/data_use_agreement_template.md</code></li><li><code>governance/data_access_policy.md</code></li></ul></div><div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><strong>Governance documents are complete and ready to use:</strong><ul style='margin:6px 0 0 18px;padding:0;'><li><code>data_access_policy.md</code> — authorized uses, approval process, researcher obligations</li><li><code>data_use_agreement_template.md</code> — fill-in DUA for external collaborators</li><li><code>deid_certification.md</code> — HIPAA Safe Harbor attestation; attach to IRB protocol or DUA</li><li><code>irb_statement.md</code> — IRB oversight narrative; bracketed fields need completion</li></ul></div>
 
     <h3 style="font-size:0.95em;font-weight:700;color:#2c5282;margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.05em;">&#43; Expanding the Clinic Network</h3>
-    
-    <div style="background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>ACTION</span><strong>Clinics 3–7 re-authorization for expanded scope.</strong> Clinics 1 &amp; 2
-      need re-authorization with the expanded OAuth scope to download
-      <code>Medication</code> and <code>DocumentReference</code> resources (currently commented
-      out in the importer). These resources add drug-name resolution and additional clinical
-      note types. Self-service onboarding app is deployed; credentials just need to be refreshed.
-    </div>
-    <div style="background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>DECIDE</span><strong>Strategy for expanding beyond 7 clinics.</strong> The infrastructure is
-      production-ready for new clinics. Decisions needed:
-      <ul style="margin:6px 0 0 18px;padding:0;">
-        <li>Which INM residency clinics or independent ND practices to prioritize next</li>
-        <li>Whether to expand outside Washington state (critical for generalizability)</li>
-        <li>Whether to pursue a formal multi-site agreement through INM or recruit independently</li>
-      </ul>
-    </div>
+    <div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><strong>All 7 clinics are complete.</strong> The database contains all available data from all 7 participating clinics. No further downloads, re-authorizations, or pipeline work are needed for the current dataset.</div><div style='background:#fff8e1;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#f59e0b;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DECIDE</span><strong>Strategy for expanding beyond the current 7 clinics.</strong> The infrastructure is production-ready for new clinics. Key decisions:<ul style='margin:6px 0 0 18px;padding:0;'><li>Which INM residency clinics or independent ND practices to prioritize next</li><li>Whether to expand outside Washington state — important for generalizability</li><li>Whether to pursue a formal multi-site recruitment agreement through INM, or recruit practices independently</li><li>Whether new clinics sign DUAs directly with Helfgott or through INM</li></ul></div>
 
     <h3 style="font-size:0.95em;font-weight:700;color:#2c5282;margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.05em;">&#128214; Manuscript &amp; Dissemination</h3>
-    
-    <div style="background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;">
-      <span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>ACTION</span><strong>Manuscript submission.</strong> The draft is substantially complete
-      (see <code>manuscript/ND-EHR_manuscript_draft.md</code>). Remaining steps: fill in
-      bracketed author/grant details, select a target journal, complete co-author review,
-      and submit. The methods-feasibility framing is appropriate for a first submission;
-      the JMIR or JAMIA family of journals are natural fits.
-    </div>
-    <div style="<span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>ACTION</span> background:#f0f4f8">
-      <span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:6px;vertical-align:middle;'>ACTION</span><strong>Conference presentation.</strong> An abstract has been drafted for
-      AANP 2026 (<code>ND-EHR.Abstract.Conference.md</code>). Confirm submission deadline
-      and finalize.
-    </div>
+    <div style='background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>ACTION</span><strong>Manuscript submission.</strong> The draft is substantially complete (<code>manuscript/ND-EHR_manuscript_draft.md</code>). Remaining steps:<ul style='margin:6px 0 0 18px;padding:0;'><li>Fill in bracketed author names, affiliations, and grant number</li><li>Complete co-author review round</li><li>Select target journal — JMIR Medical Informatics or JAMIA are natural fits for a methods-feasibility paper of this type</li><li>Submit</li></ul></div><div style='background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;overflow:hidden;'><span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>ACTION</span><strong>Conference presentation.</strong> An abstract has been drafted for AANP 2026 (<code>ND-EHR.Abstract.Conference.md</code>). Confirm submission deadline and finalize.</div>
 
   </section>
 
 <footer>
-  Generated June 02, 2026 at 11:23 AM PDT &nbsp;&bull;&nbsp;
+  Generated June 02, 2026 at 11:33 AM PDT &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
