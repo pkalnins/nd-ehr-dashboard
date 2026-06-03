@@ -44,7 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
-<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 03, 2026 at 11:34 AM PDT</p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 03, 2026 at 11:43 AM PDT</p>
 </div>
 
 
@@ -933,7 +933,7 @@
   <p style="font-size:0.84em;font-weight:600;color:#333;margin:16px 0 4px;">Interpretation</p>
   <ul style='font-size:0.88em;color:#444;line-height:1.7;padding-left:20px;margin-top:8px;'><li style='margin-bottom:10px;'><strong>Exercise counseling</strong> (n=391) was the only treatment category to survive Bonferroni correction: &beta;&nbsp;=&nbsp;-0.1139&nbsp;%/yr (95%&nbsp;CI [-0.1693, -0.0584], p&lt;0.001). Patients with documented exercise counseling declined ~0.10 percentage points per year faster than those without. This finding is consistent with the established evidence base for physical activity and glycemic control, and confirms the database captures expected clinical signals.</li><li style='margin-bottom:10px;'><strong>Conventional diabetes medications</strong> (n=38) showed the largest overall trajectory effect: &beta;&nbsp;=&nbsp;-0.1350&nbsp;%/yr (p&lt;0.001), included as a confounder control so that treatment estimates are not inflated by co-occurrence with pharmaceutical therapy. Medicated patients entered care with higher mean baseline HbA1c (6.91% vs. 6.06%).</li><li style='margin-bottom:10px;'><strong>Physical Therapy & Bodywork</strong>, <strong>Homeopathy</strong> showed significant positive interactions (slower improvement). These are unlikely to represent treatment harm — a supplementary check confirmed these patients receive <em>more</em> of every other treatment category, not fewer. The most plausible explanation is <strong>treatment refractoriness</strong>: patients whose HbA1c is more resistant to initial interventions tend to accumulate more modalities over time. Hydrotherapy (p=0.042) does not survive Bonferroni correction, and the homeopathy subgroup is small (n=24). These are hypothesis-generating signals.</li><li style='margin-bottom:10px;'><strong>Diet/nutrition, stress/mindfulness, sleep hygiene, supplements, acupuncture, and IV therapy</strong> did not reach statistical significance. The null result for diet counseling likely reflects both the heterogeneity of dietary recommendations and the gap between documented recommendations and patient adherence, rather than an absence of dietary effects on glycemic control.</li></ul>
         
-  <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a5c3a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Secondary Analysis: HbA1c Trajectory by Diet Subtype (LME)</h3>
+  <h3 style="font-size:0.88em;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;background:#1a5c3a;color:#fff;padding:7px 14px;border-radius:4px;margin:32px 0 12px;">Diet Subtype × HbA1c Trajectory (Linear Mixed Effects)</h3>
 
   <p style="font-size:0.84em;font-style:italic;color:#555;line-height:1.7;
             background:#f8f9fa;border-left:3px solid #adb5bd;padding:10px 14px;
@@ -966,7 +966,7 @@
     </tr></thead>
     <tbody>
         <tr style="background:#fdf3e0;">
-          <td style="font-weight:600;color:#1a7a4a;">Conv. DM Medication</td>
+          <td style="font-weight:600;color:#1a7a4a;">Antihyperglycemic Medication</td>
           <td style="text-align:right;">26</td>
           <td style="text-align:right;font-weight:600;color:#1a7a4a;">-0.0681</td>
           <td style="text-align:right;font-size:0.92em;color:#666;">[-0.1346, -0.0016]</td>
@@ -1135,7 +1135,7 @@
   </section>
 
 <footer>
-  Generated June 03, 2026 at 11:34 AM PDT &nbsp;&bull;&nbsp;
+  Generated June 03, 2026 at 11:43 AM PDT &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
