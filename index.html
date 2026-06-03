@@ -44,7 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
-<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 03, 2026 at 03:10 PM PDT</p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 03, 2026 at 03:12 PM PDT</p>
 </div>
 
 
@@ -502,11 +502,13 @@
           <strong>Cohorts used in this section:</strong>
           <ul style="margin:6px 0 0 0;padding-left:18px;color:#1a5c2a;">
             <li><strong>Elevated HbA1c cohort (n=3,149):</strong> all patients with any HbA1c ≥5.7%
-              (prediabetes or diabetes range). Used for treatment frequency and co-occurrence analyses. | treatment co-occurrence heatmap uses n=2,578 (adults ≥18, valid birth sex)</li>
-            <li><strong>Longitudinal HbA1c cohort (n=1,581):</strong> all patients with ≥2 HbA1c
+              (prediabetes or diabetes range). Used for treatment frequency and co-occurrence analyses.
+              <ul style="margin:2px 0;padding-left:16px;"><li style="margin-top:2px;font-size:0.93em;color:#2d6a4a;">Co-occurrence heatmap: n=2,578 (further restricted to adults ≥18, valid birth sex)</li></ul></li>
+            <li><strong>Longitudinal HbA1c cohort (n=1,581):</strong> patients with ≥2 HbA1c
               readings on distinct dates, first reading ≥5.7%. Used for glycemic change and LME analyses.
               Includes 1,581 elevated-baseline patients
-              plus 3,992 normoglycemic patients as an internal comparator. | LME analysis uses n=765 (adults ≥18, valid birth sex + BMI, ≥2 readings ≥30 days)</li>
+              plus 3,992 normoglycemic patients as an internal comparator.
+              <ul style="margin:2px 0;padding-left:16px;"><li style="margin-top:2px;font-size:0.93em;color:#2d6a4a;">LME analysis: n=765 (further restricted to adults ≥18, valid birth sex, BMI available, ≥30-day reading gap)</li></ul></li>
           </ul>
           <div style="margin-top:8px;font-size:0.88em;color:#4a7a5a;">
             All HbA1c readings sourced from <code>standardized_observations</code>, which captures both
@@ -1140,7 +1142,7 @@
   </section>
 
 <footer>
-  Generated June 03, 2026 at 03:10 PM PDT &nbsp;&bull;&nbsp;
+  Generated June 03, 2026 at 03:12 PM PDT &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
