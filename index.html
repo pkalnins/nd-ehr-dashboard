@@ -44,7 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
-<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 15, 2026 at 12:09 AM PDT</p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 15, 2026 at 12:10 AM PDT</p>
 </div>
 
 
@@ -191,10 +191,10 @@
       Study Abstract
     </h2>
     <div style="font-size:0.88em;line-height:1.75;color:#333;max-width:900px;">
-      <p><strong>Background.</strong> Electronic health record (EHR) data from community-based naturopathic clinics are underutilized in health services research. Prior studies have relied on billing and administrative data, which fail to capture the lifestyle counseling, supplement recommendations, and clinical reasoning central to naturopathic care. This study developed and validated a HIPAA-compliant, cloud-based pipeline to extract, de-identify, and structure naturopathic EHR data, and demonstrated database utility through population-level practice characterization and glycemic cohort analysis.</p>
-      <p><strong>Methods.</strong> This was a methods-feasibility pilot study using retrospective, de-identified EHR data from seven naturopathic clinics in Washington State. Data were extracted via FHIR API under a HIPAA-compliant Business Associate Agreement. De-identification combined automated PHI detection with a manually audited redaction pipeline. De-identified clinical notes (n=858,394) were parsed into 12 naturopathic treatment order categories; manual review confirmed 97.9% classification accuracy. Two glycemic cohorts were defined: longitudinal (&ge;2 HbA1c readings; n=5,576) and elevated HbA1c with &ge;1 treatment order (n=2,965). Linear regression examined the hs-CRP&ndash;HbA1c association (n=4,371).</p>
-      <p><strong>Results.</strong> The database includes 58,498 patients, 469,162 encounters, 858,394 clinical notes, and 3.6 million observations across 7 clinics (2008&ndash;2026); 68.1% female, mean age 42.7 years. Longitudinal HbA1c analysis documented significant reductions in the prediabetes (&minus;0.131%; p&lt;0.001) and diabetes (&minus;0.766%; p&lt;0.001) subgroups. Treatment pattern analysis identified nutritional supplements (83.0%), diet and nutrition (53.5%), and exercise (47.9%) as the most frequently co-ordered modalities, with botanical medicine (23.0%) and hormone therapy (21.6%) as distinct categories. Linear regression confirmed a significant positive hs-CRP&ndash;HbA1c association.</p>
-      <p style="margin-bottom:0;"><strong>Conclusions.</strong> This pilot demonstrates that a HIPAA-compliant cloud pipeline can transform multi-clinic naturopathic EHR data into a validated research dataset, establishing proof of concept for expansion to a broader, more representative sample of naturopathic practices.</p>
+      <p><strong>Background.</strong> Electronic health records (EHRs) from community-based naturopathic clinics represent a potentially valuable resource for practice-based research, yet no standardized infrastructure exists to aggregate and analyze these data across clinical sites. Building on prior database initiatives in academic naturopathic teaching clinics, this methods-feasibility pilot aimed to develop a scalable, HIPAA-compliant, cloud-based framework for community naturopathic EHR research, assemble a structured de-identified database from seven community clinics, characterize its contents, and demonstrate its descriptive and longitudinal analytic utility through analyses of treatment patterns and hemoglobin A1c (HbA1c) trajectories.</p>
+      <p><strong>Methods.</strong> De-identified retrospective EHR data were extracted via FHIR API from seven community naturopathic clinics in Washington State sharing a common cloud-based EHR platform, under a HIPAA-compliant Business Associate Agreement. Patient records were de-identified through automated detection with manual review. Treatment orders were extracted from clinical notes and categorized into 12 naturopathic treatment modalities. Database characteristics were summarized descriptively. HbA1c-based patient cohorts were used to evaluate treatment patterns and longitudinal HbA1c trends.</p>
+      <p><strong>Results.</strong> The assembled database includes 58,498 patients (68.1% female; mean age 42.7 years), 469,162 encounters, 858,394 clinical notes, and 3.6 million observations spanning 2008&ndash;2026. Treatment order classification demonstrated good validity (positive predictive value 93.3%, 95% CI: 90&ndash;96%). Analysis of an elevated HbA1c patient cohort (n=2,854) identified commonly documented treatment modalities, including nutritional supplements (78.6%), diet and nutrition (47.5%), and exercise (39.7%). The database also enabled longitudinal analyses, illustrated by HbA1c trajectory analyses in prediabetes (&minus;0.131%; p&lt;0.001) and diabetes (&minus;0.766%; p&lt;0.001) subgroups.</p>
+      <p style="margin-bottom:0;"><strong>Conclusions.</strong> This methods-feasibility pilot demonstrates that a HIPAA-compliant cloud-based pipeline can transform multi-clinic naturopathic EHR data into a validated, queryable research database at population scale. The infrastructure proved replicable across diverse community practices without requiring standardized data entry or manual chart abstraction. The platform is designed for systematic expansion to a nationally representative network of naturopathic clinics.</p>
     </div>
   </section>
 <section>
@@ -1186,7 +1186,7 @@
   </section>
 
 <footer>
-  Generated June 15, 2026 at 12:09 AM PDT &nbsp;&bull;&nbsp;
+  Generated June 15, 2026 at 12:10 AM PDT &nbsp;&bull;&nbsp;
   Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
 </footer>
 
