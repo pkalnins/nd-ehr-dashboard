@@ -44,7 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
-<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 17, 2026 at 01:02 PM PDT</p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 17, 2026 at 01:08 PM PDT</p>
 </div>
 
 
@@ -61,6 +61,27 @@
       <p><strong>Methods.</strong> De-identified retrospective EHR data were extracted via FHIR API from seven community naturopathic clinics in Washington State and loaded into a structured cloud-based research database. Records were de-identified using automated protected health information detection with manual audit. Treatment recommendations were extracted from clinical notes, categorized into 12 treatment modalities, and validated through manual review of a stratified random sample (PPV 93.3%, 95% CI: 90&ndash;96%). HbA1c-based cohorts were analyzed as exemplar use cases for evaluating treatment extraction and longitudinal outcome assessment.</p>
       <p><strong>Results.</strong> The assembled database includes 58,498 patients (68.1% female; mean age 42.7 years), 469,162 encounters, 858,394 clinical notes, and 3.6 million observations spanning 2008&ndash;2026. Common documented conditions included fatigue (29.8%), vitamin D deficiency (9.6%), and insomnia (8.0%). In an elevated HbA1c cohort (n=2,854), the most frequently documented treatment modalities were nutritional supplements (77.8%), diet/nutrition counseling (47.5%), and exercise (39.7%). Longitudinal HbA1c analyses (n=5,576) identified significant declines in HbA1c among both diabetes and prediabetes subgroups (both p&lt;0.001), demonstrating the database&rsquo;s capacity to support longitudinal outcomes research.</p>
       <p style="margin-bottom:0;"><strong>Conclusions.</strong> This pilot demonstrates the feasibility of transforming multi-clinic naturopathic EHR data into a queryable research database using a HIPAA-compliant cloud-based pipeline with validated treatment extraction capabilities. The resulting infrastructure supports population characterization, treatment pattern analysis, and longitudinal outcomes research, providing a scalable foundation for national practice-based research using real-world naturopathic clinical data.</p>
+    </div>
+  </section>
+
+  <section style="margin-bottom:28px;">
+    <div style="background:#eaf3fb;border-left:4px solid #2c5f8a;border-radius:0 8px 8px 0;
+                padding:16px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:220px;">
+        <div style="font-size:0.8em;font-weight:700;text-transform:uppercase;
+                    letter-spacing:0.06em;color:#2c5f8a;margin-bottom:4px;">Research Dataset</div>
+        <div style="font-size:0.93em;color:#1a3a5c;line-height:1.6;">
+          The de-identified research database is available to qualified researchers under a
+          data use agreement. The dataset landing page includes documentation, access
+          instructions, and the data dictionary.
+        </div>
+      </div>
+      <a href="https://pkalnins.github.io/nd-ehr-dataset/" target="_blank"
+         style="display:inline-block;background:#2c5f8a;color:#fff;font-weight:700;
+                font-size:0.88em;padding:10px 20px;border-radius:6px;text-decoration:none;
+                white-space:nowrap;flex-shrink:0;">
+        View Dataset Page &#8594;
+      </a>
     </div>
   </section>
 
@@ -1092,20 +1113,9 @@
     </p>
   </section>
 
-  <section style="margin-bottom:48px;">
-    <h2 style="font-size:1.4em;border-bottom:3px solid #2c5282;padding-bottom:6px;color:#2c5282;margin-bottom:20px;">Research Database Status</h2>
-    <p style='font-size:0.88em;color:#555;line-height:1.7;margin-bottom:20px;'>The research database is complete and available for use. All pipeline stages are done.&nbsp;<span style='font-size:0.85em;'><span style='background:#f59e0b;color:#fff;padding:1px 7px;border-radius:10px;font-weight:700;'>DECIDE</span>&nbsp;group decision&nbsp;&nbsp;<span style='background:#2c5282;color:#fff;padding:1px 7px;border-radius:10px;font-weight:700;'>ACTION</span>&nbsp;ready to implement&nbsp;&nbsp;<span style='background:#1a7a4a;color:#fff;padding:1px 7px;border-radius:10px;font-weight:700;'>DONE</span>&nbsp;complete</span></p><h3 style="font-size:0.95em;font-weight:700;color:#2c5282;margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.05em;">Infrastructure</h3>
-<div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><p style='margin:4px 0;'><strong>GCP project (<code>nd-ehr-analysis</code>)</strong> is hosted at Helfgott Research Institute / NUNM.</p><ul style='margin:6px 0 4px 18px;padding:0;'><li>BigQuery dataset <code>nd-ehr-analysis.nd_ehr_research</code> is the authoritative research database</li><li>Paul Kalnins is the primary administrator and data access contact</li></ul></div>
-<div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><p style='margin:4px 0;'><strong>Raw PHI deletion:</strong></p><ul style='margin:6px 0 4px 18px;padding:0;'><li>PHI FHIR stores deleted June 3, 2026</li><li><code>gs://nd_ehr_raw_phi/</code> scheduled for deletion by June 26, 2026</li><li>De-identified bucket (<code>gs://nd_ehr_deidentified/</code>) and all BigQuery tables are retained</li></ul></div>
-<div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><p style='margin:4px 0;'><strong>Dashboard is live</strong> at <a href="https://pkalnins.github.io/nd-ehr-dashboard/" target="_blank" style="color:#2c5282;">pkalnins.github.io/nd-ehr-dashboard</a>.</p><p style='margin:4px 0;'>Regenerated by <code>python analysis/generate_dashboard.py</code>. Code repository: <code>pkalnins/nd_ehr_analysis</code>.</p></div><h3 style="font-size:0.95em;font-weight:700;color:#2c5282;margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.05em;">Data Access</h3>
-<div style='background:#f8f9fa;border-left:4px solid #adb5bd;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;'><span style='background:#6c757d;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>NOTE</span><p style='margin:4px 0;'><strong>Researcher access:</strong> Contact Paul Kalnins (pkalnins@gmail.com) with your name,</p><p style='margin:4px 0;'>institution, Google account email, intended use, and IRB approval documentation.</p><p style='margin:4px 0;'>External collaborators sign the Data Use Agreement (<code>governance/data_use_agreement_template.md</code>).</p><p style='margin:4px 0;'>Access is granted as <code>roles/bigquery.dataViewer</code> + <code>roles/bigquery.jobUser</code> — BigQuery only,</p><p style='margin:4px 0;'>no row-level exports.</p></div><h3 style="font-size:0.95em;font-weight:700;color:#2c5282;margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.05em;">Manuscript & Dissemination</h3>
-<div style='background:#f0f7f3;border-left:4px solid #1a7a4a;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;'><span style='background:#1a7a4a;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>DONE</span><p style='margin:4px 0;'><strong>AANP 2026 oral presentation</strong> — Ryan Bradley presenting July 2026. Abstract synced with manuscript.</p></div>
-<div style='background:#f0f4f8;border-left:4px solid #4a7fb5;padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:10px;font-size:0.87em;line-height:1.7;box-sizing:border-box;'><span style='background:#2c5282;color:#fff;font-size:0.75em;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;vertical-align:middle;white-space:nowrap;'>ACTION</span><p style='margin:4px 0;'><strong>Manuscript submission.</strong> Target journal: <em>Global Advances in Integrative Medicine and Health</em>.</p><ul style='margin:6px 0 4px 18px;padding:0;'><li>Fill in three placeholders: grant number, GitHub URL, data access contact email</li><li>Circulate to co-authors for final review, then submit</li></ul></div>
-  </section>
-
 <footer>
-  Generated June 17, 2026 at 01:02 PM PDT &nbsp;&bull;&nbsp;
-  Data stored in GCS: <code>gs://nd_ehr_raw_phi/</code>
+  Generated June 17, 2026 at 01:08 PM PDT &nbsp;&bull;&nbsp;
+  BigQuery dataset: <code>nd-ehr-analysis.nd_ehr_research</code>
 </footer>
 
 
