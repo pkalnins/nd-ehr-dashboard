@@ -44,7 +44,7 @@
   7 participating clinics &nbsp;&bull;&nbsp; ChARM EHR FHIR R4
   &nbsp;&bull;&nbsp; GCP project: <code>nd-ehr-analysis</code>
 </p>
-<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 17, 2026 at 01:08 PM PDT</p>
+<p style="font-size:0.8em;color:#6c757d;margin:2px 0 0;">Last updated: June 18, 2026 at 11:12 AM PDT</p>
 </div>
 
 
@@ -54,13 +54,13 @@
       Study Abstract
     </h2>
     <p style="font-size:0.95em;font-style:italic;color:#444;margin:0 0 14px;">
-      Building a Multi-Clinic Research Database from Naturopathic EHR Data: A Privacy-First, Cloud-Based Informatics Pilot
+      Transforming Multi-Clinic Naturopathic EHR Data into a Research Database: Development and Validation of a Privacy-Preserving Pipeline
     </p>
     <div style="font-size:0.88em;line-height:1.75;color:#333;max-width:900px;">
-      <p><strong>Background.</strong> Electronic health records (EHRs) from community-based naturopathic clinics represent a valuable resource for practice-based research. However, no standardized infrastructure exists for aggregating and analyzing these data across clinical sites. This methods-feasibility pilot developed a seven-clinic, HIPAA-compliant, cloud-based naturopathic EHR research database with infrastructure supporting multi-site data aggregation, de-identification, and free-text treatment extraction, and evaluated its utility through patient population characterization, treatment pattern analysis, and longitudinal HbA1c trajectory analyses.</p>
-      <p><strong>Methods.</strong> De-identified retrospective EHR data were extracted via FHIR API from seven community naturopathic clinics in Washington State and loaded into a structured cloud-based research database. Records were de-identified using automated protected health information detection with manual audit. Treatment recommendations were extracted from clinical notes, categorized into 12 treatment modalities, and validated through manual review of a stratified random sample (PPV 93.3%, 95% CI: 90&ndash;96%). HbA1c-based cohorts were analyzed as exemplar use cases for evaluating treatment extraction and longitudinal outcome assessment.</p>
-      <p><strong>Results.</strong> The assembled database includes 58,498 patients (68.1% female; mean age 42.7 years), 469,162 encounters, 858,394 clinical notes, and 3.6 million observations spanning 2008&ndash;2026. Common documented conditions included fatigue (29.8%), vitamin D deficiency (9.6%), and insomnia (8.0%). In an elevated HbA1c cohort (n=2,854), the most frequently documented treatment modalities were nutritional supplements (77.8%), diet/nutrition counseling (47.5%), and exercise (39.7%). Longitudinal HbA1c analyses (n=5,576) identified significant declines in HbA1c among both diabetes and prediabetes subgroups (both p&lt;0.001), demonstrating the database&rsquo;s capacity to support longitudinal outcomes research.</p>
-      <p style="margin-bottom:0;"><strong>Conclusions.</strong> This pilot demonstrates the feasibility of transforming multi-clinic naturopathic EHR data into a queryable research database using a HIPAA-compliant cloud-based pipeline with validated treatment extraction capabilities. The resulting infrastructure supports population characterization, treatment pattern analysis, and longitudinal outcomes research, providing a scalable foundation for national practice-based research using real-world naturopathic clinical data.</p>
+      <p><strong>Background.</strong> Electronic health records (EHRs) from community-based naturopathic clinics represent a valuable resource for practice-based research. However, no standardized infrastructure exists for aggregating and analyzing these data across clinical sites. This methods-feasibility pilot developed a seven-clinic, HIPAA-compliant, cloud-based naturopathic EHR research database with infrastructure supporting multi-site data aggregation, de-identification, and free-text treatment extraction, and evaluated its utility through patient population characterization, treatment pattern analysis, and proof-of-concept analyses of treatment orders and longitudinal trajectories within HbA1c-defined cohorts.</p>
+      <p><strong>Methods.</strong> De-identified retrospective EHR data were extracted via FHIR API from seven community naturopathic clinics in Washington State and loaded into a structured cloud-based research database. Records were de-identified using automated protected health information detection with manual audit. Treatment recommendations were extracted from clinical notes, categorized into 12 treatment modalities and three practice metrics, and validated through manual review of a stratified random sample (PPV 93.3%, 95% CI: 90&ndash;96%). HbA1c-based cohorts were analyzed as exemplar use cases for evaluating treatment extraction and longitudinal signal detection.</p>
+      <p><strong>Results.</strong> The assembled database includes 58,498 patients (68.1% female; mean age 42.7 years), 469,162 encounters, 858,394 clinical notes, and 3.6 million observations spanning 2008&ndash;2026. Common documented conditions included fatigue (29.8%), vitamin D deficiency (9.6%), and insomnia (8.0%). In an elevated HbA1c cohort (n=2,854), the most frequently documented treatment modalities were nutritional supplements (77.8%), diet/nutrition counseling (47.5%), and exercise (39.7%). Longitudinal HbA1c analyses (n=5,576) identified significant declines among both diabetes and prediabetes subgroups (both p&lt;0.001).</p>
+      <p style="margin-bottom:0;"><strong>Conclusions.</strong> This pilot demonstrates the feasibility of transforming multi-clinic naturopathic EHR data into a queryable research database using a HIPAA-compliant cloud-based pipeline with validated treatment extraction capabilities. The resulting infrastructure supports population characterization, treatment pattern analysis, and longitudinal analyses, providing a scalable foundation for practice-based research across naturopathic clinical settings.</p>
     </div>
   </section>
 
@@ -1114,7 +1114,7 @@
   </section>
 
 <footer>
-  Generated June 17, 2026 at 01:08 PM PDT &nbsp;&bull;&nbsp;
+  Generated June 18, 2026 at 11:12 AM PDT &nbsp;&bull;&nbsp;
   BigQuery dataset: <code>nd-ehr-analysis.nd_ehr_research</code>
 </footer>
 
